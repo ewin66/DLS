@@ -539,6 +539,12 @@
     <Compile Include="Modules\Analytics.Designer.cs">
       <DependentUpon>Analytics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\UserManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -707,6 +713,9 @@
     <EmbeddedResource Include="Modules\Analytics.resx">
       <DependentUpon>Analytics.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\UserManage.resx">
       <DependentUpon>UserManage.cs</DependentUpon>
