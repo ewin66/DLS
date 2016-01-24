@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="marqueeProgressBarControl1.Properties.Appearance.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>195, 194, 194</value>
+  </data>
+  <data name="&gt;&gt;marqueeProgressBarControl1.Name" xml:space="preserve">
+    <value>marqueeProgressBarControl1</value>
+  </data>
+  <data name="&gt;&gt;marqueeProgressBarControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MarqueeProgressBarControl, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;marqueeProgressBarControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;marqueeProgressBarControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 48</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>Copyright © 2016-</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v14.2" name="DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="labelControl2.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v14.2">
+    <value>None</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 13</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pictureEdit1.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="pictureEdit1.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Name" xml:space="preserve">
+    <value>pictureEdit1</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 148, 30</value>
+  </data>
+  <data name="&gt;&gt;panelControl.Name" xml:space="preserve">
+    <value>panelControl</value>
+  </data>
+  <data name="&gt;&gt;panelControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelControl1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>238, 238, 238</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 431</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 78</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelDemoText.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 26.25pt</value>
+  </data>
+  <data name="labelDemoText.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="&gt;&gt;labelDemoText.Name" xml:space="preserve">
+    <value>labelDemoText</value>
+  </data>
+  <data name="&gt;&gt;labelDemoText.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelDemoText.Parent" xml:space="preserve">
+    <value>panelControl</value>
+  </data>
+  <data name="&gt;&gt;labelDemoText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureEdit2.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit2.Name" xml:space="preserve">
+    <value>pictureEdit2</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelProductText.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 14.25pt</value>
+  </data>
+  <data name="labelProductText.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>252, 216, 188</value>
+  </data>
+  <data name="&gt;&gt;labelProductText.Name" xml:space="preserve">
+    <value>labelProductText</value>
+  </data>
+  <data name="&gt;&gt;labelProductText.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelProductText.Parent" xml:space="preserve">
+    <value>panelControl</value>
+  </data>
+  <data name="&gt;&gt;labelProductText.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 18</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>830, 510</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 1, 5, 1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ssMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraSplashScreen.DemoSplashScreen, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>
