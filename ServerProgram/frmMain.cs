@@ -157,7 +157,7 @@ namespace DevExpress.ProductsDemo.Win {
 
             this.navBarGroup1Item1.Tag = new NavBarGroupTagObject("UserManage", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));
             this.navBarGroup1Item2.Tag = new NavBarGroupTagObject("LoginHistory", typeof(DevExpress.ProductsDemo.Win.Modules.UserControl1));
-            this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.LoginHistory));
+            this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.AlamHistory));
             this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("HouseInfo", typeof(DevExpress.ProductsDemo.Win.Modules.LoginHistory));
             
             this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));

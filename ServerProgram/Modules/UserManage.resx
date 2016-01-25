@@ -438,11 +438,23 @@
   <data name="&gt;&gt;layoutViewColumnPhoto.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutViewColumnId.Name" xml:space="preserve">
     <value>layoutViewColumnId</value>
   </data>
   <data name="&gt;&gt;layoutViewColumnId.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn2_1.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn2_1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn2_1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutViewColumnLevel.Name" xml:space="preserve">
     <value>layoutViewColumnLevel</value>
@@ -450,11 +462,23 @@
   <data name="&gt;&gt;layoutViewColumnLevel.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_1.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1_1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutViewColumnName.Name" xml:space="preserve">
     <value>layoutViewColumnName</value>
   </data>
   <data name="&gt;&gt;layoutViewColumnName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_2.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1_2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutViewColumnPhone.Name" xml:space="preserve">
     <value>layoutViewColumnPhone</value>
@@ -462,11 +486,35 @@
   <data name="&gt;&gt;layoutViewColumnPhone.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_3.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1_3</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutViewColumnNote.Name" xml:space="preserve">
     <value>layoutViewColumnNote</value>
   </data>
   <data name="&gt;&gt;layoutViewColumnNote.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_4.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1_4</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
+    <value>layoutViewCard1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewCard, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Item1.Name" xml:space="preserve">
+    <value>Item1</value>
+  </data>
+  <data name="&gt;&gt;Item1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -491,54 +539,6 @@
   </data>
   <data name="&gt;&gt;lciIndex.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
-    <value>layoutViewCard1</value>
-  </data>
-  <data name="&gt;&gt;layoutViewCard1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewCard, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn1</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn2_1.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn2_1</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn2_1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_3.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn1_3</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_3.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_1.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn1_1</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_2.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn1_2</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;Item1.Name" xml:space="preserve">
-    <value>Item1</value>
-  </data>
-  <data name="&gt;&gt;Item1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_4.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn1_4</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn1_4.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserManage</value>
