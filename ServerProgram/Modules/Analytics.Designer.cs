@@ -121,6 +121,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             // arcScaleComponent2
             // 
+            this.arcScaleComponent2.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleComponent2.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleComponent2.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleComponent2.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
             this.arcScaleComponent2.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 10F);
             this.arcScaleComponent2.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#999999");
             this.arcScaleComponent2.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
@@ -199,8 +203,8 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 4F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 420F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 7F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 690F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 2, 2);
@@ -212,9 +216,9 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 700);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1667, 1185);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -224,13 +228,14 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel4.Controls.Add(this.labelControl3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.monthlySalesPerformance, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 359);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 607);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(570, 338);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(960, 573);
             this.tableLayoutPanel4.TabIndex = 12;
             // 
             // labelControl3
@@ -241,20 +246,22 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelControl3.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl3.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl3.LineVisible = true;
-            this.labelControl3.Location = new System.Drawing.Point(3, 3);
+            this.labelControl3.Location = new System.Drawing.Point(5, 5);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Padding = new System.Windows.Forms.Padding(34, 0, 20, 0);
+            this.labelControl3.Padding = new System.Windows.Forms.Padding(57, 0, 33, 0);
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(564, 19);
+            this.labelControl3.Size = new System.Drawing.Size(950, 32);
             this.labelControl3.TabIndex = 12;
             this.labelControl3.Text = "MONTHLY SALES PERFORMANCE ";
             // 
             // monthlySalesPerformance
             // 
             this.monthlySalesPerformance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthlySalesPerformance.Location = new System.Drawing.Point(3, 28);
+            this.monthlySalesPerformance.Location = new System.Drawing.Point(8, 49);
+            this.monthlySalesPerformance.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.monthlySalesPerformance.Name = "monthlySalesPerformance";
-            this.monthlySalesPerformance.Size = new System.Drawing.Size(564, 307);
+            this.monthlySalesPerformance.Size = new System.Drawing.Size(944, 517);
             this.monthlySalesPerformance.TabIndex = 11;
             // 
             // tableLayoutPanel5
@@ -264,13 +271,14 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel5.Controls.Add(this.labelControl2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.dailySalesPerformance, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(570, 338);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(960, 572);
             this.tableLayoutPanel5.TabIndex = 13;
             // 
             // labelControl2
@@ -281,20 +289,22 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelControl2.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl2.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl2.LineVisible = true;
-            this.labelControl2.Location = new System.Drawing.Point(3, 3);
+            this.labelControl2.Location = new System.Drawing.Point(5, 5);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Padding = new System.Windows.Forms.Padding(34, 0, 20, 0);
+            this.labelControl2.Padding = new System.Windows.Forms.Padding(57, 0, 33, 0);
             this.labelControl2.ShowLineShadow = false;
-            this.labelControl2.Size = new System.Drawing.Size(564, 19);
+            this.labelControl2.Size = new System.Drawing.Size(950, 32);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "DAILY SALES PERFORMANCE ";
             // 
             // dailySalesPerformance
             // 
             this.dailySalesPerformance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dailySalesPerformance.Location = new System.Drawing.Point(3, 28);
+            this.dailySalesPerformance.Location = new System.Drawing.Point(8, 49);
+            this.dailySalesPerformance.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dailySalesPerformance.Name = "dailySalesPerformance";
-            this.dailySalesPerformance.Size = new System.Drawing.Size(564, 307);
+            this.dailySalesPerformance.Size = new System.Drawing.Size(944, 516);
             this.dailySalesPerformance.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -306,15 +316,16 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.labelControl5, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(583, 359);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(982, 607);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(414, 338);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(680, 573);
             this.tableLayoutPanel6.TabIndex = 14;
             // 
             // labelControl4
@@ -325,11 +336,12 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelControl4.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl4.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl4.LineVisible = true;
-            this.labelControl4.Location = new System.Drawing.Point(3, 3);
+            this.labelControl4.Location = new System.Drawing.Point(5, 5);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelControl4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.labelControl4.ShowLineShadow = false;
-            this.labelControl4.Size = new System.Drawing.Size(408, 19);
+            this.labelControl4.Size = new System.Drawing.Size(670, 32);
             this.labelControl4.TabIndex = 16;
             this.labelControl4.Text = "ANNUAL SALES PERFORMANCE ";
             // 
@@ -341,9 +353,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.gaugeControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gaugeControl2.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
             this.linearGauge1});
-            this.gaugeControl2.Location = new System.Drawing.Point(3, 281);
+            this.gaugeControl2.Location = new System.Drawing.Point(5, 476);
+            this.gaugeControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.gaugeControl2.Name = "gaugeControl2";
-            this.gaugeControl2.Size = new System.Drawing.Size(408, 54);
+            this.gaugeControl2.Size = new System.Drawing.Size(670, 92);
             this.gaugeControl2.TabIndex = 9;
             // 
             // linearGauge1
@@ -368,6 +381,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             // linearScaleComponent1
             // 
+            this.linearScaleComponent1.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.linearScaleComponent1.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.linearScaleComponent1.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.linearScaleComponent1.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
             this.linearScaleComponent1.AppearanceScale.Brush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#999999");
             this.linearScaleComponent1.AppearanceScale.Width = 4F;
             this.linearScaleComponent1.AppearanceTickmarkText.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
@@ -426,13 +443,14 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel3.Controls.Add(this.fiscalToData, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.fiscalYear, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 28);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 47);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(408, 203);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(670, 344);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // gaugeControl1
@@ -443,17 +461,17 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
             this.circularGauge2});
             this.gaugeControl1.LayoutPadding = new DevExpress.XtraGauges.Core.Base.Thickness(0, 6, 0, 0);
-            this.gaugeControl1.Location = new System.Drawing.Point(204, 0);
+            this.gaugeControl1.Location = new System.Drawing.Point(335, 0);
             this.gaugeControl1.Margin = new System.Windows.Forms.Padding(0);
             this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(204, 159);
+            this.gaugeControl1.Size = new System.Drawing.Size(335, 270);
             this.gaugeControl1.TabIndex = 11;
             // 
             // circularGauge2
             // 
             this.circularGauge2.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent4});
-            this.circularGauge2.Bounds = new System.Drawing.Rectangle(0, 6, 204, 153);
+            this.circularGauge2.Bounds = new System.Drawing.Rectangle(0, 6, 335, 264);
             this.circularGauge2.Name = "circularGauge2";
             this.circularGauge2.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.needleFiscalYear});
@@ -470,6 +488,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             // arcScalePrevYear
             // 
+            this.arcScalePrevYear.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScalePrevYear.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScalePrevYear.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScalePrevYear.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
             this.arcScalePrevYear.AppearanceTickmarkText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.arcScalePrevYear.AppearanceTickmarkText.Spacing = new DevExpress.XtraGauges.Core.Base.TextSpacing(-10, 0, -10, 0);
             this.arcScalePrevYear.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#999999");
@@ -535,7 +557,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.gaugeControl3.Location = new System.Drawing.Point(0, 0);
             this.gaugeControl3.Margin = new System.Windows.Forms.Padding(0);
             this.gaugeControl3.Name = "gaugeControl3";
-            this.gaugeControl3.Size = new System.Drawing.Size(204, 159);
+            this.gaugeControl3.Size = new System.Drawing.Size(335, 270);
             this.gaugeControl3.TabIndex = 12;
             // 
             // circularGauge3
@@ -543,7 +565,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.circularGauge3.AutoSize = DevExpress.Utils.DefaultBoolean.True;
             this.circularGauge3.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent3});
-            this.circularGauge3.Bounds = new System.Drawing.Rectangle(0, 6, 204, 153);
+            this.circularGauge3.Bounds = new System.Drawing.Rectangle(0, 6, 335, 264);
             this.circularGauge3.Name = "circularGauge3";
             this.circularGauge3.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.needleFiscalToData});
@@ -560,6 +582,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             // arcScaleFiscalToData
             // 
+            this.arcScaleFiscalToData.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleFiscalToData.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleFiscalToData.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.arcScaleFiscalToData.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
             this.arcScaleFiscalToData.AppearanceTickmarkText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.arcScaleFiscalToData.AppearanceTickmarkText.Spacing = new DevExpress.XtraGauges.Core.Base.TextSpacing(-10, 0, -10, 0);
             this.arcScaleFiscalToData.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#999999");
@@ -620,9 +646,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelFiscalToData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelFiscalToData.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.labelFiscalToData.ForeColor = System.Drawing.Color.Gray;
-            this.labelFiscalToData.Location = new System.Drawing.Point(3, 159);
+            this.labelFiscalToData.Location = new System.Drawing.Point(5, 270);
+            this.labelFiscalToData.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelFiscalToData.Name = "labelFiscalToData";
-            this.labelFiscalToData.Size = new System.Drawing.Size(198, 16);
+            this.labelFiscalToData.Size = new System.Drawing.Size(325, 27);
             this.labelFiscalToData.TabIndex = 13;
             this.labelFiscalToData.Text = "FISCAL TO DATE";
             this.labelFiscalToData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -633,9 +660,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelFiscalYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelFiscalYear.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.labelFiscalYear.ForeColor = System.Drawing.Color.Gray;
-            this.labelFiscalYear.Location = new System.Drawing.Point(207, 159);
+            this.labelFiscalYear.Location = new System.Drawing.Point(340, 270);
+            this.labelFiscalYear.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelFiscalYear.Name = "labelFiscalYear";
-            this.labelFiscalYear.Size = new System.Drawing.Size(198, 16);
+            this.labelFiscalYear.Size = new System.Drawing.Size(325, 27);
             this.labelFiscalYear.TabIndex = 14;
             this.labelFiscalYear.Text = "FISCAL YEAR";
             this.labelFiscalYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -646,9 +674,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.fiscalToData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fiscalToData.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.fiscalToData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(104)))), ((int)(((byte)(165)))));
-            this.fiscalToData.Location = new System.Drawing.Point(3, 175);
+            this.fiscalToData.Location = new System.Drawing.Point(5, 297);
+            this.fiscalToData.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fiscalToData.Name = "fiscalToData";
-            this.fiscalToData.Size = new System.Drawing.Size(198, 28);
+            this.fiscalToData.Size = new System.Drawing.Size(325, 47);
             this.fiscalToData.TabIndex = 15;
             this.fiscalToData.Text = "$000,000,000";
             this.fiscalToData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -659,9 +688,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.fiscalYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fiscalYear.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.fiscalYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(70)))), ((int)(((byte)(113)))));
-            this.fiscalYear.Location = new System.Drawing.Point(207, 175);
+            this.fiscalYear.Location = new System.Drawing.Point(340, 297);
+            this.fiscalYear.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.fiscalYear.Name = "fiscalYear";
-            this.fiscalYear.Size = new System.Drawing.Size(198, 28);
+            this.fiscalYear.Size = new System.Drawing.Size(325, 47);
             this.fiscalYear.TabIndex = 16;
             this.fiscalYear.Text = "$000,000,000";
             this.fiscalYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -674,11 +704,12 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelControl5.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl5.LineVisible = true;
-            this.labelControl5.Location = new System.Drawing.Point(3, 257);
+            this.labelControl5.Location = new System.Drawing.Point(5, 435);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelControl5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.labelControl5.ShowLineShadow = false;
-            this.labelControl5.Size = new System.Drawing.Size(408, 18);
+            this.labelControl5.Size = new System.Drawing.Size(670, 31);
             this.labelControl5.TabIndex = 17;
             this.labelControl5.Text = "SALES FORECAST";
             // 
@@ -689,18 +720,19 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.tableLayoutPanel2.Controls.Add(this.chartSalesbySecor, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(583, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(982, 5);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(414, 338);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(680, 572);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // chartSalesbySecor
             // 
             this.chartSalesbySecor.BackColor = System.Drawing.Color.Transparent;
-            this.chartSalesbySecor.BorderOptions.Visibility = Utils.DefaultBoolean.False;
+            this.chartSalesbySecor.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             simpleDiagram1.EqualPieSize = false;
             this.chartSalesbySecor.Diagram = simpleDiagram1;
             this.chartSalesbySecor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -708,19 +740,20 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.chartSalesbySecor.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Center;
             this.chartSalesbySecor.Legend.Antialiasing = true;
             this.chartSalesbySecor.Legend.BackColor = System.Drawing.Color.Transparent;
-            this.chartSalesbySecor.Legend.Border.Visibility = Utils.DefaultBoolean.False;
+            this.chartSalesbySecor.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartSalesbySecor.Legend.EquallySpacedItems = false;
             this.chartSalesbySecor.Legend.Margins.Right = 0;
             this.chartSalesbySecor.Legend.MarkerSize = new System.Drawing.Size(18, 18);
             this.chartSalesbySecor.Legend.TextOffset = 8;
             this.chartSalesbySecor.Legend.VerticalIndent = 12;
-            this.chartSalesbySecor.Location = new System.Drawing.Point(3, 28);
+            this.chartSalesbySecor.Location = new System.Drawing.Point(5, 47);
+            this.chartSalesbySecor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.chartSalesbySecor.Name = "chartSalesbySecor";
             this.chartSalesbySecor.Padding.Right = 0;
             series1.ArgumentDataMember = "GroupName";
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             doughnutSeriesLabel1.Antialiasing = true;
-            doughnutSeriesLabel1.Border.Visibility = Utils.DefaultBoolean.False;
+            doughnutSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             doughnutSeriesLabel1.TextPattern = "{V:F0}";
             series1.Label = doughnutSeriesLabel1;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -728,17 +761,13 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             series1.Name = "Series 1";
             series1.ValueDataMembersSerializable = "TotalCost";
             doughnutSeriesView1.HoleRadiusPercent = 55;
-            doughnutSeriesView1.RuntimeExploding = false;
-            doughnutSeriesView1.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             series1.View = doughnutSeriesView1;
             this.chartSalesbySecor.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
             doughnutSeriesLabel2.TextPattern = "{VP:G2}";
             this.chartSalesbySecor.SeriesTemplate.Label = doughnutSeriesLabel2;
-            doughnutSeriesView2.RuntimeExploding = false;
-            doughnutSeriesView2.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             this.chartSalesbySecor.SeriesTemplate.View = doughnutSeriesView2;
-            this.chartSalesbySecor.Size = new System.Drawing.Size(408, 307);
+            this.chartSalesbySecor.Size = new System.Drawing.Size(670, 520);
             this.chartSalesbySecor.TabIndex = 1;
             // 
             // labelControl1
@@ -749,11 +778,12 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             this.labelControl1.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl1.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl1.LineVisible = true;
-            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(5, 5);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelControl1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(408, 19);
+            this.labelControl1.Size = new System.Drawing.Size(670, 32);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "SALES BY SECTOR ";
             // 
@@ -761,12 +791,11 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             // 
             this.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AnalyticsModule";
-            this.Size = new System.Drawing.Size(1000, 700);
+            this.Size = new System.Drawing.Size(1667, 1185);
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent2)).EndInit();

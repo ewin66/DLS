@@ -533,6 +533,12 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
+    <Compile Include="Modules\DataAnalytics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalytics.designer.cs">
+      <DependentUpon>DataAnalytics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\AlamHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -544,6 +550,18 @@
     </Compile>
     <Compile Include="Modules\Analytics.Designer.cs">
       <DependentUpon>Analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AptManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AptManage.designer.cs">
+      <DependentUpon>AptManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SystemStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemStatus.Designer.cs">
+      <DependentUpon>SystemStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -716,12 +734,21 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalytics.resx">
+      <DependentUpon>DataAnalytics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\AlamHistory.resx">
       <DependentUpon>AlamHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Analytics.resx">
       <DependentUpon>Analytics.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AptManage.resx">
+      <DependentUpon>AptManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SystemStatus.resx">
+      <DependentUpon>SystemStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

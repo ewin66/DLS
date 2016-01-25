@@ -158,14 +158,17 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item1.Tag = new NavBarGroupTagObject("UserManage", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));
             this.navBarGroup1Item2.Tag = new NavBarGroupTagObject("LoginHistory", typeof(DevExpress.ProductsDemo.Win.Modules.UserControl1));
             this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.AlamHistory));
-            this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("HouseInfo", typeof(DevExpress.ProductsDemo.Win.Modules.LoginHistory));
+            this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("AptManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
             
             this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));
             this.navBarGroup1.SelectedLinkIndex = 0;
 
-            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.LoginHistory));
-            this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));
+            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
+            this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
             this.navBarGroup2.SelectedLinkIndex = 0;
+
+            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
+            this.navBarGroup3.SelectedLinkIndex = 0;
         }
         internal void EnableLayoutButtons(bool enabled) {
             bbiFlipLayout.Enabled = enabled;
