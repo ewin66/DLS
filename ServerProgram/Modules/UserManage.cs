@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Data.OleDb;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid;
@@ -23,13 +24,16 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         public override string ModuleName { get { return Properties.Resources.ContactsName; } }
         public UserManage() {
             InitializeComponent();
-            EditorHelper.InitPersonComboBox(repositoryItemImageComboBox1);
-            gidControlUserManage.DataSource = DataHelper.UserInfos;
+            //EditorHelper.InitPersonComboBox(repositoryItemImageComboBox1);
+            //gidControlUserManage.DataSource = DataHelper.UserInfos;
             gridView1.ShowFindPanel();
             InitIndex(DataHelper.UserInfos);
+
+            InitNWindData();
         }
         protected override DevExpress.XtraGrid.GridControl Grid { get { return gidControlUserManage; } }
         internal override void ShowModule(bool firstShow) {
+            
             base.ShowModule(firstShow);
             gidControlUserManage.Focus();
             UpdateActionButtons();
@@ -39,6 +43,8 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 GridHelper.SetFindControlImages(gidControlUserManage);
                 if (DataHelper.UserInfos.Count == 0) UpdateCurrentContact();
             }
+
+            
         }
         void UpdateActionButtons() {
             OwnerForm.EnableLayoutButtons(gidControlUserManage.MainView != layoutView1);
@@ -112,6 +118,20 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                         try
                         {
                             DataHelper.UserInfos.Add(contact);
+
+                            string connetionString = null;
+                            OleDbConnection connection ;
+                            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+                            string sql = null;
+                            connetionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=demo.mdb;";
+                            connection = new OleDbConnection(connetionString);
+                            sql = string.Format("insert into UserInfo values('{0}', '{1}', '{2}', '{3}')", contact.Id, contact.Level, contact.Name, contact.Phone);
+
+                            connection.Open();
+                            oledbAdapter.InsertCommand = new OleDbCommand(sql, connection);
+                            oledbAdapter.InsertCommand.ExecuteNonQuery();
+
+
                         }
                         finally
                         {
@@ -214,10 +234,11 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         }
         Timer alphaChange = null;
         void view_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e) {
-            if(alphaChange != null) alphaChange.Dispose();
+            if (alphaChange != null) alphaChange.Dispose();
             alphaChange = new Timer();
             alphaChange.Interval = 200;
-            alphaChange.Tick += (s, ee) => {
+            alphaChange.Tick += (s, ee) =>
+            {
                 gidControlUserManage.DataSource = ApplyFilter(DataHelper.UserInfos, ((GridView)sender).GetFocusedRow() as AlphaIndex);
                 ((Timer)s).Dispose();
                 this.alphaChange = null;
@@ -248,6 +269,40 @@ namespace DevExpress.ProductsDemo.Win.Modules {
 
         }
 
+        private void UserManage_Load(object sender, EventArgs e)
+        {
+            
+        }
+        string tblGrid = "[UserInfo]";
+        
+        protected override void InitMDBData(string connectionString)
+        {
+            DataSet ds = new DataSet();
+            System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT UserID, Grade, UserName, Phone FROM " + tblGrid, connectionString);
+            oleDbDataAdapter.Fill(ds, tblGrid);
+            //oleDbDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM " + tblLookUp, connectionString);
+            //oleDbDataAdapter.Fill(ds, tblLookUp);
+
+            
+            foreach( DataRow row in ds.Tables[tblGrid].Rows)
+            {
+                UserInfo contact = new UserInfo();
+
+                contact.Id = row["UserID"].ToString();
+                contact.Level = UserLevel.Level1;
+                contact.Name = row["UserName"].ToString();
+                contact.Phone = row["Phone"].ToString();
+
+                DataHelper.UserInfos.Add(contact);
+            }
+            
+            gidControlUserManage.DataSource = DataHelper.UserInfos;
+            //gidControlUserManage.DataSource = ds.Tables[tblGrid];
+            //repositoryItemLookUpEdit1.DataSource = ds.Tables[tblLookUp];
+                    //gridControl1.DataSource = ((NavBarData)item.Tag).Data;
+            //gridControl1.DataSource as List<Task>)
+
+        }
 
 
     }

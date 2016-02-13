@@ -128,6 +128,8 @@ namespace DevExpress.ProductsDemo.Win {
             LookAndFeelStyleChanged();
         }
         protected virtual void LookAndFeelStyleChanged() { }
+
+
     }
     public class BaseModule : BaseControl {
         protected string partName = string.Empty;
@@ -247,6 +249,21 @@ namespace DevExpress.ProductsDemo.Win {
                 }
             }
             return null;
+        }
+
+        protected virtual void InitNWindData()
+        {
+            string DBFileName = string.Empty;
+
+            DBFileName = DevExpress.Utils.FilesHelper.FindingFileName(Application.StartupPath, "demo.mdb");
+            if (DBFileName != string.Empty)
+            {
+                InitMDBData("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + DBFileName);
+            }
+
+        }
+        protected virtual void InitMDBData(string connectionString)
+        {
         }
 
         protected virtual bool AllowZoomControl { get { return false; } }

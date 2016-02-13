@@ -31,14 +31,11 @@
             this.gidControlUserManage = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colUserLevel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
             this.layoutViewColumnPhoto = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_layoutViewColumn1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
@@ -65,11 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gidControlUserManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn2_1)).BeginInit();
@@ -143,11 +137,8 @@
             this.gidControlUserManage.MainView = this.gridView1;
             this.gidControlUserManage.Name = "gidControlUserManage";
             this.gidControlUserManage.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemImageComboBox1,
             this.repositoryItemPictureEdit1,
-            this.repositoryItemMemoEdit1,
-            this.repositoryItemTextEdit1,
-            this.repositoryItemHyperLinkEdit1});
+            this.repositoryItemLookUpEdit1});
             this.gidControlUserManage.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.layoutView1});
@@ -171,6 +162,7 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsPrint.PrintHorzLines = false;
             this.gridView1.OptionsPrint.PrintVertLines = false;
+            this.gridView1.OptionsView.AllowHtmlDrawHeaders = true;
             this.gridView1.OptionsView.ShowGroupedColumns = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
@@ -190,6 +182,13 @@
             this.colUserID.OptionsColumn.AllowFocus = false;
             this.colUserID.OptionsColumn.ReadOnly = true;
             this.colUserID.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit1, "repositoryItemLookUpEdit1");
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit1.Buttons"))))});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             // 
             // colUserLevel
             // 
@@ -215,38 +214,12 @@
             this.colPhone.OptionsColumn.AllowFocus = false;
             this.colPhone.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
-            // repositoryItemImageComboBox1
-            // 
-            resources.ApplyResources(this.repositoryItemImageComboBox1, "repositoryItemImageComboBox1");
-            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemImageComboBox1.Buttons"))))});
-            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
-            // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             this.repositoryItemPictureEdit1.PictureAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.repositoryItemPictureEdit1.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
-            // 
-            // repositoryItemTextEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemTextEdit1, "repositoryItemTextEdit1");
-            this.repositoryItemTextEdit1.Mask.EditMask = resources.GetString("repositoryItemTextEdit1.Mask.EditMask");
-            this.repositoryItemTextEdit1.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemTextEdit1.Mask.MaskType")));
-            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat")));
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // repositoryItemHyperLinkEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemHyperLinkEdit1, "repositoryItemHyperLinkEdit1");
-            this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
-            this.repositoryItemHyperLinkEdit1.SingleClick = true;
-            this.repositoryItemHyperLinkEdit1.OpenLink += new DevExpress.XtraEditors.Controls.OpenLinkEventHandler(this.repositoryItemHyperLinkEdit1_OpenLink);
             // 
             // layoutView1
             // 
@@ -459,6 +432,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "UserManage";
+            this.Load += new System.EventHandler(this.UserManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indexGridControl)).EndInit();
@@ -466,11 +440,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gidControlUserManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn2_1)).EndInit();
@@ -500,13 +471,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUserLevel;
         private DevExpress.XtraGrid.Columns.GridColumn colUserName;
         private DevExpress.XtraGrid.Columns.GridColumn colPhone;
-        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
         private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumnPhoto;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
-        private XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
         private XtraGrid.GridControl indexGridControl;
         private XtraGrid.Views.Grid.GridView indexGridView;
         private XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
@@ -524,5 +491,6 @@
         private XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1_4;
         private XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private XtraLayout.EmptySpaceItem Item1;
+        private XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
     }
 }
