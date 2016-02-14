@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.ProductsDemo.Win.Controls;
 
+using DevExpress.MailDemo.Win;
+
 namespace DevExpress.ProductsDemo.Win.Modules
 {
     public partial class UserControl1 : BaseModule
@@ -25,6 +27,20 @@ namespace DevExpress.ProductsDemo.Win.Modules
             DataSet ds = new DataSet();
             ds = crud.SelectOleDbTable(crud.Connection, query);
             this.gcLoingHistoryGrid.DataSource = ds.Tables[0];
+        }
+
+
+        protected internal override void ButtonClick(string tag)
+        {
+            switch (tag)
+            {
+                case TagResources.ContactList:
+
+                    break;
+                case TagResources.ContactNew:
+
+                    break;
+            }
         }
     }
 }
