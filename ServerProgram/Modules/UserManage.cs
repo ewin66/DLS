@@ -38,7 +38,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             gidControlUserManage.Focus();
             UpdateActionButtons();
             if(firstShow) {
-                ButtonClick(TagResources.ContactCard);
+                ButtonClick(TagResources.ContactList);
                 gidControlUserManage.ForceInitialize();
                 GridHelper.SetFindControlImages(gidControlUserManage);
                 if (DataHelper.UserInfos.Count == 0) UpdateCurrentContact();
@@ -101,7 +101,9 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                     gidControlUserManage.MainView.BeginDataUpdate();
                     try
                     {
+                        DeleteUserInfo(CurrentContact);
                         DataHelper.UserInfos.Remove(CurrentContact);
+                        
                     }
                     finally
                     {
@@ -118,19 +120,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                         try
                         {
                             DataHelper.UserInfos.Add(contact);
-
-                            string connetionString = null;
-                            OleDbConnection connection ;
-                            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
-                            string sql = null;
-                            connetionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=demo.mdb;";
-                            connection = new OleDbConnection(connetionString);
-                            sql = string.Format("insert into UserInfo values('{0}', '{1}', '{2}', '{3}')", contact.Id, contact.Level, contact.Name, contact.Phone);
-
-                            connection.Open();
-                            oledbAdapter.InsertCommand = new OleDbCommand(sql, connection);
-                            oledbAdapter.InsertCommand.ExecuteNonQuery();
-
+                            InsertUserInfo(contact);
 
                         }
                         finally
@@ -145,7 +135,11 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                     }
                     break;
                 case TagResources.ContactEdit:
-                    EditUser(CurrentContact);
+                    if (EditUser(CurrentContact) == DialogResult.OK)
+                    {
+                        UpdateUserInfo(CurrentContact);
+                    }
+
                     break;
             }
             UpdateCurrentContact();
@@ -172,8 +166,14 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         }
 
         private void gridView1_RowCellClick(object sender, RowCellClickEventArgs e) {
-            if(e.Button == MouseButtons.Left && e.RowHandle >= 0 && e.Clicks == 2)
-                EditUser(CurrentContact);
+            if (e.Button == MouseButtons.Left && e.RowHandle >= 0 && e.Clicks == 2)
+            {
+                if (EditUser(CurrentContact) == DialogResult.OK)
+                {
+                    UpdateUserInfo(CurrentContact);
+                }
+            }
+                
         }
 
         private void layoutView1_MouseDown(object sender, MouseEventArgs e) {
@@ -188,6 +188,55 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 }
             }
         }
+
+        void InsertUserInfo(UserInfo contact)
+        {
+            
+            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+            int level = 0;
+            if (contact.Level == UserLevel.Level1)
+                level = 1;
+            else if (contact.Level == UserLevel.Level2)
+                level = 2;
+            else if (contact.Level == UserLevel.Level3)
+                level = 3;
+            string sql = string.Format("insert into UserInfo values('{0}', '{1}', '{2}', '{3}', '{4}')", contact.Id, level, contact.Name, contact.Phone, contact.Password);
+
+            oledbAdapter.InsertCommand = new OleDbCommand(sql, Connection);
+            oledbAdapter.InsertCommand.ExecuteNonQuery();
+        }
+        void UpdateUserInfo(UserInfo contact)
+        {
+            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+
+            int level = 0;
+            if (contact.Level == UserLevel.Level1)
+                level = 1;
+            else if (contact.Level == UserLevel.Level2)
+                level = 2;
+            else if (contact.Level == UserLevel.Level3)
+                level = 3;
+            string sql = string.Format("update UserInfo set [UserID] = '{0}', [Grade] = '{1}', [UserName] = '{2}', [Phone] = '{3}', [Password] = '{4}' where UserID = '{5}'",
+                contact.Id, level, contact.Name, contact.Phone, contact.Password, contact.Id);
+
+
+            oledbAdapter.UpdateCommand = Connection.CreateCommand();
+            oledbAdapter.UpdateCommand.CommandText = sql;
+            oledbAdapter.UpdateCommand.ExecuteNonQuery();
+
+        }
+        void DeleteUserInfo(UserInfo contact)
+        {
+            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+
+            string sql = string.Format("delete from UserInfo where UserID = '{0}'", contact.Id);
+
+
+            oledbAdapter.DeleteCommand = Connection.CreateCommand();
+            oledbAdapter.DeleteCommand.CommandText = sql;
+            oledbAdapter.DeleteCommand.ExecuteNonQuery();
+        }
+
         DialogResult EditUser(UserInfo contact)
         {
             if(contact == null) return DialogResult.Ignore;
@@ -277,30 +326,46 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         
         protected override void InitMDBData(string connectionString)
         {
-            DataSet ds = new DataSet();
-            System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT UserID, Grade, UserName, Phone FROM " + tblGrid, connectionString);
-            oleDbDataAdapter.Fill(ds, tblGrid);
-            //oleDbDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM " + tblLookUp, connectionString);
-            //oleDbDataAdapter.Fill(ds, tblLookUp);
-
             
+            Connection = new OleDbConnection(connectionString);
+            Connection.Open();
+
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter();
+            DataSet ds = new DataSet();
+            oleDbDataAdapter.SelectCommand = new OleDbCommand("SELECT UserID, Grade, UserName, Phone, Password FROM " + tblGrid, Connection);
+            oleDbDataAdapter.Fill(ds, tblGrid);
+            oleDbDataAdapter.Dispose();
+
             foreach( DataRow row in ds.Tables[tblGrid].Rows)
             {
                 UserInfo contact = new UserInfo();
 
                 contact.Id = row["UserID"].ToString();
-                contact.Level = UserLevel.Level1;
+                if (row["Grade"].ToString() == "1")
+                {
+                    contact.Level = UserLevel.Level1;
+                }
+                else if (row["Grade"].ToString() == "2")
+                {
+                    contact.Level = UserLevel.Level2;
+                }
+                else if (row["Grade"].ToString() == "3")
+                {
+                    contact.Level = UserLevel.Level3;
+                }
+                else
+                {
+                    contact.Level = UserLevel.None;
+                }
                 contact.Name = row["UserName"].ToString();
                 contact.Phone = row["Phone"].ToString();
+                contact.Password = row["Password"].ToString();
+                contact.ConfirmPassword = row["Password"].ToString();
 
                 DataHelper.UserInfos.Add(contact);
             }
             
             gidControlUserManage.DataSource = DataHelper.UserInfos;
-            //gidControlUserManage.DataSource = ds.Tables[tblGrid];
-            //repositoryItemLookUpEdit1.DataSource = ds.Tables[tblLookUp];
-                    //gridControl1.DataSource = ((NavBarData)item.Tag).Data;
-            //gridControl1.DataSource as List<Task>)
 
         }
 

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Data.OleDb;
 using DevExpress.MailClient.Win;
 using DevExpress.Utils;
 using DevExpress.Utils.Design;
@@ -133,7 +134,8 @@ namespace DevExpress.ProductsDemo.Win {
     }
     public class BaseModule : BaseControl {
         protected string partName = string.Empty;
-                
+        protected OleDbConnection connection;
+
         public BaseModule() { }
 
         internal frmMain OwnerForm { get { return this.FindForm() as frmMain; } }
@@ -265,7 +267,10 @@ namespace DevExpress.ProductsDemo.Win {
         protected virtual void InitMDBData(string connectionString)
         {
         }
-
+        protected virtual OleDbConnection Connection { 
+            get { return connection; }
+            set { connection = value; }
+        }
         protected virtual bool AllowZoomControl { get { return false; } }
         protected virtual void SetZoomCaption() { }
         public virtual float ZoomFactor {

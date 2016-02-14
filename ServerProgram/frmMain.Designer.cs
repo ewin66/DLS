@@ -576,11 +576,11 @@
             this.rgbiCurrentView.Gallery.Appearance.ItemCaptionAppearance.Pressed.Options.UseTextOptions = true;
             this.rgbiCurrentView.Gallery.Appearance.ItemCaptionAppearance.Pressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.rgbiCurrentView.Gallery.ColumnCount = 4;
+            galleryItem9.Checked = true;
             galleryItem9.Image = global::DevExpress.ProductsDemo.Win.Properties.Resources.List_32x32;
             galleryItem9.Tag = "List";
             galleryItem10.Image = global::DevExpress.ProductsDemo.Win.Properties.Resources.SortAsc_32x32;
             galleryItem10.Tag = "Alphabetical";
-            galleryItem11.Checked = true;
             galleryItem11.Image = global::DevExpress.ProductsDemo.Win.Properties.Resources.Card_32x32;
             galleryItem11.Tag = "Card";
             galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
@@ -721,6 +721,7 @@
             this.rpgCurrentView.Name = "rpgCurrentView";
             this.rpgCurrentView.ShowCaptionButton = false;
             resources.ApplyResources(this.rpgCurrentView, "rpgCurrentView");
+            this.rpgCurrentView.Visible = false;
             // 
             // ribbonPage1
             // 

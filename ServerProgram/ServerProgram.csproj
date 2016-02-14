@@ -840,6 +840,7 @@
     </Content>
     <Content Include="Resources\ArrowLeft.png" />
     <Content Include="Resources\ArrowRight.png" />
+    <Content Include="Resources\ci.png" />
     <Content Include="Resources\ColorMixer_32x32.png" />
     <Content Include="Resources\reminder.png" />
     <Content Include="Resources\WeatherMap.png" />

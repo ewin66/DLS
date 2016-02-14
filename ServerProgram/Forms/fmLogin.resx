@@ -117,17 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureEdit1.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="pictureEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="pictureEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 160</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Name" xml:space="preserve">
+    <value>pictureEdit1</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="textEdit2.EditValue" xml:space="preserve">
     <value>admin</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 44</value>
+    <value>41, 208</value>
   </data>
   <data name="textEdit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 28</value>
+    <value>395, 28</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textEdit2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
@@ -141,16 +215,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEdit2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="textEdit1.EditValue" xml:space="preserve">
     <value>admin</value>
   </data>
   <data name="textEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 12</value>
+    <value>41, 176</value>
   </data>
   <data name="textEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 28</value>
+    <value>395, 28</value>
   </data>
   <data name="textEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -165,13 +239,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEdit1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="sbCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 160</value>
+    <value>307, 240</value>
   </data>
   <data name="sbCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 29</value>
+    <value>129, 29</value>
   </data>
   <data name="sbCancel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -189,13 +263,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;sbCancel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="sbOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 160</value>
+    <value>178, 240</value>
   </data>
   <data name="sbOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 29</value>
+    <value>125, 29</value>
   </data>
   <data name="sbOK.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -213,7 +287,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;sbOK.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -237,23 +311,23 @@
   <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem5</value>
   </data>
-  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
     <value>PW</value>
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>PW</value>
   </data>
+  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 201</value>
+    <value>448, 281</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -283,7 +357,7 @@
     <value>10, 22</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>458, 201</value>
+    <value>448, 281</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -318,12 +392,6 @@
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem5.Name" xml:space="preserve">
-    <value>emptySpaceItem5</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
     <value>layoutControlItem1</value>
   </data>
@@ -341,6 +409,12 @@
   </data>
   <data name="&gt;&gt;dxValidationProvider1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>fmLogin</value>

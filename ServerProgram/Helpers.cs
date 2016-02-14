@@ -225,7 +225,7 @@ namespace DevExpress.ProductsDemo.Win {
                 default: return "None";
 
             }
-            return string.Empty;
+            //return string.Empty;
         }
         static ImageCollection CreateFlagStatusImageCollection() {
             ImageCollection ret = new ImageCollection();
