@@ -14,7 +14,7 @@ namespace DevExpress.MailDemo.Win {
     public enum TaskCategory { HouseChores, Shopping, Office };
     public enum FlagStatus { Today, Tomorrow, ThisWeek, NextWeek, NoDate, Custom, Completed };
     public enum ContactTitle { None, Dr, Miss, Mr, Mrs, Ms, Prof };
-    public enum UserLevel { None, Level1, Level2, Level3 };
+    public enum UserLevel { Level1 = 0, Level2 = 1, Level3 = 2 };
     public class TagResources {
         public const string FlipLayout = "FlipLayout";
         public const string MenuSaveAs = "SaveAs";

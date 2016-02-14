@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.ProductsDemo.Win.Controls;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
@@ -14,6 +15,16 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public UserControl1()
         {
             InitializeComponent();
+
+            this.deLoginHistoryDateFrom.DateTime = DateTime.Today;
+            this.deLoginHistoryDateTo.DateTime = DateTime.Today;
+
+            OleDbUserControl crud = new OleDbUserControl();
+
+            string query = "select * from LoginHistory";
+            DataSet ds = new DataSet();
+            ds = crud.SelectOleDbTable(crud.Connection, query);
+            this.gcLoingHistoryGrid.DataSource = ds.Tables[0];
         }
     }
 }

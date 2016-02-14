@@ -188,7 +188,7 @@ namespace DevExpress.ProductsDemo.Win {
             //edit.SmallImages = iCollection;
             ImageCollection iCollection = new ImageCollection();
 
-            edit.Items.Add(new ImageComboBoxItem(string.Empty, UserLevel.None, -1));
+            //edit.Items.Add(new ImageComboBoxItem(string.Empty, UserLevel.None, -1));
             edit.Items.Add(new ImageComboBoxItem(GetLevelByUserLevel(UserLevel.Level1), UserLevel.Level1, 0));
             edit.Items.Add(new ImageComboBoxItem(GetLevelByUserLevel(UserLevel.Level2), UserLevel.Level2, 1));
             edit.Items.Add(new ImageComboBoxItem(GetLevelByUserLevel(UserLevel.Level3), UserLevel.Level3, 2));
@@ -219,13 +219,16 @@ namespace DevExpress.ProductsDemo.Win {
         {
             switch (level)
             {
-                case UserLevel.Level1: return "Level1";
-                case UserLevel.Level2: return "Level2";
-                case UserLevel.Level3: return "Level3";
-                default: return "None";
+                //case UserLevel.Level1: return "Level1";
+                //case UserLevel.Level2: return "Level2";
+                //case UserLevel.Level3: return "Level3";
+                //default: return "None";
+                case UserLevel.Level1: return "모니터";
+                case UserLevel.Level2: return "운영자";
+                case UserLevel.Level3: return "A/S요원";
 
             }
-            //return string.Empty;
+            return string.Empty;
         }
         static ImageCollection CreateFlagStatusImageCollection() {
             ImageCollection ret = new ImageCollection();

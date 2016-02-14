@@ -33,7 +33,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.sbLoingHistoryPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -49,6 +48,8 @@
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lcgLoginHistory = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -61,8 +62,6 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -84,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgLoginHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -96,8 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -123,7 +122,6 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3,
             this.gridColumn4});
             this.gridView1.GridControl = this.gcLoingHistoryGrid;
             this.gridView1.Name = "gridView1";
@@ -132,6 +130,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "일시";
+            this.gridColumn1.FieldName = "Datetime";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -139,23 +138,18 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "운영자";
+            this.gridColumn2.FieldName = "UserID";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "동 / 호";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "운영내용";
+            this.gridColumn4.FieldName = "Action";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // layoutControl1
             // 
@@ -173,7 +167,9 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
-            this.tabbedControlGroup1});
+            this.tabbedControlGroup1,
+            this.layoutControlItem7,
+            this.layoutControlItem8});
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1062, 177, 809, 736);
@@ -228,7 +224,7 @@
             this.cbeUser.Name = "cbeUser";
             this.cbeUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbeUser.Size = new System.Drawing.Size(148, 28);
+            this.cbeUser.Size = new System.Drawing.Size(386, 28);
             this.cbeUser.StyleController = this.layoutControl1;
             this.cbeUser.TabIndex = 9;
             // 
@@ -260,6 +256,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deLoginHistoryDateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deLoginHistoryDateTo.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.deLoginHistoryDateTo.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
             this.deLoginHistoryDateTo.Size = new System.Drawing.Size(175, 28);
             this.deLoginHistoryDateTo.StyleController = this.layoutControl1;
             this.deLoginHistoryDateTo.TabIndex = 6;
@@ -283,6 +281,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deLoginHistoryDateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deLoginHistoryDateFrom.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.deLoginHistoryDateFrom.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
             this.deLoginHistoryDateFrom.Size = new System.Drawing.Size(148, 28);
             this.deLoginHistoryDateFrom.StyleController = this.layoutControl1;
             this.deLoginHistoryDateFrom.TabIndex = 4;
@@ -311,6 +311,24 @@
             this.tabbedControlGroup1.SelectedTabPageIndex = -1;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(792, 287);
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.cbeUser;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 32);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(471, 32);
+            this.layoutControlItem7.Text = "운영자";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(78, 22);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.cbeAction;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 64);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(233, 32);
+            this.layoutControlItem8.Text = "운영 내용";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(78, 22);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -334,8 +352,6 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
             this.emptySpaceItem3,
             this.layoutControlItem9,
             this.layoutControlItem10,
@@ -378,17 +394,17 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(233, 32);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 32);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(709, 32);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(942, 32);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(233, 64);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 64);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(709, 32);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(942, 32);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
@@ -435,24 +451,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(17, 32);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.cbeUser;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 32);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(233, 32);
-            this.layoutControlItem7.Text = "운영자";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(78, 22);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.cbeAction;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 64);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(233, 32);
-            this.layoutControlItem8.Text = "운영 내용";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(78, 22);
             // 
             // emptySpaceItem3
             // 
@@ -528,6 +526,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcgLoginHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -540,8 +540,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -558,7 +556,6 @@
         private XtraGrid.Views.Grid.GridView gridView1;
         private XtraGrid.Columns.GridColumn gridColumn1;
         private XtraGrid.Columns.GridColumn gridColumn2;
-        private XtraGrid.Columns.GridColumn gridColumn3;
         private XtraGrid.Columns.GridColumn gridColumn4;
         private XtraLayout.LayoutControl layoutControl1;
         private XtraLayout.LayoutControlGroup layoutControlGroup1;

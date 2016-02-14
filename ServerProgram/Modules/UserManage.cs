@@ -353,10 +353,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 {
                     contact.Level = UserLevel.Level3;
                 }
-                else
-                {
-                    contact.Level = UserLevel.None;
-                }
+
                 contact.Name = row["UserName"].ToString();
                 contact.Phone = row["Phone"].ToString();
                 contact.Password = row["Password"].ToString();

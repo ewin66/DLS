@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,19 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.MailClient.Win;
+using DevExpress.ProductsDemo.Win;
+using DevExpress.ProductsDemo.Win.Controls;
 
 namespace DevExpress.ProductsDemo.Win.Forms {
     public partial class fmLogin : XtraForm {
-
+        OleDbUserControl db;
+        string user = string.Empty;
+        
         public fmLogin() {
             InitializeComponent();
+
+            db = new OleDbUserControl();
+
         }
 
         protected override void OnClosing(CancelEventArgs e) {
@@ -24,8 +32,11 @@ namespace DevExpress.ProductsDemo.Win.Forms {
 
         private void sbOK_Click(object sender, EventArgs e)
         {
-            if( this.textEdit1.Text == "admin" && this.textEdit2.Text == "admin")
+            user = this.textEdit1.Text;
+            if (db.loginCheck(user, this.textEdit2.Text))
             {
+                db.InsertLoginHistory(user, "로그인");
+                
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -42,6 +53,8 @@ namespace DevExpress.ProductsDemo.Win.Forms {
             this.Close();
         }
 
-
+        public string User { 
+            get { return user; } 
+        }
     }
 }

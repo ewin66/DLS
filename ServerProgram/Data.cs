@@ -337,8 +337,8 @@ namespace DevExpress.MailClient.Win {
             get
             {
                 
-                if (level == UserLevel.None)
-                    level = UserLevel.Level1;
+                //if (level == UserLevel.None)
+                //    level = UserLevel.Level1;
                 switch (level)
                 {
                     case UserLevel.Level1:
@@ -381,7 +381,7 @@ namespace DevExpress.MailClient.Win {
         UserLevel level;
         string name;
         public User() : this(string.Empty) { }
-        public User(string name) : this(UserLevel.None, name) { }
+        public User(string name) : this(UserLevel.Level1, name) { }
         public User(UserLevel level, string name)
         {
             this.level = level;

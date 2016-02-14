@@ -5,6 +5,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
 using DevExpress.ProductsDemo.Win.Forms;
+using DevExpress.ProductsDemo.Win.Controls;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
@@ -25,9 +26,11 @@ namespace DevExpress.ProductsDemo.Win {
             //XtraReportsDemos.ConnectionHelper.ApplyDataDirectory(System.IO.Path.GetDirectoryName(path));
 
             DataHelper.ApplicationArguments = arguments;
-            System.Globalization.CultureInfo enUs = new System.Globalization.CultureInfo("en-US");
-            System.Threading.Thread.CurrentThread.CurrentCulture = enUs;
-            System.Threading.Thread.CurrentThread.CurrentUICulture = enUs;
+
+            
+            //System.Globalization.CultureInfo enUs = new System.Globalization.CultureInfo("en-US");
+            //System.Threading.Thread.CurrentThread.CurrentCulture = enUs;
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = enUs;
             DevExpress.Utils.LocalizationHelper.SetCurrentCulture(DataHelper.ApplicationArguments);
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Segoe UI", 8);
@@ -47,8 +50,12 @@ namespace DevExpress.ProductsDemo.Win {
             if( login.DialogResult == DialogResult.OK )
             {
                 Application.Run(new frmMain());
+
+                OleDbUserControl db = new OleDbUserControl();
+                
+                db.InsertLoginHistory(login.User, "로그아웃");
             }
-            
+
             
         }
     }

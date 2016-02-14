@@ -446,6 +446,7 @@
     <Compile Include="Controls\HelpControl.Designer.cs">
       <DependentUpon>HelpControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\OleDbUserControl.cs" />
     <Compile Include="Controls\PrintControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
