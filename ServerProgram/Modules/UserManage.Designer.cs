@@ -186,6 +186,7 @@
             // colUserLevel
             // 
             resources.ApplyResources(this.colUserLevel, "colUserLevel");
+            this.colUserLevel.FieldName = "Level";
             this.colUserLevel.Name = "colUserLevel";
             this.colUserLevel.OptionsColumn.AllowFocus = false;
             this.colUserLevel.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
