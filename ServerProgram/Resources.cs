@@ -38,6 +38,8 @@ namespace DevExpress.MailDemo.Win {
         public const string ContactNew = "NewContact";
         public const string ContactEdit = "EditContact";
         public const string ContactDelete = "DeleteContact";
+        public const string LoginHistorySearch = "LoginHistorySearch";
+
     }
     public class CollectionResources {
         public static List<string> HouseTasks = new List<string>() {

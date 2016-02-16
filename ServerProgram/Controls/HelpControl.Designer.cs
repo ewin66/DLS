@@ -66,7 +66,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.galleryControl1.DesignGalleryItemIndex = 0;
             resources.ApplyResources(this.galleryControl1, "galleryControl1");
             // 
-            // galleryControlGallery1
+            // 
             // 
             this.galleryControl1.Gallery.Appearance.ItemCaptionAppearance.Hovered.Options.UseTextOptions = true;
             this.galleryControl1.Gallery.Appearance.ItemCaptionAppearance.Hovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;

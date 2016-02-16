@@ -62,6 +62,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.panel2 = new System.Windows.Forms.Panel();
             this.zoomTrackBarControl1 = new DevExpress.XtraEditors.ZoomTrackBarControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -130,18 +131,18 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.ddbPrintStyle.Appearance.Options.UseFont = true;
             this.ddbPrintStyle.Appearance.Options.UseTextOptions = true;
             this.ddbPrintStyle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbPrintStyle.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbPrintStyle, "ddbPrintStyle");
             this.ddbPrintStyle.Name = "ddbPrintStyle";
-            this.ddbPrintStyle.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbPrintStyle.StyleController = this.layoutControl1;
             // 
             // ddbDuplex
             // 
             this.ddbDuplex.Appearance.Options.UseTextOptions = true;
             this.ddbDuplex.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbDuplex.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbDuplex, "ddbDuplex");
             this.ddbDuplex.Name = "ddbDuplex";
-            this.ddbDuplex.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbDuplex.StyleController = this.layoutControl1;
             // 
             // printerLabel
@@ -159,9 +160,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             // 
             this.ddbPrinter.Appearance.Options.UseTextOptions = true;
             this.ddbPrinter.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbPrinter.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbPrinter, "ddbPrinter");
             this.ddbPrinter.Name = "ddbPrinter";
-            this.ddbPrinter.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbPrinter.StyleController = this.layoutControl1;
             // 
             // copySpinEdit
@@ -219,36 +220,36 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             // 
             this.ddbOrientation.Appearance.Options.UseTextOptions = true;
             this.ddbOrientation.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbOrientation.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbOrientation, "ddbOrientation");
             this.ddbOrientation.Name = "ddbOrientation";
-            this.ddbOrientation.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbOrientation.StyleController = this.layoutControl1;
             // 
             // ddbPaperSize
             // 
             this.ddbPaperSize.Appearance.Options.UseTextOptions = true;
             this.ddbPaperSize.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbPaperSize.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbPaperSize, "ddbPaperSize");
             this.ddbPaperSize.Name = "ddbPaperSize";
-            this.ddbPaperSize.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbPaperSize.StyleController = this.layoutControl1;
             // 
             // ddbMargins
             // 
             this.ddbMargins.Appearance.Options.UseTextOptions = true;
             this.ddbMargins.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbMargins.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbMargins, "ddbMargins");
             this.ddbMargins.Name = "ddbMargins";
-            this.ddbMargins.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbMargins.StyleController = this.layoutControl1;
             // 
             // ddbCollate
             // 
             this.ddbCollate.Appearance.Options.UseTextOptions = true;
             this.ddbCollate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.ddbCollate.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             resources.ApplyResources(this.ddbCollate, "ddbCollate");
             this.ddbCollate.Name = "ddbCollate";
-            this.ddbCollate.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
             this.ddbCollate.StyleController = this.layoutControl1;
             // 
             // layoutControlGroup1
@@ -272,7 +273,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrintStyle});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(520, 679);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(866, 940);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciPrintButton
@@ -286,7 +287,6 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrintButton.Size = new System.Drawing.Size(84, 80);
             this.lciPrintButton.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPrintButton.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPrintButton.TextToControlDistance = 0;
             this.lciPrintButton.TextVisible = false;
             // 
             // lciOrientation
@@ -297,10 +297,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciOrientation.MaxSize = new System.Drawing.Size(0, 56);
             this.lciOrientation.MinSize = new System.Drawing.Size(100, 56);
             this.lciOrientation.Name = "lciOrientation";
-            this.lciOrientation.Size = new System.Drawing.Size(500, 56);
+            this.lciOrientation.Size = new System.Drawing.Size(846, 56);
             this.lciOrientation.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciOrientation.TextSize = new System.Drawing.Size(0, 0);
-            this.lciOrientation.TextToControlDistance = 0;
             this.lciOrientation.TextVisible = false;
             // 
             // lciMargins
@@ -311,10 +310,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciMargins.MaxSize = new System.Drawing.Size(0, 56);
             this.lciMargins.MinSize = new System.Drawing.Size(100, 56);
             this.lciMargins.Name = "lciMargins";
-            this.lciMargins.Size = new System.Drawing.Size(500, 56);
+            this.lciMargins.Size = new System.Drawing.Size(846, 56);
             this.lciMargins.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciMargins.TextSize = new System.Drawing.Size(0, 0);
-            this.lciMargins.TextToControlDistance = 0;
             this.lciMargins.TextVisible = false;
             // 
             // lciPaperSize
@@ -325,10 +323,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPaperSize.MaxSize = new System.Drawing.Size(0, 56);
             this.lciPaperSize.MinSize = new System.Drawing.Size(100, 56);
             this.lciPaperSize.Name = "lciPaperSize";
-            this.lciPaperSize.Size = new System.Drawing.Size(500, 56);
+            this.lciPaperSize.Size = new System.Drawing.Size(846, 56);
             this.lciPaperSize.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPaperSize.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPaperSize.TextToControlDistance = 0;
             this.lciPaperSize.TextVisible = false;
             // 
             // lciPrintLabel
@@ -339,10 +336,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrintLabel.MaxSize = new System.Drawing.Size(0, 36);
             this.lciPrintLabel.MinSize = new System.Drawing.Size(14, 36);
             this.lciPrintLabel.Name = "lciPrintLabel";
-            this.lciPrintLabel.Size = new System.Drawing.Size(416, 36);
+            this.lciPrintLabel.Size = new System.Drawing.Size(762, 36);
             this.lciPrintLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPrintLabel.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPrintLabel.TextToControlDistance = 0;
             this.lciPrintLabel.TextVisible = false;
             // 
             // lciCopiesSpinEdit
@@ -356,7 +352,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciCopiesSpinEdit.Padding = new DevExpress.XtraLayout.Utils.Padding(20, 20, 2, 2);
             this.lciCopiesSpinEdit.Size = new System.Drawing.Size(180, 44);
             this.lciCopiesSpinEdit.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciCopiesSpinEdit.TextSize = new System.Drawing.Size(36, 13);
+            this.lciCopiesSpinEdit.TextSize = new System.Drawing.Size(58, 22);
             // 
             // emptySpaceItem1
             // 
@@ -364,7 +360,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
             this.emptySpaceItem1.Location = new System.Drawing.Point(264, 36);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(236, 44);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(582, 44);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciSettingsLabel
@@ -375,10 +371,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciSettingsLabel.MaxSize = new System.Drawing.Size(0, 36);
             this.lciSettingsLabel.MinSize = new System.Drawing.Size(14, 36);
             this.lciSettingsLabel.Name = "lciSettingsLabel";
-            this.lciSettingsLabel.Size = new System.Drawing.Size(500, 36);
+            this.lciSettingsLabel.Size = new System.Drawing.Size(846, 36);
             this.lciSettingsLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciSettingsLabel.TextSize = new System.Drawing.Size(0, 0);
-            this.lciSettingsLabel.TextToControlDistance = 0;
             this.lciSettingsLabel.TextVisible = false;
             // 
             // lciPrinterLabel
@@ -389,10 +384,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrinterLabel.MaxSize = new System.Drawing.Size(0, 36);
             this.lciPrinterLabel.MinSize = new System.Drawing.Size(14, 36);
             this.lciPrinterLabel.Name = "lciPrinterLabel";
-            this.lciPrinterLabel.Size = new System.Drawing.Size(500, 36);
+            this.lciPrinterLabel.Size = new System.Drawing.Size(846, 36);
             this.lciPrinterLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPrinterLabel.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPrinterLabel.TextToControlDistance = 0;
             this.lciPrinterLabel.TextVisible = false;
             // 
             // lciPrinter
@@ -403,10 +397,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrinter.MaxSize = new System.Drawing.Size(0, 56);
             this.lciPrinter.MinSize = new System.Drawing.Size(100, 56);
             this.lciPrinter.Name = "lciPrinter";
-            this.lciPrinter.Size = new System.Drawing.Size(500, 56);
+            this.lciPrinter.Size = new System.Drawing.Size(846, 56);
             this.lciPrinter.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPrinter.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPrinter.TextToControlDistance = 0;
             this.lciPrinter.TextVisible = false;
             // 
             // lciDuplex
@@ -417,10 +410,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciDuplex.MaxSize = new System.Drawing.Size(0, 56);
             this.lciDuplex.MinSize = new System.Drawing.Size(68, 56);
             this.lciDuplex.Name = "lciDuplex";
-            this.lciDuplex.Size = new System.Drawing.Size(500, 56);
+            this.lciDuplex.Size = new System.Drawing.Size(846, 56);
             this.lciDuplex.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciDuplex.TextSize = new System.Drawing.Size(0, 0);
-            this.lciDuplex.TextToControlDistance = 0;
             this.lciDuplex.TextVisible = false;
             // 
             // lciCollated
@@ -431,10 +423,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciCollated.MaxSize = new System.Drawing.Size(0, 56);
             this.lciCollated.MinSize = new System.Drawing.Size(100, 56);
             this.lciCollated.Name = "lciCollated";
-            this.lciCollated.Size = new System.Drawing.Size(500, 56);
+            this.lciCollated.Size = new System.Drawing.Size(846, 56);
             this.lciCollated.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciCollated.TextSize = new System.Drawing.Size(0, 0);
-            this.lciCollated.TextToControlDistance = 0;
             this.lciCollated.TextVisible = false;
             // 
             // lciPrintStyle
@@ -445,10 +436,9 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.lciPrintStyle.MaxSize = new System.Drawing.Size(0, 56);
             this.lciPrintStyle.MinSize = new System.Drawing.Size(79, 26);
             this.lciPrintStyle.Name = "lciPrintStyle";
-            this.lciPrintStyle.Size = new System.Drawing.Size(500, 171);
+            this.lciPrintStyle.Size = new System.Drawing.Size(846, 432);
             this.lciPrintStyle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPrintStyle.TextSize = new System.Drawing.Size(0, 0);
-            this.lciPrintStyle.TextToControlDistance = 0;
             this.lciPrintStyle.TextVisible = false;
             // 
             // pnlControl
@@ -503,8 +493,8 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.pageButtonEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.pageButtonEdit.Properties.AutoHeight = ((bool)(resources.GetObject("pageButtonEdit.Properties.AutoHeight")));
             this.pageButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pageButtonEdit.Properties.Buttons"))), resources.GetString("pageButtonEdit.Properties.Buttons1"), ((int)(resources.GetObject("pageButtonEdit.Properties.Buttons2"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons3"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons4"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("pageButtonEdit.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("pageButtonEdit.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons8")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pageButtonEdit.Properties.Buttons9"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pageButtonEdit.Properties.Buttons"))), resources.GetString("pageButtonEdit.Properties.Buttons1"), ((int)(resources.GetObject("pageButtonEdit.Properties.Buttons2"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons3"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons4"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("pageButtonEdit.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("pageButtonEdit.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("pageButtonEdit.Properties.Buttons8"), ((object)(resources.GetObject("pageButtonEdit.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("pageButtonEdit.Properties.Buttons10"))), ((bool)(resources.GetObject("pageButtonEdit.Properties.Buttons11")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pageButtonEdit.Properties.Buttons12"))))});
             this.pageButtonEdit.Properties.DisplayFormat.FormatString = "Page {0}";
             this.pageButtonEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.pageButtonEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.pageButtonEdit_ButtonClick);
@@ -522,6 +512,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.zoomTrackBarControl1.Name = "zoomTrackBarControl1";
             this.zoomTrackBarControl1.Properties.Alignment = DevExpress.Utils.VertAlignment.Center;
             this.zoomTrackBarControl1.Properties.Maximum = 80;
+            this.zoomTrackBarControl1.Properties.Middle = 5;
             this.zoomTrackBarControl1.Properties.ScrollThumbStyle = DevExpress.XtraEditors.Repository.ScrollThumbStyle.ArrowDownRight;
             this.zoomTrackBarControl1.Properties.SmallChange = 2;
             this.zoomTrackBarControl1.Value = 40;
@@ -542,6 +533,7 @@ namespace DevExpress.ProductsDemo.Win.Controls {
             this.Name = "PrintControl";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

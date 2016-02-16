@@ -431,6 +431,7 @@
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Common\Extension.cs" />
     <Compile Include="Controls.cs">
       <SubType>UserControl</SubType>
     </Compile>
