@@ -13,16 +13,17 @@ using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.MailClient.Win;
 using DevExpress.ProductsDemo.Win;
 using DevExpress.ProductsDemo.Win.Controls;
+using DevExpress.ProductsDemo.Win.Common;
 
 namespace DevExpress.ProductsDemo.Win.Forms {
     public partial class fmLogin : XtraForm {
-        OleDbUserControl db;
+        MySqlManage db;
         string user = string.Empty;
         
         public fmLogin() {
             InitializeComponent();
 
-            db = new OleDbUserControl();
+            db = new MySqlManage();
 
         }
 
@@ -33,9 +34,16 @@ namespace DevExpress.ProductsDemo.Win.Forms {
         private void sbOK_Click(object sender, EventArgs e)
         {
             user = this.textEdit1.Text;
-            if (db.loginCheck(user, this.textEdit2.Text))
+
+            string qry = string.Format("select MST06AID, MST06PWD from amr_mst06 where MST06AID = '{0}'", user);
+            
+
+            if (db.loginCheck(db.Connection, qry, user.ToUpper(), this.textEdit2.Text))
             {
-                db.InsertLoginHistory(user, "로그인");
+
+                //string sql = string.Format("insert into LoginHistory values('{0}', '{1}', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), userid, action);
+
+                //db.InsertLoginHistory(db.Connection, user, "로그인");
                 
                 this.DialogResult = DialogResult.OK;
                 this.Close();

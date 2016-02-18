@@ -21,6 +21,7 @@ using DevExpress.XtraPivotGrid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraSplashScreen;
+using MySql.Data.MySqlClient;
 
 namespace DevExpress.ProductsDemo.Win {
     public class ModulesNavigator {
@@ -135,6 +136,7 @@ namespace DevExpress.ProductsDemo.Win {
     public class BaseModule : BaseControl {
         protected string partName = string.Empty;
         protected OleDbConnection connection;
+        protected MySqlConnection mariaDbConnection;  
 
         public BaseModule() { }
 
@@ -255,13 +257,22 @@ namespace DevExpress.ProductsDemo.Win {
 
         protected virtual void InitNWindData()
         {
-            string DBFileName = string.Empty;
+            //string DBFileName = string.Empty;
 
-            DBFileName = DevExpress.Utils.FilesHelper.FindingFileName(Application.StartupPath, "demo.mdb");
-            if (DBFileName != string.Empty)
-            {
-                InitMDBData("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + DBFileName);
-            }
+            //DBFileName = DevExpress.Utils.FilesHelper.FindingFileName(Application.StartupPath, "demo.mdb");
+            //if (DBFileName != string.Empty)
+            //{
+            //    InitMDBData("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + DBFileName);
+            //}
+
+
+                InitMDBData("SERVER=localhost; DATABASE=AMR; UID=root; PASSWORD=root;");
+
+            //string MyConString = "SERVER=localhost; DATABASE=AMR; UID=root; PASSWORD=root;";
+
+            //mariaDbConnection = new MySqlConnection(MyConString);
+
+            //mariaDbConnection.Open();
 
         }
         protected virtual void InitMDBData(string connectionString)
@@ -270,6 +281,12 @@ namespace DevExpress.ProductsDemo.Win {
         protected virtual OleDbConnection Connection { 
             get { return connection; }
             set { connection = value; }
+        }
+
+        protected virtual MySqlConnection MariaDbConnection
+        {
+            get { return mariaDbConnection; }
+            set { mariaDbConnection = value; }
         }
         protected virtual bool AllowZoomControl { get { return false; } }
         protected virtual void SetZoomCaption() { }

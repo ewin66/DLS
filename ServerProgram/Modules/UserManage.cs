@@ -14,10 +14,11 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Layout.ViewInfo;
 using DevExpress.ProductsDemo.Win.Forms;
+using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
-
 using System.Collections;
+using MySql.Data.MySqlClient;
 
 namespace DevExpress.ProductsDemo.Win.Modules {
     public partial class UserManage : BaseModule {
@@ -191,8 +192,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
 
         void InsertUserInfo(UserInfo contact)
         {
-            
-            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+
+            MySqlDataReader Reader;
+            MySqlCommand command = MariaDbConnection.CreateCommand();
+  
             int level = 0;
             if (contact.Level == UserLevel.Level1)
                 level = 1;
@@ -200,10 +203,11 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 level = 2;
             else if (contact.Level == UserLevel.Level3)
                 level = 3;
-            string sql = string.Format("insert into UserInfo values('{0}', '{1}', '{2}', '{3}', '{4}')", contact.Id, level, contact.Name, contact.Phone, contact.Password);
+            string sql = string.Format("insert into AMR_MST06 values('{0}', '{1}', '{2}', '{3}', '{4}')", contact.Id, contact.Password, contact.Name, level, contact.Phone);
+            command.CommandText = sql;
 
-            oledbAdapter.InsertCommand = new OleDbCommand(sql, Connection);
-            oledbAdapter.InsertCommand.ExecuteNonQuery();
+            Reader = command.ExecuteReader();
+            Reader.Close();
         }
         void UpdateUserInfo(UserInfo contact)
         {
@@ -326,38 +330,36 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         
         protected override void InitMDBData(string connectionString)
         {
-            
-            Connection = new OleDbConnection(connectionString);
-            Connection.Open();
 
-            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter();
+            MariaDbConnection = new MySqlConnection(connectionString);
+            MariaDbConnection.Open();
+            MySqlManage sql = new MySqlManage();
             DataSet ds = new DataSet();
-            oleDbDataAdapter.SelectCommand = new OleDbCommand("SELECT UserID, Grade, UserName, Phone, Password FROM " + tblGrid, Connection);
-            oleDbDataAdapter.Fill(ds, tblGrid);
-            oleDbDataAdapter.Dispose();
+            ds = sql.SelectMariaDBTable(MariaDbConnection, "SELECT * FROM AMR_MST06");
+            
 
-            foreach( DataRow row in ds.Tables[tblGrid].Rows)
+            foreach( DataRow row in ds.Tables[0].Rows)
             {
                 UserInfo contact = new UserInfo();
 
-                contact.Id = row["UserID"].ToString();
-                if (row["Grade"].ToString() == "1")
+                contact.Id = row["MST06AID"].ToString();
+                if (row["MST06LEV"].ToString() == "1")
                 {
                     contact.Level = UserLevel.Level1;
                 }
-                else if (row["Grade"].ToString() == "2")
+                else if (row["MST06LEV"].ToString() == "2")
                 {
                     contact.Level = UserLevel.Level2;
                 }
-                else if (row["Grade"].ToString() == "3")
+                else if (row["MST06LEV"].ToString() == "3")
                 {
                     contact.Level = UserLevel.Level3;
                 }
 
-                contact.Name = row["UserName"].ToString();
-                contact.Phone = row["Phone"].ToString();
-                contact.Password = row["Password"].ToString();
-                contact.ConfirmPassword = row["Password"].ToString();
+                contact.Name = row["MST06NAM"].ToString();
+                contact.Phone = row["MST06PHN"].ToString();
+                contact.Password = row["MST06PWD"].ToString();
+                contact.ConfirmPassword = row["MST06PWD"].ToString();
 
                 DataHelper.UserInfos.Add(contact);
             }

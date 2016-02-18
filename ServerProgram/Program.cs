@@ -6,6 +6,7 @@ using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
 using DevExpress.ProductsDemo.Win.Forms;
 using DevExpress.ProductsDemo.Win.Controls;
+using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
@@ -43,7 +44,6 @@ namespace DevExpress.ProductsDemo.Win {
             //SplashScreenManager.ShowForm(null, typeof(ssMain), true, true, false, 1000);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
 
             fmLogin login = new fmLogin();
             Application.Run(login);

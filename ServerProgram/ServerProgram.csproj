@@ -362,6 +362,7 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -432,6 +433,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Common\Extension.cs" />
+    <Compile Include="Common\MySqlManage.cs" />
     <Compile Include="Controls.cs">
       <SubType>UserControl</SubType>
     </Compile>
