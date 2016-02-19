@@ -41,9 +41,10 @@ namespace DevExpress.ProductsDemo.Win.Forms {
             if (db.loginCheck(db.Connection, qry, user.ToUpper(), this.textEdit2.Text))
             {
 
-                //string sql = string.Format("insert into LoginHistory values('{0}', '{1}', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), userid, action);
+                string sql = string.Format("insert into amr_iqr03 values('{0}', '{1}', '1234', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), user.ToUpper(), 12);
 
-                //db.InsertLoginHistory(db.Connection, user, "로그인");
+                
+                db.InsertLoginHistory(db.Connection, sql, user.ToUpper() );
                 
                 this.DialogResult = DialogResult.OK;
                 this.Close();

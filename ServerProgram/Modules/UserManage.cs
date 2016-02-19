@@ -211,7 +211,9 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         }
         void UpdateUserInfo(UserInfo contact)
         {
-            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+            MySqlDataReader Reader;
+            MySqlCommand command = MariaDbConnection.CreateCommand();
+  
 
             int level = 0;
             if (contact.Level == UserLevel.Level1)
@@ -220,25 +222,28 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 level = 2;
             else if (contact.Level == UserLevel.Level3)
                 level = 3;
-            string sql = string.Format("update UserInfo set [UserID] = '{0}', [Grade] = '{1}', [UserName] = '{2}', [Phone] = '{3}', [Password] = '{4}' where UserID = '{5}'",
+            string sql = string.Format("update AMR_MST06 set MST06AID = '{0}', MST06LEV = '{1}', MST06NAM = '{2}', MST06PHN = '{3}', MST06PWD = '{4}' where MST06AID = '{5}'",
                 contact.Id, level, contact.Name, contact.Phone, contact.Password, contact.Id);
 
 
-            oledbAdapter.UpdateCommand = Connection.CreateCommand();
-            oledbAdapter.UpdateCommand.CommandText = sql;
-            oledbAdapter.UpdateCommand.ExecuteNonQuery();
+            command.CommandText = sql;
+
+            Reader = command.ExecuteReader();
+            Reader.Close();
 
         }
         void DeleteUserInfo(UserInfo contact)
         {
-            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+            MySqlDataReader Reader;
+            MySqlCommand command = MariaDbConnection.CreateCommand();
 
-            string sql = string.Format("delete from UserInfo where UserID = '{0}'", contact.Id);
+            string sql = string.Format("delete from AMR_MST06 where MST06AID = '{0}'", contact.Id);
 
 
-            oledbAdapter.DeleteCommand = Connection.CreateCommand();
-            oledbAdapter.DeleteCommand.CommandText = sql;
-            oledbAdapter.DeleteCommand.ExecuteNonQuery();
+            command.CommandText = sql;
+
+            Reader = command.ExecuteReader();
+            Reader.Close();
         }
 
         DialogResult EditUser(UserInfo contact)

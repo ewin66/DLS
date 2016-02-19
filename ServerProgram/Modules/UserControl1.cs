@@ -32,11 +32,11 @@ namespace DevExpress.ProductsDemo.Win.Modules
             {
                 case TagResources.LoginHistorySearch:
                     this.gcLoingHistoryGrid.SafeInvoke(d => d.DataSource = null);
-                    OleDbUserControl crud = new OleDbUserControl();
+                    MySqlManage crud = new MySqlManage();
 
-                    string query = "select * from LoginHistory";
+                    string query = "select IQR03DAT, IQR03AID,  IQR03MNO from amr_iqr03";
                     DataSet ds = new DataSet();
-                    ds = crud.SelectOleDbTable(crud.Connection, query);
+                    ds = crud.SelectMariaDBTable(crud.Connection, query);
                     this.gcLoingHistoryGrid.DataSource = ds.Tables[0];
 
                     break;

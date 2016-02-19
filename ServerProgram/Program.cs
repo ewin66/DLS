@@ -52,9 +52,10 @@ namespace DevExpress.ProductsDemo.Win {
             {
                 Application.Run(new frmMain());
 
-                OleDbUserControl db = new OleDbUserControl();
-                
-                db.InsertLoginHistory(login.User, "로그아웃");
+                MySqlManage db = new MySqlManage();
+
+                string sql = string.Format("insert into amr_iqr03 values('{0}', '{1}', '1234', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), login.User, 14);
+                db.InsertLoginHistory(db.Connection, sql, login.User);
             }
 
             

@@ -72,14 +72,12 @@ namespace DevExpress.ProductsDemo.Win.Common
             return false;
         }
 
-        public void InsertLoginHistory(MySqlConnection conn, string query, string userid, string action)
+        public void InsertLoginHistory(MySqlConnection conn, string query, string userid)
         {
             MySqlDataReader Reader;
             MySqlCommand command = conn.CreateCommand();
             command.CommandText = query;
             Reader = command.ExecuteReader();
-
-            
 
     
         }
