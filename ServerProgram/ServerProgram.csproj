@@ -500,6 +500,12 @@
     </Compile>
     <Compile Include="Data.cs">
     </Compile>
+    <Compile Include="Forms\frmEdit_AMR_MST04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEdit_AMR_MST04.Designer.cs">
+      <DependentUpon>frmEdit_AMR_MST04.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,6 +543,12 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
+    <Compile Include="Modules\ComManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ComManage.Designer.cs">
+      <DependentUpon>ComManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\DataAnalytics.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -721,6 +733,10 @@
     <EmbeddedResource Include="Forms\frmEditTask.resx">
       <DependentUpon>frmEditTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEdit_AMR_MST04.resx">
+      <DependentUpon>frmEdit_AMR_MST04.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -737,6 +753,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ComManage.resx">
+      <DependentUpon>ComManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\DataAnalytics.resx">
       <DependentUpon>DataAnalytics.cs</DependentUpon>

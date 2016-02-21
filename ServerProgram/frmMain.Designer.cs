@@ -83,12 +83,14 @@
             this.bbiLoginHistorySearch = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiNewSno = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiEditSno = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDeleteSno = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiNewCmp = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiNewDon = new DevExpress.XtraBars.BarButtonItem();
             this.rpContacts = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgContacts = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgCurrentView = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -98,6 +100,7 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpTasks = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgFollowUp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -143,9 +146,6 @@
             this.nbiPdf = new DevExpress.XtraNavBar.NavBarItem();
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
             this.pmFlagStatus = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -203,14 +203,14 @@
             this.bbiLoginHistorySearch,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem6,
+            this.bbiNewSno,
+            this.bbiEditSno,
+            this.bbiDeleteSno,
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem1,
-            this.barButtonItem10});
+            this.bbiNewCmp,
+            this.bbiNewDon});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
             this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -654,29 +654,29 @@
             this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
             this.barButtonItem3.Name = "barButtonItem3";
             // 
-            // barButtonItem4
+            // bbiNewSno
             // 
-            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
-            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
-            this.barButtonItem4.Id = 108;
-            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
-            this.barButtonItem4.Name = "barButtonItem4";
+            resources.ApplyResources(this.bbiNewSno, "bbiNewSno");
+            this.bbiNewSno.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiNewSno.Glyph")));
+            this.bbiNewSno.Id = 108;
+            this.bbiNewSno.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiNewSno.LargeGlyph")));
+            this.bbiNewSno.Name = "bbiNewSno";
             // 
-            // barButtonItem5
+            // bbiEditSno
             // 
-            resources.ApplyResources(this.barButtonItem5, "barButtonItem5");
-            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
-            this.barButtonItem5.Id = 109;
-            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
-            this.barButtonItem5.Name = "barButtonItem5";
+            resources.ApplyResources(this.bbiEditSno, "bbiEditSno");
+            this.bbiEditSno.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiEditSno.Glyph")));
+            this.bbiEditSno.Id = 109;
+            this.bbiEditSno.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiEditSno.LargeGlyph")));
+            this.bbiEditSno.Name = "bbiEditSno";
             // 
-            // barButtonItem6
+            // bbiDeleteSno
             // 
-            resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
-            this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
-            this.barButtonItem6.Id = 110;
-            this.barButtonItem6.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.LargeGlyph")));
-            this.barButtonItem6.Name = "barButtonItem6";
+            resources.ApplyResources(this.bbiDeleteSno, "bbiDeleteSno");
+            this.bbiDeleteSno.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiDeleteSno.Glyph")));
+            this.bbiDeleteSno.Id = 110;
+            this.bbiDeleteSno.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDeleteSno.LargeGlyph")));
+            this.bbiDeleteSno.Name = "bbiDeleteSno";
             // 
             // barButtonItem7
             // 
@@ -701,6 +701,22 @@
             this.barButtonItem9.Id = 113;
             this.barButtonItem9.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.LargeGlyph")));
             this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // bbiNewCmp
+            // 
+            resources.ApplyResources(this.bbiNewCmp, "bbiNewCmp");
+            this.bbiNewCmp.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiNewCmp.Glyph")));
+            this.bbiNewCmp.Id = 1;
+            this.bbiNewCmp.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiNewCmp.LargeGlyph")));
+            this.bbiNewCmp.Name = "bbiNewCmp";
+            // 
+            // bbiNewDon
+            // 
+            resources.ApplyResources(this.bbiNewDon, "bbiNewDon");
+            this.bbiNewDon.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiNewDon.Glyph")));
+            this.bbiNewDon.Id = 2;
+            this.bbiNewDon.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiNewDon.LargeGlyph")));
+            this.bbiNewDon.Name = "bbiNewDon";
             // 
             // rpContacts
             // 
@@ -771,11 +787,18 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiNewSno);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiEditSno);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiDeleteSno);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             resources.ApplyResources(this.ribbonPageGroup2, "ribbonPageGroup2");
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.bbiNewCmp);
+            this.ribbonPageGroup4.ItemLinks.Add(this.bbiNewDon);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
             // 
             // rpTasks
             // 
@@ -941,6 +964,7 @@
             // navBarGroup1
             // 
             resources.ApplyResources(this.navBarGroup1, "navBarGroup1");
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Large;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -1154,29 +1178,6 @@
             this.pmFlagStatus.Name = "pmFlagStatus";
             this.pmFlagStatus.Ribbon = this.ribbonControl1;
             // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
-            // 
-            // barButtonItem1
-            // 
-            resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem10
-            // 
-            resources.ApplyResources(this.barButtonItem10, "barButtonItem10");
-            this.barButtonItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.Glyph")));
-            this.barButtonItem10.Id = 2;
-            this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
-            this.barButtonItem10.Name = "barButtonItem10";
-            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -1307,16 +1308,16 @@
         private XtraBars.BarButtonItem bbiLoginHistorySearch;
         private XtraBars.BarButtonItem barButtonItem2;
         private XtraBars.BarButtonItem barButtonItem3;
-        private XtraBars.BarButtonItem barButtonItem4;
-        private XtraBars.BarButtonItem barButtonItem5;
-        private XtraBars.BarButtonItem barButtonItem6;
+        private XtraBars.BarButtonItem bbiNewSno;
+        private XtraBars.BarButtonItem bbiEditSno;
+        private XtraBars.BarButtonItem bbiDeleteSno;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private XtraBars.BarButtonItem barButtonItem7;
         private XtraBars.BarButtonItem barButtonItem8;
         private XtraBars.BarButtonItem barButtonItem9;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private XtraBars.BarButtonItem barButtonItem1;
-        private XtraBars.BarButtonItem barButtonItem10;
+        private XtraBars.BarButtonItem bbiNewCmp;
+        private XtraBars.BarButtonItem bbiNewDon;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }

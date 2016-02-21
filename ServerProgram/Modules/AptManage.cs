@@ -90,7 +90,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 case TagResources.FlipLayout:
                     layoutControl1.Root.FlipLayout();
                     break;
-                case TagResources.ContactDelete:
+                case TagResources.SnoDelete:
                     if(CurrentContact == null) return;
                     int index = gridView1.FocusedRowHandle;
                     gidControlAptManage.MainView.BeginDataUpdate();
@@ -106,7 +106,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                     gridView1.FocusedRowHandle = index;
                     ShowInfo(gridView1);
                     break;
-                case TagResources.ContactNew:
+                case TagResources.SnoNew:
                     AMR_MST04 contact = new AMR_MST04();
                     if(EditUser(contact) == DialogResult.OK) {
                         gidControlAptManage.MainView.BeginDataUpdate();
@@ -125,7 +125,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                         }
                     }
                     break;
-                case TagResources.ContactEdit:
+                case TagResources.SnoEdit:
                     EditUser(CurrentContact);
                     break;
             }
@@ -174,10 +174,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             if(contact == null) return DialogResult.Ignore;
             DialogResult ret = DialogResult.Cancel;
             Cursor.Current = Cursors.WaitCursor;
-            //using (frmEditUser frm = new frmEditUser(contact, OwnerForm.Ribbon))
-            //{
-            //    ret = frm.ShowDialog(OwnerForm);
-            //}
+            using (frmEdit_AMR_MST04 frm = new frmEdit_AMR_MST04(contact, OwnerForm.Ribbon))
+            {
+                ret = frm.ShowDialog(OwnerForm);
+            }
             UpdateCurrentContact();
             Cursor.Current = Cursors.Default;
             return ret;

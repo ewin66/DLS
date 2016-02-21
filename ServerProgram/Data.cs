@@ -320,6 +320,10 @@ namespace DevExpress.MailClient.Win {
             this.MST04PHN = info.MST04PHN;
 
         }
+        public AMR_MST04 Clone()
+        {
+            return new AMR_MST04(this);
+        }
         #region IComparable Members
 
         public int CompareTo(object obj)

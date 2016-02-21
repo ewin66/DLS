@@ -705,10 +705,10 @@
         h7xAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem4.Caption" xml:space="preserve">
+  <data name="bbiNewSno.Caption" xml:space="preserve">
     <value>신규</value>
   </data>
-  <data name="barButtonItem4.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewSno.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAARdEVYdFRpdGxlAENvbnRhY3Q7TmV341PvfgAAAk5JREFUOE+l0u1LU1EcB/Dr0m09SG8kEIJ6
@@ -724,7 +724,7 @@
         WlpA/+siYjWx5g+KF9GzmBDwBfnDvwHzA+YKeCy9H+Q7AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem4.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewSno.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAARdEVYdFRpdGxlAENvbnRhY3Q7TmV341PvfgAABthJREFUWEfFl2lUVGUYx6+22r6fU7aXbX7q
@@ -760,10 +760,10 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="barButtonItem5.Caption" xml:space="preserve">
+  <data name="bbiEditSno.Caption" xml:space="preserve">
     <value>수정</value>
   </data>
-  <data name="barButtonItem5.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiEditSno.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAqdEVYdFRpdGxlAENvbnRhY3Q7Q2FyZDtJbmZvO0RldGFpbDtQZXJzb247RWRpdOGxk1gAAALZ
@@ -782,7 +782,7 @@
         xIlFJMPLlvwEi8oKAcyr6MoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="barButtonItem5.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiEditSno.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAqdEVYdFRpdGxlAENvbnRhY3Q7Q2FyZDtJbmZvO0RldGFpbDtQZXJzb247RWRpdOGxk1gAAAhb
@@ -824,10 +824,10 @@
         pnbn6xNlT8sThSU4qDU4vyEXFBcjFxSXL9eGbcp9F0yQPT0TZP8GTvbMX/PjRVUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="barButtonItem6.Caption" xml:space="preserve">
+  <data name="bbiDeleteSno.Caption" xml:space="preserve">
     <value>삭제</value>
   </data>
-  <data name="barButtonItem6.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiDeleteSno.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAApdEVYdFRpdGxlAFJlbW92ZTtEZWxldGU7QmFycztSaWJib247U3RhbmRhcmQ7Y1ZIMAAAAnhJ
@@ -844,7 +844,7 @@
         bC8nnR9ARYN0vjKGJLRfqIUeGekF0ocV9NLl30HYT5jov8COKRjfAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem6.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiDeleteSno.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAApdEVYdFRpdGxlAFJlbW92ZTtEZWxldGU7QmFycztSaWJib247U3RhbmRhcmQ7Y1ZIMAAAB9ZJ
@@ -1087,10 +1087,10 @@
         h7xAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
+  <data name="bbiNewCmp.Caption" xml:space="preserve">
     <value>단지 등록</value>
   </data>
-  <data name="barButtonItem1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewCmp.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAOdEVYdFRpdGxlAFRhc2s7TmV30ugvpgAAAuhJREFUOE9tkXlIk2Ecx980z7T8QwIhMCjpUMKj
@@ -1109,7 +1109,7 @@
         AW7EVAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="barButtonItem1.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewCmp.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAOdEVYdFRpdGxlAFRhc2s7TmV30ugvpgAACUFJREFUWEetlwdYVFcWx5+aaNbsxuh2dY1dwRrX
@@ -1155,10 +1155,10 @@
         P9pZ9rhbpMOtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem10.Caption" xml:space="preserve">
+  <data name="bbiNewDon.Caption" xml:space="preserve">
     <value>동 등록</value>
   </data>
-  <data name="barButtonItem10.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewDon.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAOdEVYdFRpdGxlAFRhc2s7TmV30ugvpgAAAuhJREFUOE9tkXlIk2Ecx980z7T8QwIhMCjpUMKj
@@ -1177,7 +1177,7 @@
         AW7EVAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="barButtonItem10.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiNewDon.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAOdEVYdFRpdGxlAFRhc2s7TmV30ugvpgAACUFJREFUWEetlwdYVFcWx5+aaNbsxuh2dY1dwRrX
@@ -2782,22 +2782,22 @@
   <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem4.Name" xml:space="preserve">
-    <value>barButtonItem4</value>
+  <data name="&gt;&gt;bbiNewSno.Name" xml:space="preserve">
+    <value>bbiNewSno</value>
   </data>
-  <data name="&gt;&gt;barButtonItem4.Type" xml:space="preserve">
+  <data name="&gt;&gt;bbiNewSno.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem5.Name" xml:space="preserve">
-    <value>barButtonItem5</value>
+  <data name="&gt;&gt;bbiEditSno.Name" xml:space="preserve">
+    <value>bbiEditSno</value>
   </data>
-  <data name="&gt;&gt;barButtonItem5.Type" xml:space="preserve">
+  <data name="&gt;&gt;bbiEditSno.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem6.Name" xml:space="preserve">
-    <value>barButtonItem6</value>
+  <data name="&gt;&gt;bbiDeleteSno.Name" xml:space="preserve">
+    <value>bbiDeleteSno</value>
   </data>
-  <data name="&gt;&gt;barButtonItem6.Type" xml:space="preserve">
+  <data name="&gt;&gt;bbiDeleteSno.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem7.Name" xml:space="preserve">
@@ -2816,6 +2816,18 @@
     <value>barButtonItem9</value>
   </data>
   <data name="&gt;&gt;barButtonItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bbiNewCmp.Name" xml:space="preserve">
+    <value>bbiNewCmp</value>
+  </data>
+  <data name="&gt;&gt;bbiNewCmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bbiNewDon.Name" xml:space="preserve">
+    <value>bbiNewDon</value>
+  </data>
+  <data name="&gt;&gt;bbiNewDon.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;rpContacts.Name" xml:space="preserve">
@@ -2870,6 +2882,12 @@
     <value>ribbonPageGroup2</value>
   </data>
   <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup4.Name" xml:space="preserve">
+    <value>ribbonPageGroup4</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup4.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;rpTasks.Name" xml:space="preserve">
@@ -3123,24 +3141,6 @@
   </data>
   <data name="&gt;&gt;pmFlagStatus.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.PopupMenu, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup4.Name" xml:space="preserve">
-    <value>ribbonPageGroup4</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup4.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
-    <value>barButtonItem1</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem10.Name" xml:space="preserve">
-    <value>barButtonItem10</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem10.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

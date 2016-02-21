@@ -103,8 +103,12 @@ namespace DevExpress.ProductsDemo.Win {
             InitBarButtonItem(bbiEditContact, TagResources.ContactEdit, Properties.Resources.EditContactDescription);
             InitBarButtonItem(bbiDeleteContact, TagResources.ContactDelete, Properties.Resources.DeleteContactDescription);
             InitBarButtonItem(bbiFlipLayout, TagResources.FlipLayout, Properties.Resources.FlipLayoutDescription);
-
+            
             InitBarButtonItem(this.bbiLoginHistorySearch, TagResources.LoginHistorySearch);
+
+            InitBarButtonItem(this.bbiNewSno, TagResources.SnoNew);
+            InitBarButtonItem(this.bbiEditSno, TagResources.SnoEdit);
+            InitBarButtonItem(this.bbiDeleteSno, TagResources.SnoDelete);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[0], TagResources.TaskList, Properties.Resources.TaskListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[1], TagResources.TaskToDoList, Properties.Resources.TaskToDoListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[2], TagResources.TaskCompleted, Properties.Resources.TaskCompletedDescription);
@@ -162,8 +166,8 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.AlamHistory));
             this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("AptManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
             
-            //this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.UserManage));
-            this.navBarGroup1.SelectedLinkIndex = 3;
+            this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.ComManage));
+            this.navBarGroup1.SelectedLinkIndex = 5;
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
             this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.AnalyticsModule));

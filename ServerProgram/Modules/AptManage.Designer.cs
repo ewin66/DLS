@@ -189,7 +189,7 @@
             // colSno
             // 
             resources.ApplyResources(this.colSno, "colSno");
-            this.colSno.FieldName = "Id";
+            this.colSno.FieldName = "MST04SNO";
             this.colSno.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Alphabetical;
             this.colSno.Name = "colSno";
             this.colSno.OptionsColumn.AllowFocus = false;
@@ -199,7 +199,7 @@
             // colCmp
             // 
             resources.ApplyResources(this.colCmp, "colCmp");
-            this.colCmp.FieldName = "Level";
+            this.colCmp.FieldName = "MST04CMP";
             this.colCmp.Name = "colCmp";
             this.colCmp.OptionsColumn.AllowFocus = false;
             this.colCmp.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -207,7 +207,7 @@
             // colDon
             // 
             resources.ApplyResources(this.colDon, "colDon");
-            this.colDon.FieldName = "Name";
+            this.colDon.FieldName = "MST04DON";
             this.colDon.Name = "colDon";
             this.colDon.OptionsColumn.AllowFocus = false;
             this.colDon.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -215,7 +215,7 @@
             // colHno
             // 
             resources.ApplyResources(this.colHno, "colHno");
-            this.colHno.FieldName = "Phone";
+            this.colHno.FieldName = "MST04HNO";
             this.colHno.Name = "colHno";
             this.colHno.OptionsColumn.AllowFocus = false;
             this.colHno.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -223,11 +223,13 @@
             // gridColumnName
             // 
             resources.ApplyResources(this.gridColumnName, "gridColumnName");
+            this.gridColumnName.FieldName = "MST04NAM";
             this.gridColumnName.Name = "gridColumnName";
             // 
             // gridColumnPhone
             // 
             resources.ApplyResources(this.gridColumnPhone, "gridColumnPhone");
+            this.gridColumnPhone.FieldName = "MST04PHN";
             this.gridColumnPhone.Name = "gridColumnPhone";
             // 
             // repositoryItemImageComboBox1
