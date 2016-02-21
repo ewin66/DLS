@@ -143,6 +143,9 @@
             this.nbiPdf = new DevExpress.XtraNavBar.NavBarItem();
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
             this.pmFlagStatus = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -205,9 +208,11 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
-            this.barButtonItem9});
+            this.barButtonItem9,
+            this.barButtonItem1,
+            this.barButtonItem10});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 1;
+            this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpContacts,
@@ -758,7 +763,8 @@
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup4});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Tag = "AptManage";
             resources.ApplyResources(this.ribbonPage3, "ribbonPage3");
@@ -1148,6 +1154,29 @@
             this.pmFlagStatus.Name = "pmFlagStatus";
             this.pmFlagStatus.Ribbon = this.ribbonControl1;
             // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
+            // 
+            // barButtonItem1
+            // 
+            resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem10
+            // 
+            resources.ApplyResources(this.barButtonItem10, "barButtonItem10");
+            this.barButtonItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.Glyph")));
+            this.barButtonItem10.Id = 2;
+            this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -1286,6 +1315,9 @@
         private XtraBars.BarButtonItem barButtonItem8;
         private XtraBars.BarButtonItem barButtonItem9;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private XtraBars.BarButtonItem barButtonItem1;
+        private XtraBars.BarButtonItem barButtonItem10;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 

@@ -38,6 +38,18 @@
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem10 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem11 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem12 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem13 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem14 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem15 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem16 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem17 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem18 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem19 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem20 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem21 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem22 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
+            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem23 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup3 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem24 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem25 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
@@ -75,18 +87,6 @@
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem53 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem54 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem55 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem13 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem14 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem15 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem16 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem17 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem18 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem19 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem20 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem21 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem22 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
-            DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem23 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup spreadsheetCommandGalleryItemGroup8 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItemGroup();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem56 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
             DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem spreadsheetCommandGalleryItem57 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem();
@@ -269,17 +269,6 @@
             this.spreadsheetCommandBarButtonItem55 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonGalleryDropDownItem1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonGalleryDropDownItem();
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonGalleryDropDownItem();
-            this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonGalleryDropDownItem();
-            this.commandBarGalleryDropDown4 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.spreadsheetCommandBarSubItem7 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarSubItem();
-            this.spreadsheetCommandBarButtonItem56 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
-            this.spreadsheetCommandBarButtonItem57 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
-            this.galleryFormatAsTableItem1 = new DevExpress.XtraSpreadsheet.UI.GalleryFormatAsTableItem();
-            this.commandBarGalleryDropDown5 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.galleryChangeStyleItem1 = new DevExpress.XtraSpreadsheet.UI.GalleryChangeStyleItem();
-            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.spreadsheetCommandBarButtonItem1 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonItem2 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
@@ -299,6 +288,7 @@
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.changeFontSizeItem1 = new DevExpress.XtraSpreadsheet.UI.ChangeFontSizeItem();
             this.repositoryItemSpreadsheetFontSizeEdit1 = new DevExpress.XtraSpreadsheet.Design.RepositoryItemSpreadsheetFontSizeEdit();
+            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.spreadsheetCommandBarButtonItem14 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonItem15 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
@@ -359,6 +349,16 @@
             this.barButtonGroup10 = new DevExpress.XtraBars.BarButtonGroup();
             this.spreadsheetCommandBarButtonItem41 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonItem42 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonGalleryDropDownItem();
+            this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonGalleryDropDownItem();
+            this.commandBarGalleryDropDown4 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.spreadsheetCommandBarButtonItem56 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
+            this.spreadsheetCommandBarButtonItem57 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
+            this.spreadsheetCommandBarSubItem7 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarSubItem();
+            this.galleryFormatAsTableItem1 = new DevExpress.XtraSpreadsheet.UI.GalleryFormatAsTableItem();
+            this.commandBarGalleryDropDown5 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
+            this.galleryChangeStyleItem1 = new DevExpress.XtraSpreadsheet.UI.GalleryChangeStyleItem();
             this.spreadsheetCommandBarSubItem8 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarSubItem();
             this.spreadsheetCommandBarButtonItem58 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonItem59 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
@@ -571,14 +571,14 @@
             this.spreadsheetCommandBarButtonItem99 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.panel = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpreadsheetFontSizeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
@@ -793,191 +793,6 @@
             this.commandBarGalleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown2.Name = "commandBarGalleryDropDown2";
             this.commandBarGalleryDropDown2.Ribbon = this.ribbonControl1;
-            // 
-            // spreadsheetCommandBarButtonGalleryDropDownItem2
-            // 
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2.CommandName = "ConditionalFormattingColorScalesCommandGroup";
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2.DropDownControl = this.commandBarGalleryDropDown3;
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2.Id = 92;
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2.Name = "spreadsheetCommandBarButtonGalleryDropDownItem2";
-            this.spreadsheetCommandBarButtonGalleryDropDownItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // commandBarGalleryDropDown3
-            // 
-            // 
-            // 
-            // 
-            this.commandBarGalleryDropDown3.Gallery.AllowFilter = false;
-            spreadsheetCommandGalleryItemGroup3.CommandName = "ConditionalFormattingColorScalesCommandGroup";
-            spreadsheetCommandGalleryItem24.CommandName = "ConditionalFormattingColorScaleGreenYellowRed";
-            spreadsheetCommandGalleryItem25.CommandName = "ConditionalFormattingColorScaleRedYellowGreen";
-            spreadsheetCommandGalleryItem26.CommandName = "ConditionalFormattingColorScaleGreenWhiteRed";
-            spreadsheetCommandGalleryItem27.CommandName = "ConditionalFormattingColorScaleRedWhiteGreen";
-            spreadsheetCommandGalleryItem28.CommandName = "ConditionalFormattingColorScaleBlueWhiteRed";
-            spreadsheetCommandGalleryItem29.CommandName = "ConditionalFormattingColorScaleRedWhiteBlue";
-            spreadsheetCommandGalleryItem30.CommandName = "ConditionalFormattingColorScaleWhiteRed";
-            spreadsheetCommandGalleryItem31.CommandName = "ConditionalFormattingColorScaleRedWhite";
-            spreadsheetCommandGalleryItem32.CommandName = "ConditionalFormattingColorScaleGreenWhite";
-            spreadsheetCommandGalleryItem33.CommandName = "ConditionalFormattingColorScaleWhiteGreen";
-            spreadsheetCommandGalleryItem34.CommandName = "ConditionalFormattingColorScaleGreenYellow";
-            spreadsheetCommandGalleryItem35.CommandName = "ConditionalFormattingColorScaleYellowGreen";
-            spreadsheetCommandGalleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem24,
-            spreadsheetCommandGalleryItem25,
-            spreadsheetCommandGalleryItem26,
-            spreadsheetCommandGalleryItem27,
-            spreadsheetCommandGalleryItem28,
-            spreadsheetCommandGalleryItem29,
-            spreadsheetCommandGalleryItem30,
-            spreadsheetCommandGalleryItem31,
-            spreadsheetCommandGalleryItem32,
-            spreadsheetCommandGalleryItem33,
-            spreadsheetCommandGalleryItem34,
-            spreadsheetCommandGalleryItem35});
-            this.commandBarGalleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup3});
-            this.commandBarGalleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(32, 32);
-            this.commandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
-            this.commandBarGalleryDropDown3.Name = "commandBarGalleryDropDown3";
-            this.commandBarGalleryDropDown3.Ribbon = this.ribbonControl1;
-            // 
-            // spreadsheetCommandBarButtonGalleryDropDownItem3
-            // 
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3.CommandName = "ConditionalFormattingIconSetsCommandGroup";
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3.DropDownControl = this.commandBarGalleryDropDown4;
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3.Id = 93;
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3.Name = "spreadsheetCommandBarButtonGalleryDropDownItem3";
-            this.spreadsheetCommandBarButtonGalleryDropDownItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // commandBarGalleryDropDown4
-            // 
-            // 
-            // 
-            // 
-            this.commandBarGalleryDropDown4.Gallery.AllowFilter = false;
-            spreadsheetCommandGalleryItemGroup4.CommandName = "ConditionalFormattingIconSetsDirectionalCommandGroup";
-            spreadsheetCommandGalleryItem36.CommandName = "ConditionalFormattingIconSetArrows3Colored";
-            spreadsheetCommandGalleryItem37.CommandName = "ConditionalFormattingIconSetArrows3Grayed";
-            spreadsheetCommandGalleryItem38.CommandName = "ConditionalFormattingIconSetArrows4Colored";
-            spreadsheetCommandGalleryItem39.CommandName = "ConditionalFormattingIconSetArrows4Grayed";
-            spreadsheetCommandGalleryItem40.CommandName = "ConditionalFormattingIconSetArrows5Colored";
-            spreadsheetCommandGalleryItem41.CommandName = "ConditionalFormattingIconSetArrows5Grayed";
-            spreadsheetCommandGalleryItem42.CommandName = "ConditionalFormattingIconSetTriangles3";
-            spreadsheetCommandGalleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem36,
-            spreadsheetCommandGalleryItem37,
-            spreadsheetCommandGalleryItem38,
-            spreadsheetCommandGalleryItem39,
-            spreadsheetCommandGalleryItem40,
-            spreadsheetCommandGalleryItem41,
-            spreadsheetCommandGalleryItem42});
-            spreadsheetCommandGalleryItemGroup5.CommandName = "ConditionalFormattingIconSetsShapesCommandGroup";
-            spreadsheetCommandGalleryItem43.CommandName = "ConditionalFormattingIconSetTrafficLights3";
-            spreadsheetCommandGalleryItem44.CommandName = "ConditionalFormattingIconSetTrafficLights3Rimmed";
-            spreadsheetCommandGalleryItem45.CommandName = "ConditionalFormattingIconSetTrafficLights4";
-            spreadsheetCommandGalleryItem46.CommandName = "ConditionalFormattingIconSetSigns3";
-            spreadsheetCommandGalleryItem47.CommandName = "ConditionalFormattingIconSetRedToBlack";
-            spreadsheetCommandGalleryItemGroup5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem43,
-            spreadsheetCommandGalleryItem44,
-            spreadsheetCommandGalleryItem45,
-            spreadsheetCommandGalleryItem46,
-            spreadsheetCommandGalleryItem47});
-            spreadsheetCommandGalleryItemGroup6.CommandName = "ConditionalFormattingIconSetsIndicatorsCommandGroup";
-            spreadsheetCommandGalleryItem48.CommandName = "ConditionalFormattingIconSetSymbols3Circled";
-            spreadsheetCommandGalleryItem49.CommandName = "ConditionalFormattingIconSetSymbols3";
-            spreadsheetCommandGalleryItem50.CommandName = "ConditionalFormattingIconSetFlags3";
-            spreadsheetCommandGalleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem48,
-            spreadsheetCommandGalleryItem49,
-            spreadsheetCommandGalleryItem50});
-            spreadsheetCommandGalleryItemGroup7.CommandName = "ConditionalFormattingIconSetsRatingsCommandGroup";
-            spreadsheetCommandGalleryItem51.CommandName = "ConditionalFormattingIconSetStars3";
-            spreadsheetCommandGalleryItem52.CommandName = "ConditionalFormattingIconSetRatings4";
-            spreadsheetCommandGalleryItem53.CommandName = "ConditionalFormattingIconSetRatings5";
-            spreadsheetCommandGalleryItem54.CommandName = "ConditionalFormattingIconSetQuarters5";
-            spreadsheetCommandGalleryItem55.CommandName = "ConditionalFormattingIconSetBoxes5";
-            spreadsheetCommandGalleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            spreadsheetCommandGalleryItem51,
-            spreadsheetCommandGalleryItem52,
-            spreadsheetCommandGalleryItem53,
-            spreadsheetCommandGalleryItem54,
-            spreadsheetCommandGalleryItem55});
-            this.commandBarGalleryDropDown4.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            spreadsheetCommandGalleryItemGroup4,
-            spreadsheetCommandGalleryItemGroup5,
-            spreadsheetCommandGalleryItemGroup6,
-            spreadsheetCommandGalleryItemGroup7});
-            this.commandBarGalleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(32, 32);
-            this.commandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
-            this.commandBarGalleryDropDown4.Name = "commandBarGalleryDropDown4";
-            this.commandBarGalleryDropDown4.Ribbon = this.ribbonControl1;
-            // 
-            // spreadsheetCommandBarSubItem7
-            // 
-            this.spreadsheetCommandBarSubItem7.CommandName = "ConditionalFormattingRemoveCommandGroup";
-            this.spreadsheetCommandBarSubItem7.Id = 96;
-            this.spreadsheetCommandBarSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem56),
-            new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem57)});
-            this.spreadsheetCommandBarSubItem7.Name = "spreadsheetCommandBarSubItem7";
-            // 
-            // spreadsheetCommandBarButtonItem56
-            // 
-            this.spreadsheetCommandBarButtonItem56.CommandName = "ConditionalFormattingRemoveFromSheet";
-            this.spreadsheetCommandBarButtonItem56.Id = 94;
-            this.spreadsheetCommandBarButtonItem56.Name = "spreadsheetCommandBarButtonItem56";
-            // 
-            // spreadsheetCommandBarButtonItem57
-            // 
-            this.spreadsheetCommandBarButtonItem57.CommandName = "ConditionalFormattingRemove";
-            this.spreadsheetCommandBarButtonItem57.Id = 95;
-            this.spreadsheetCommandBarButtonItem57.Name = "spreadsheetCommandBarButtonItem57";
-            // 
-            // galleryFormatAsTableItem1
-            // 
-            this.galleryFormatAsTableItem1.DropDownControl = this.commandBarGalleryDropDown5;
-            this.galleryFormatAsTableItem1.Id = 97;
-            this.galleryFormatAsTableItem1.Name = "galleryFormatAsTableItem1";
-            // 
-            // commandBarGalleryDropDown5
-            // 
-            // 
-            // 
-            // 
-            this.commandBarGalleryDropDown5.Gallery.AllowFilter = false;
-            this.commandBarGalleryDropDown5.Gallery.ColumnCount = 7;
-            this.commandBarGalleryDropDown5.Gallery.DrawImageBackground = false;
-            this.commandBarGalleryDropDown5.Gallery.ItemAutoSizeMode = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAutoSizeMode.None;
-            this.commandBarGalleryDropDown5.Gallery.ItemSize = new System.Drawing.Size(73, 58);
-            this.commandBarGalleryDropDown5.Gallery.RowCount = 10;
-            this.commandBarGalleryDropDown5.Name = "commandBarGalleryDropDown5";
-            this.commandBarGalleryDropDown5.Ribbon = this.ribbonControl1;
-            // 
-            // galleryChangeStyleItem1
-            // 
-            // 
-            // 
-            // 
-            this.galleryChangeStyleItem1.Gallery.DrawImageBackground = false;
-            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
-            this.galleryChangeStyleItem1.Gallery.ItemAutoSizeMode = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAutoSizeMode.None;
-            this.galleryChangeStyleItem1.Gallery.ItemSize = new System.Drawing.Size(106, 28);
-            this.galleryChangeStyleItem1.Gallery.RowCount = 9;
-            this.galleryChangeStyleItem1.Gallery.ShowItemText = true;
-            this.galleryChangeStyleItem1.Id = 98;
-            this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
-            // 
-            // spreadsheetControl1
-            // 
-            this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 229);
-            this.spreadsheetControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.spreadsheetControl1.MenuManager = this.ribbonControl1;
-            this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(1792, 775);
-            this.spreadsheetControl1.TabIndex = 0;
-            this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
             // ribbonControl1
             // 
@@ -1209,8 +1024,8 @@
             this.spreadsheetCommandBarCheckItem31,
             this.galleryTableStylesItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ribbonControl1.MaxItemId = 225;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.ribbonControl1.MaxItemId = 226;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.chartToolsRibbonPageCategory1,
@@ -1351,6 +1166,17 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemSpreadsheetFontSizeEdit1.Control = this.spreadsheetControl1;
             this.repositoryItemSpreadsheetFontSizeEdit1.Name = "repositoryItemSpreadsheetFontSizeEdit1";
+            // 
+            // spreadsheetControl1
+            // 
+            this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 229);
+            this.spreadsheetControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.spreadsheetControl1.MenuManager = this.ribbonControl1;
+            this.spreadsheetControl1.Name = "spreadsheetControl1";
+            this.spreadsheetControl1.Size = new System.Drawing.Size(1792, 775);
+            this.spreadsheetControl1.TabIndex = 0;
+            this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
             // spreadsheetCommandBarButtonItem14
             // 
@@ -1887,6 +1713,180 @@
             this.spreadsheetCommandBarButtonItem42.Id = 74;
             this.spreadsheetCommandBarButtonItem42.Name = "spreadsheetCommandBarButtonItem42";
             this.spreadsheetCommandBarButtonItem42.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
+            // 
+            // spreadsheetCommandBarButtonGalleryDropDownItem2
+            // 
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2.CommandName = "ConditionalFormattingColorScalesCommandGroup";
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2.DropDownControl = this.commandBarGalleryDropDown3;
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2.Id = 92;
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2.Name = "spreadsheetCommandBarButtonGalleryDropDownItem2";
+            this.spreadsheetCommandBarButtonGalleryDropDownItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // commandBarGalleryDropDown3
+            // 
+            // 
+            // 
+            // 
+            this.commandBarGalleryDropDown3.Gallery.AllowFilter = false;
+            spreadsheetCommandGalleryItemGroup3.CommandName = "ConditionalFormattingColorScalesCommandGroup";
+            spreadsheetCommandGalleryItem24.CommandName = "ConditionalFormattingColorScaleGreenYellowRed";
+            spreadsheetCommandGalleryItem25.CommandName = "ConditionalFormattingColorScaleRedYellowGreen";
+            spreadsheetCommandGalleryItem26.CommandName = "ConditionalFormattingColorScaleGreenWhiteRed";
+            spreadsheetCommandGalleryItem27.CommandName = "ConditionalFormattingColorScaleRedWhiteGreen";
+            spreadsheetCommandGalleryItem28.CommandName = "ConditionalFormattingColorScaleBlueWhiteRed";
+            spreadsheetCommandGalleryItem29.CommandName = "ConditionalFormattingColorScaleRedWhiteBlue";
+            spreadsheetCommandGalleryItem30.CommandName = "ConditionalFormattingColorScaleWhiteRed";
+            spreadsheetCommandGalleryItem31.CommandName = "ConditionalFormattingColorScaleRedWhite";
+            spreadsheetCommandGalleryItem32.CommandName = "ConditionalFormattingColorScaleGreenWhite";
+            spreadsheetCommandGalleryItem33.CommandName = "ConditionalFormattingColorScaleWhiteGreen";
+            spreadsheetCommandGalleryItem34.CommandName = "ConditionalFormattingColorScaleGreenYellow";
+            spreadsheetCommandGalleryItem35.CommandName = "ConditionalFormattingColorScaleYellowGreen";
+            spreadsheetCommandGalleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem24,
+            spreadsheetCommandGalleryItem25,
+            spreadsheetCommandGalleryItem26,
+            spreadsheetCommandGalleryItem27,
+            spreadsheetCommandGalleryItem28,
+            spreadsheetCommandGalleryItem29,
+            spreadsheetCommandGalleryItem30,
+            spreadsheetCommandGalleryItem31,
+            spreadsheetCommandGalleryItem32,
+            spreadsheetCommandGalleryItem33,
+            spreadsheetCommandGalleryItem34,
+            spreadsheetCommandGalleryItem35});
+            this.commandBarGalleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            spreadsheetCommandGalleryItemGroup3});
+            this.commandBarGalleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(32, 32);
+            this.commandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
+            this.commandBarGalleryDropDown3.Name = "commandBarGalleryDropDown3";
+            this.commandBarGalleryDropDown3.Ribbon = this.ribbonControl1;
+            // 
+            // spreadsheetCommandBarButtonGalleryDropDownItem3
+            // 
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3.CommandName = "ConditionalFormattingIconSetsCommandGroup";
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3.DropDownControl = this.commandBarGalleryDropDown4;
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3.Id = 93;
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3.Name = "spreadsheetCommandBarButtonGalleryDropDownItem3";
+            this.spreadsheetCommandBarButtonGalleryDropDownItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // commandBarGalleryDropDown4
+            // 
+            // 
+            // 
+            // 
+            this.commandBarGalleryDropDown4.Gallery.AllowFilter = false;
+            spreadsheetCommandGalleryItemGroup4.CommandName = "ConditionalFormattingIconSetsDirectionalCommandGroup";
+            spreadsheetCommandGalleryItem36.CommandName = "ConditionalFormattingIconSetArrows3Colored";
+            spreadsheetCommandGalleryItem37.CommandName = "ConditionalFormattingIconSetArrows3Grayed";
+            spreadsheetCommandGalleryItem38.CommandName = "ConditionalFormattingIconSetArrows4Colored";
+            spreadsheetCommandGalleryItem39.CommandName = "ConditionalFormattingIconSetArrows4Grayed";
+            spreadsheetCommandGalleryItem40.CommandName = "ConditionalFormattingIconSetArrows5Colored";
+            spreadsheetCommandGalleryItem41.CommandName = "ConditionalFormattingIconSetArrows5Grayed";
+            spreadsheetCommandGalleryItem42.CommandName = "ConditionalFormattingIconSetTriangles3";
+            spreadsheetCommandGalleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem36,
+            spreadsheetCommandGalleryItem37,
+            spreadsheetCommandGalleryItem38,
+            spreadsheetCommandGalleryItem39,
+            spreadsheetCommandGalleryItem40,
+            spreadsheetCommandGalleryItem41,
+            spreadsheetCommandGalleryItem42});
+            spreadsheetCommandGalleryItemGroup5.CommandName = "ConditionalFormattingIconSetsShapesCommandGroup";
+            spreadsheetCommandGalleryItem43.CommandName = "ConditionalFormattingIconSetTrafficLights3";
+            spreadsheetCommandGalleryItem44.CommandName = "ConditionalFormattingIconSetTrafficLights3Rimmed";
+            spreadsheetCommandGalleryItem45.CommandName = "ConditionalFormattingIconSetTrafficLights4";
+            spreadsheetCommandGalleryItem46.CommandName = "ConditionalFormattingIconSetSigns3";
+            spreadsheetCommandGalleryItem47.CommandName = "ConditionalFormattingIconSetRedToBlack";
+            spreadsheetCommandGalleryItemGroup5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem43,
+            spreadsheetCommandGalleryItem44,
+            spreadsheetCommandGalleryItem45,
+            spreadsheetCommandGalleryItem46,
+            spreadsheetCommandGalleryItem47});
+            spreadsheetCommandGalleryItemGroup6.CommandName = "ConditionalFormattingIconSetsIndicatorsCommandGroup";
+            spreadsheetCommandGalleryItem48.CommandName = "ConditionalFormattingIconSetSymbols3Circled";
+            spreadsheetCommandGalleryItem49.CommandName = "ConditionalFormattingIconSetSymbols3";
+            spreadsheetCommandGalleryItem50.CommandName = "ConditionalFormattingIconSetFlags3";
+            spreadsheetCommandGalleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem48,
+            spreadsheetCommandGalleryItem49,
+            spreadsheetCommandGalleryItem50});
+            spreadsheetCommandGalleryItemGroup7.CommandName = "ConditionalFormattingIconSetsRatingsCommandGroup";
+            spreadsheetCommandGalleryItem51.CommandName = "ConditionalFormattingIconSetStars3";
+            spreadsheetCommandGalleryItem52.CommandName = "ConditionalFormattingIconSetRatings4";
+            spreadsheetCommandGalleryItem53.CommandName = "ConditionalFormattingIconSetRatings5";
+            spreadsheetCommandGalleryItem54.CommandName = "ConditionalFormattingIconSetQuarters5";
+            spreadsheetCommandGalleryItem55.CommandName = "ConditionalFormattingIconSetBoxes5";
+            spreadsheetCommandGalleryItemGroup7.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            spreadsheetCommandGalleryItem51,
+            spreadsheetCommandGalleryItem52,
+            spreadsheetCommandGalleryItem53,
+            spreadsheetCommandGalleryItem54,
+            spreadsheetCommandGalleryItem55});
+            this.commandBarGalleryDropDown4.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            spreadsheetCommandGalleryItemGroup4,
+            spreadsheetCommandGalleryItemGroup5,
+            spreadsheetCommandGalleryItemGroup6,
+            spreadsheetCommandGalleryItemGroup7});
+            this.commandBarGalleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(32, 32);
+            this.commandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
+            this.commandBarGalleryDropDown4.Name = "commandBarGalleryDropDown4";
+            this.commandBarGalleryDropDown4.Ribbon = this.ribbonControl1;
+            // 
+            // spreadsheetCommandBarButtonItem56
+            // 
+            this.spreadsheetCommandBarButtonItem56.CommandName = "ConditionalFormattingRemoveFromSheet";
+            this.spreadsheetCommandBarButtonItem56.Id = 94;
+            this.spreadsheetCommandBarButtonItem56.Name = "spreadsheetCommandBarButtonItem56";
+            // 
+            // spreadsheetCommandBarButtonItem57
+            // 
+            this.spreadsheetCommandBarButtonItem57.CommandName = "ConditionalFormattingRemove";
+            this.spreadsheetCommandBarButtonItem57.Id = 95;
+            this.spreadsheetCommandBarButtonItem57.Name = "spreadsheetCommandBarButtonItem57";
+            // 
+            // spreadsheetCommandBarSubItem7
+            // 
+            this.spreadsheetCommandBarSubItem7.CommandName = "ConditionalFormattingRemoveCommandGroup";
+            this.spreadsheetCommandBarSubItem7.Id = 96;
+            this.spreadsheetCommandBarSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem56),
+            new DevExpress.XtraBars.LinkPersistInfo(this.spreadsheetCommandBarButtonItem57)});
+            this.spreadsheetCommandBarSubItem7.Name = "spreadsheetCommandBarSubItem7";
+            // 
+            // galleryFormatAsTableItem1
+            // 
+            this.galleryFormatAsTableItem1.DropDownControl = this.commandBarGalleryDropDown5;
+            this.galleryFormatAsTableItem1.Id = 97;
+            this.galleryFormatAsTableItem1.Name = "galleryFormatAsTableItem1";
+            // 
+            // commandBarGalleryDropDown5
+            // 
+            // 
+            // 
+            // 
+            this.commandBarGalleryDropDown5.Gallery.AllowFilter = false;
+            this.commandBarGalleryDropDown5.Gallery.ColumnCount = 7;
+            this.commandBarGalleryDropDown5.Gallery.DrawImageBackground = false;
+            this.commandBarGalleryDropDown5.Gallery.ItemAutoSizeMode = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAutoSizeMode.None;
+            this.commandBarGalleryDropDown5.Gallery.ItemSize = new System.Drawing.Size(73, 58);
+            this.commandBarGalleryDropDown5.Gallery.RowCount = 10;
+            this.commandBarGalleryDropDown5.Name = "commandBarGalleryDropDown5";
+            this.commandBarGalleryDropDown5.Ribbon = this.ribbonControl1;
+            // 
+            // galleryChangeStyleItem1
+            // 
+            // 
+            // 
+            // 
+            this.galleryChangeStyleItem1.Gallery.DrawImageBackground = false;
+            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
+            this.galleryChangeStyleItem1.Gallery.ItemAutoSizeMode = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAutoSizeMode.None;
+            this.galleryChangeStyleItem1.Gallery.ItemSize = new System.Drawing.Size(106, 28);
+            this.galleryChangeStyleItem1.Gallery.RowCount = 9;
+            this.galleryChangeStyleItem1.Gallery.ShowItemText = true;
+            this.galleryChangeStyleItem1.Id = 98;
+            this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
             // spreadsheetCommandBarSubItem8
             // 
@@ -3803,10 +3803,10 @@
             // 
             this.spreadsheetFormulaBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spreadsheetFormulaBarControl1.Location = new System.Drawing.Point(0, 0);
-            this.spreadsheetFormulaBarControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.spreadsheetFormulaBarControl1.Margin = new System.Windows.Forms.Padding(5);
             this.spreadsheetFormulaBarControl1.MinimumSize = new System.Drawing.Size(0, 34);
             this.spreadsheetFormulaBarControl1.Name = "spreadsheetFormulaBarControl1";
-            this.spreadsheetFormulaBarControl1.Size = new System.Drawing.Size(1551, 34);
+            this.spreadsheetFormulaBarControl1.Size = new System.Drawing.Size(1646, 34);
             this.spreadsheetFormulaBarControl1.SpreadsheetControl = this.spreadsheetControl1;
             this.spreadsheetFormulaBarControl1.TabIndex = 0;
             // 
@@ -3815,11 +3815,11 @@
             this.spreadsheetNameBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spreadsheetNameBoxControl1.EditValue = "A1";
             this.spreadsheetNameBoxControl1.Location = new System.Drawing.Point(0, 0);
-            this.spreadsheetNameBoxControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.spreadsheetNameBoxControl1.Margin = new System.Windows.Forms.Padding(5);
             this.spreadsheetNameBoxControl1.Name = "spreadsheetNameBoxControl1";
             this.spreadsheetNameBoxControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spreadsheetNameBoxControl1.Size = new System.Drawing.Size(236, 28);
+            this.spreadsheetNameBoxControl1.Size = new System.Drawing.Size(141, 28);
             this.spreadsheetNameBoxControl1.SpreadsheetControl = this.spreadsheetControl1;
             this.spreadsheetNameBoxControl1.TabIndex = 0;
             // 
@@ -3827,7 +3827,7 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 190);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(5);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.spreadsheetNameBoxControl1);
             this.splitContainerControl1.Panel2.Controls.Add(this.spreadsheetFormulaBarControl1);
@@ -3839,7 +3839,7 @@
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitterControl1.Location = new System.Drawing.Point(0, 224);
-            this.splitterControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitterControl1.Margin = new System.Windows.Forms.Padding(5);
             this.splitterControl1.MinSize = 20;
             this.splitterControl1.Name = "splitterControl1";
             this.splitterControl1.Size = new System.Drawing.Size(1792, 5);
@@ -4104,7 +4104,7 @@
             this.panel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(0, 183);
-            this.panel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel.Margin = new System.Windows.Forms.Padding(5);
             this.panel.MinimumSize = new System.Drawing.Size(0, 7);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1792, 7);
@@ -4119,18 +4119,18 @@
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SpreadsheetModule";
             this.Size = new System.Drawing.Size(1792, 1004);
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpreadsheetFontSizeEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();

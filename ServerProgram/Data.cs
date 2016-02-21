@@ -279,6 +279,57 @@ namespace DevExpress.MailClient.Win {
 
         #endregion
     }
+
+    /// <summary>
+    /// 세대 정보
+    /// </summary>
+    public class AMR_MST04 : IComparable
+    {
+        UInt32 mst04sno;
+        string mst04cmp;
+        string mst04don;
+        UInt32 mst04flr;
+        string mst04hno;
+        string mst04nam;
+        string mst04phn;
+
+        public UInt32 MST04SNO { get { return mst04sno; } set { mst04sno = value; } }
+        public string MST04CMP { get { return mst04cmp; } set { mst04cmp = value; } }
+        public string MST04DON { get { return mst04don; } set { mst04don = value; } }
+        public UInt32 MST04FLR { get { return mst04flr; } set { mst04flr = value; } }
+        public string MST04HNO { get { return mst04hno; } set { mst04hno = value; } }
+        public string MST04NAM { get { return mst04nam; } set { mst04nam = value; } }
+        public string MST04PHN { get { return mst04phn; } set { mst04phn = value; } }
+        public AMR_MST04()
+        {
+        }
+                
+        public AMR_MST04(AMR_MST04 info)
+        {
+            this.Assign(info);
+        }
+                
+        public void Assign(AMR_MST04 info)
+        {
+            this.MST04SNO = info.MST04SNO;
+            this.MST04CMP = info.MST04CMP;
+            this.MST04DON = info.MST04DON;
+            this.MST04FLR = info.MST04FLR;
+            this.MST04HNO = info.MST04HNO;
+            this.MST04NAM = info.MST04NAM;
+            this.MST04PHN = info.MST04PHN;
+
+        }
+        #region IComparable Members
+
+        public int CompareTo(object obj)
+        {
+            return Comparer<string>.Default.Compare(MST04CMP, obj.ToString());
+        }
+
+        #endregion
+    }
+
     public class UserInfo : IComparable
     {
         
@@ -481,6 +532,8 @@ namespace DevExpress.MailClient.Win {
         }
     }
     public class DataHelper {
+
+        static List<AMR_MST04> amr_mst04s = null;
         static List<Contact> contacts = null;
         static List<UserInfo> userinfos = null;
         static List<Task> tasks = null;
@@ -502,6 +555,15 @@ namespace DevExpress.MailClient.Win {
                 if (userinfos == null)
                     userinfos = GetUserInfos();
                 return userinfos;
+            }
+        }
+        public static List<AMR_MST04> AMR_MST04s
+        {
+            get
+            {
+                if (amr_mst04s == null)
+                    amr_mst04s = new List<AMR_MST04>();
+                return amr_mst04s;
             }
         }
         public static List<Task> Tasks {

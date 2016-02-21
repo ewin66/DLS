@@ -156,53 +156,77 @@
   <data name="gidControlAptManage.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
-  <data name="colUserID.Caption" xml:space="preserve">
+  <data name="colSno.Caption" xml:space="preserve">
     <value>세대번호</value>
   </data>
-  <data name="colUserID.Visible" type="System.Boolean, mscorlib">
+  <data name="colSno.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colUserID.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="colSno.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="colUserID.Width" type="System.Int32, mscorlib">
-    <value>455</value>
+  <data name="colSno.Width" type="System.Int32, mscorlib">
+    <value>501</value>
   </data>
-  <data name="colUserLevel.Caption" xml:space="preserve">
-    <value>단지정보</value>
+  <data name="colCmp.Caption" xml:space="preserve">
+    <value>단지</value>
   </data>
-  <data name="colUserLevel.Visible" type="System.Boolean, mscorlib">
+  <data name="colCmp.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colUserLevel.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="colCmp.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="colUserLevel.Width" type="System.Int32, mscorlib">
-    <value>414</value>
+  <data name="colCmp.Width" type="System.Int32, mscorlib">
+    <value>540</value>
   </data>
-  <data name="colUserName.Caption" xml:space="preserve">
+  <data name="colDon.Caption" xml:space="preserve">
     <value>동</value>
   </data>
-  <data name="colUserName.Visible" type="System.Boolean, mscorlib">
+  <data name="colDon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colUserName.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="colDon.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="colUserName.Width" type="System.Int32, mscorlib">
-    <value>383</value>
+  <data name="colDon.Width" type="System.Int32, mscorlib">
+    <value>394</value>
   </data>
-  <data name="colPhone.Caption" xml:space="preserve">
+  <data name="colHno.Caption" xml:space="preserve">
     <value>호</value>
   </data>
-  <data name="colPhone.Visible" type="System.Boolean, mscorlib">
+  <data name="colHno.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colPhone.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="colHno.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="colPhone.Width" type="System.Int32, mscorlib">
-    <value>674</value>
+  <data name="colHno.Width" type="System.Int32, mscorlib">
+    <value>266</value>
+  </data>
+  <data name="gridColumnName.Caption" xml:space="preserve">
+    <value>세대주</value>
+  </data>
+  <data name="gridColumnName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gridColumnName.Width" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="gridColumnPhone.Caption" xml:space="preserve">
+    <value>연락처</value>
+  </data>
+  <data name="gridColumnPhone.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnPhone.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gridColumnPhone.Width" type="System.Int32, mscorlib">
+    <value>307</value>
   </data>
   <assembly alias="DevExpress.Data.v14.2" name="DevExpress.Data.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="gridView1.GroupSummary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
@@ -372,28 +396,40 @@
   <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colUserID.Name" xml:space="preserve">
-    <value>colUserID</value>
+  <data name="&gt;&gt;colSno.Name" xml:space="preserve">
+    <value>colSno</value>
   </data>
-  <data name="&gt;&gt;colUserID.Type" xml:space="preserve">
+  <data name="&gt;&gt;colSno.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colUserLevel.Name" xml:space="preserve">
-    <value>colUserLevel</value>
+  <data name="&gt;&gt;colCmp.Name" xml:space="preserve">
+    <value>colCmp</value>
   </data>
-  <data name="&gt;&gt;colUserLevel.Type" xml:space="preserve">
+  <data name="&gt;&gt;colCmp.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colUserName.Name" xml:space="preserve">
-    <value>colUserName</value>
+  <data name="&gt;&gt;colDon.Name" xml:space="preserve">
+    <value>colDon</value>
   </data>
-  <data name="&gt;&gt;colUserName.Type" xml:space="preserve">
+  <data name="&gt;&gt;colDon.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colPhone.Name" xml:space="preserve">
-    <value>colPhone</value>
+  <data name="&gt;&gt;colHno.Name" xml:space="preserve">
+    <value>colHno</value>
   </data>
-  <data name="&gt;&gt;colPhone.Type" xml:space="preserve">
+  <data name="&gt;&gt;colHno.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumnName.Name" xml:space="preserve">
+    <value>gridColumnName</value>
+  </data>
+  <data name="&gt;&gt;gridColumnName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumnPhone.Name" xml:space="preserve">
+    <value>gridColumnPhone</value>
+  </data>
+  <data name="&gt;&gt;gridColumnPhone.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;repositoryItemImageComboBox1.Name" xml:space="preserve">

@@ -31,10 +31,12 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gidControlAptManage = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserLevel = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSno = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCmp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHno = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -156,10 +158,12 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colUserID,
-            this.colUserLevel,
-            this.colUserName,
-            this.colPhone});
+            this.colSno,
+            this.colCmp,
+            this.colDon,
+            this.colHno,
+            this.gridColumnName,
+            this.gridColumnPhone});
             this.gridView1.GridControl = this.gidControlAptManage;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("gridView1.GroupSummary"))), resources.GetString("gridView1.GroupSummary1"), ((DevExpress.XtraGrid.Columns.GridColumn)(resources.GetObject("gridView1.GroupSummary2"))), resources.GetString("gridView1.GroupSummary3"))});
@@ -182,39 +186,49 @@
             this.gridView1.ColumnFilterChanged += new System.EventHandler(this.gridView1_ColumnFilterChanged);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
-            // colUserID
+            // colSno
             // 
-            resources.ApplyResources(this.colUserID, "colUserID");
-            this.colUserID.FieldName = "Id";
-            this.colUserID.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Alphabetical;
-            this.colUserID.Name = "colUserID";
-            this.colUserID.OptionsColumn.AllowFocus = false;
-            this.colUserID.OptionsColumn.ReadOnly = true;
-            this.colUserID.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            resources.ApplyResources(this.colSno, "colSno");
+            this.colSno.FieldName = "Id";
+            this.colSno.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Alphabetical;
+            this.colSno.Name = "colSno";
+            this.colSno.OptionsColumn.AllowFocus = false;
+            this.colSno.OptionsColumn.ReadOnly = true;
+            this.colSno.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
-            // colUserLevel
+            // colCmp
             // 
-            resources.ApplyResources(this.colUserLevel, "colUserLevel");
-            this.colUserLevel.FieldName = "Level";
-            this.colUserLevel.Name = "colUserLevel";
-            this.colUserLevel.OptionsColumn.AllowFocus = false;
-            this.colUserLevel.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            resources.ApplyResources(this.colCmp, "colCmp");
+            this.colCmp.FieldName = "Level";
+            this.colCmp.Name = "colCmp";
+            this.colCmp.OptionsColumn.AllowFocus = false;
+            this.colCmp.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
-            // colUserName
+            // colDon
             // 
-            resources.ApplyResources(this.colUserName, "colUserName");
-            this.colUserName.FieldName = "Name";
-            this.colUserName.Name = "colUserName";
-            this.colUserName.OptionsColumn.AllowFocus = false;
-            this.colUserName.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            resources.ApplyResources(this.colDon, "colDon");
+            this.colDon.FieldName = "Name";
+            this.colDon.Name = "colDon";
+            this.colDon.OptionsColumn.AllowFocus = false;
+            this.colDon.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
-            // colPhone
+            // colHno
             // 
-            resources.ApplyResources(this.colPhone, "colPhone");
-            this.colPhone.FieldName = "Phone";
-            this.colPhone.Name = "colPhone";
-            this.colPhone.OptionsColumn.AllowFocus = false;
-            this.colPhone.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            resources.ApplyResources(this.colHno, "colHno");
+            this.colHno.FieldName = "Phone";
+            this.colHno.Name = "colHno";
+            this.colHno.OptionsColumn.AllowFocus = false;
+            this.colHno.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            // 
+            // gridColumnName
+            // 
+            resources.ApplyResources(this.gridColumnName, "gridColumnName");
+            this.gridColumnName.Name = "gridColumnName";
+            // 
+            // gridColumnPhone
+            // 
+            resources.ApplyResources(this.gridColumnPhone, "gridColumnPhone");
+            this.gridColumnPhone.Name = "gridColumnPhone";
             // 
             // repositoryItemImageComboBox1
             // 
@@ -497,10 +511,10 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.SplitterItem splitterItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserID;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserLevel;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
-        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colSno;
+        private DevExpress.XtraGrid.Columns.GridColumn colCmp;
+        private DevExpress.XtraGrid.Columns.GridColumn colDon;
+        private DevExpress.XtraGrid.Columns.GridColumn colHno;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
         private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumnPhoto;
@@ -525,5 +539,7 @@
         private XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1_4;
         private XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private XtraLayout.EmptySpaceItem Item1;
+        private XtraGrid.Columns.GridColumn gridColumnName;
+        private XtraGrid.Columns.GridColumn gridColumnPhone;
     }
 }

@@ -25,9 +25,9 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         {
             InitializeComponent();
             EditorHelper.InitPersonComboBox(repositoryItemImageComboBox1);
-            gidControlAptManage.DataSource = DataHelper.UserInfos;
+            gidControlAptManage.DataSource = DataHelper.AMR_MST04s;
             gridView1.ShowFindPanel();
-            InitIndex(DataHelper.UserInfos);
+            InitIndex(DataHelper.AMR_MST04s);
         }
         protected override DevExpress.XtraGrid.GridControl Grid { get { return gidControlAptManage; } }
         internal override void ShowModule(bool firstShow) {
@@ -35,25 +35,25 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             gidControlAptManage.Focus();
             UpdateActionButtons();
             if(firstShow) {
-                ButtonClick(TagResources.ContactCard);
+                ButtonClick(TagResources.ContactList);
                 gidControlAptManage.ForceInitialize();
                 GridHelper.SetFindControlImages(gidControlAptManage);
-                if (DataHelper.UserInfos.Count == 0) UpdateCurrentContact();
+                if (DataHelper.AMR_MST04s.Count == 0) UpdateCurrentContact();
             }
         }
         void UpdateActionButtons() {
             OwnerForm.EnableLayoutButtons(gidControlAptManage.MainView != layoutView1);
             OwnerForm.EnableZoomControl(gidControlAptManage.MainView != layoutView1);
         }
-        UserInfo CurrentContact {
-            get { return gridView1.GetRow(gridView1.FocusedRowHandle) as UserInfo; }
+        AMR_MST04 CurrentContact {
+            get { return gridView1.GetRow(gridView1.FocusedRowHandle) as AMR_MST04; }
         }
         private void gridView1_ColumnFilterChanged(object sender, EventArgs e) {
             UpdateCurrentContact();
         }
         private void gridView1_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e) {
             if(e.FocusedRowHandle == GridControl.AutoFilterRowHandle)
-                gridView1.FocusedColumn = colUserID;
+                gridView1.FocusedColumn = colSno;
             else if(e.FocusedRowHandle >= 0)
                 gridView1.FocusedColumn = null;
             UpdateCurrentContact();
@@ -76,7 +76,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 case TagResources.ContactAlphabetical:
                     UpdateMainView(gridView1);
                     ClearSortingAndGrouping();
-                    colUserID.Group();
+                    colSno.Group();
                     break;
                 //case TagResources.ContactByState:
                 //    UpdateMainView(gridView1);
@@ -96,7 +96,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                     gidControlAptManage.MainView.BeginDataUpdate();
                     try
                     {
-                        DataHelper.UserInfos.Remove(CurrentContact);
+                        DataHelper.AMR_MST04s.Remove(CurrentContact);
                     }
                     finally
                     {
@@ -107,12 +107,12 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                     ShowInfo(gridView1);
                     break;
                 case TagResources.ContactNew:
-                    UserInfo contact = new UserInfo();
+                    AMR_MST04 contact = new AMR_MST04();
                     if(EditUser(contact) == DialogResult.OK) {
                         gidControlAptManage.MainView.BeginDataUpdate();
                         try
                         {
-                            DataHelper.UserInfos.Add(contact);
+                            DataHelper.AMR_MST04s.Add(contact);
                         }
                         finally
                         {
@@ -161,7 +161,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             if(e.Clicks == 2 && e.Button == MouseButtons.Left) {
                 LayoutViewHitInfo info = layoutView1.CalcHitInfo(e.Location);
                 if(info.InCard) {
-                    UserInfo current = layoutView1.GetRow(info.RowHandle) as UserInfo;
+                    AMR_MST04 current = layoutView1.GetRow(info.RowHandle) as AMR_MST04;
                     if(current != null) {
                         EditUser(current);
                         layoutView1.UpdateCurrentRow();
@@ -169,15 +169,15 @@ namespace DevExpress.ProductsDemo.Win.Modules {
                 }
             }
         }
-        DialogResult EditUser(UserInfo contact)
+        DialogResult EditUser(AMR_MST04 contact)
         {
             if(contact == null) return DialogResult.Ignore;
             DialogResult ret = DialogResult.Cancel;
             Cursor.Current = Cursors.WaitCursor;
-            using (frmEditUser frm = new frmEditUser(contact, OwnerForm.Ribbon))
-            {
-                ret = frm.ShowDialog(OwnerForm);
-            }
+            //using (frmEditUser frm = new frmEditUser(contact, OwnerForm.Ribbon))
+            //{
+            //    ret = frm.ShowDialog(OwnerForm);
+            //}
             UpdateCurrentContact();
             Cursor.Current = Cursors.Default;
             return ret;
@@ -196,10 +196,10 @@ namespace DevExpress.ProductsDemo.Win.Modules {
         private void repositoryItemHyperLinkEdit1_OpenLink(object sender, OpenLinkEventArgs e) {
             if(e.EditValue != null) e.EditValue = "mailto:" + e.EditValue.ToString();
         }
-        protected void InitIndex(List<UserInfo> list)
+        protected void InitIndex(List<AMR_MST04> list)
         {
             this.extractName = (s) => {
-                string name = ((UserInfo)s).Name;
+                string name = ((AMR_MST04)s).MST04CMP;
                 if(string.IsNullOrEmpty(name)) return null; //todo?
                 return AlphaIndex_AptManage.Group(name.Substring(0, 1));
             };
@@ -219,7 +219,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             alphaChange = new Timer();
             alphaChange.Interval = 200;
             alphaChange.Tick += (s, ee) => {
-                gidControlAptManage.DataSource = ApplyFilter(DataHelper.UserInfos, ((GridView)sender).GetFocusedRow() as AlphaIndex_AptManage);
+                gidControlAptManage.DataSource = ApplyFilter(DataHelper.AMR_MST04s, ((GridView)sender).GetFocusedRow() as AlphaIndex_AptManage);
                 ((Timer)s).Dispose();
                 this.alphaChange = null;
                 UpdateInfo();
@@ -227,7 +227,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             alphaChange.Start();
         }
         GetAlphaMehtod_AptManage extractName;
-        IList ApplyFilter(List<UserInfo> list, AlphaIndex_AptManage alpha)
+        IList ApplyFilter(List<AMR_MST04> list, AlphaIndex_AptManage alpha)
         {
             if(alpha == null || alpha == AlphaIndex_AptManage.All) return list;
             var res = from q in list
@@ -236,7 +236,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             return res.ToList();
 
         }
-        public List<AlphaIndex_AptManage> Generate(List<UserInfo> values, GetAlphaMehtod_AptManage extractName)
+        public List<AlphaIndex_AptManage> Generate(List<AMR_MST04> values, GetAlphaMehtod_AptManage extractName)
         {
             var data = from q in values
                        where extractName(q) != null
