@@ -42,6 +42,10 @@ namespace DevExpress.MailDemo.Win {
         public const string SnoNew = "SnoNew";
         public const string SnoEdit = "SnoEdit";
         public const string SnoDelete = "SnoDelete";
+        public const string DeviceNew = "DeviceNew";
+        public const string DeviceEdit = "DeviceEdit";
+        public const string DeviceDelete = "DeviceDelete";
+        public const string ComSetup = "ComSetup";
 
     }
     public class CollectionResources {

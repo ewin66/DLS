@@ -69,9 +69,9 @@
             this.bbiNextWeekFlag = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNoDateFlag = new DevExpress.XtraBars.BarButtonItem();
             this.bbiCustomFlag = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiNewTask = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiEditTask = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDeleteTask = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiNewDevice = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiEditDevice = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDeleteDevice = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNewContact = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEditContact = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDeleteContact = new DevExpress.XtraBars.BarButtonItem();
@@ -91,6 +91,8 @@
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNewCmp = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNewDon = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.bbiComSetup = new DevExpress.XtraBars.BarButtonItem();
             this.rpContacts = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgContacts = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgCurrentView = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -103,8 +105,7 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpTasks = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpgFollowUp = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rpdCurrentViewTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpView = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.prgAppearance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -189,9 +190,9 @@
             this.bbiNextWeekFlag,
             this.bbiNoDateFlag,
             this.bbiCustomFlag,
-            this.bbiNewTask,
-            this.bbiEditTask,
-            this.bbiDeleteTask,
+            this.bbiNewDevice,
+            this.bbiEditDevice,
+            this.bbiDeleteDevice,
             this.bbiNewContact,
             this.bbiEditContact,
             this.bbiDeleteContact,
@@ -210,9 +211,11 @@
             this.barButtonItem8,
             this.barButtonItem9,
             this.bbiNewCmp,
-            this.bbiNewDon});
+            this.bbiNewDon,
+            this.barSubItem1,
+            this.bbiComSetup});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 3;
+            this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpContacts,
@@ -505,29 +508,29 @@
             this.bbiCustomFlag.Id = 50;
             this.bbiCustomFlag.Name = "bbiCustomFlag";
             // 
-            // bbiNewTask
+            // bbiNewDevice
             // 
-            resources.ApplyResources(this.bbiNewTask, "bbiNewTask");
-            this.bbiNewTask.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.NewTask_16x16;
-            this.bbiNewTask.Id = 54;
-            this.bbiNewTask.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.NewTask_32x32;
-            this.bbiNewTask.Name = "bbiNewTask";
+            resources.ApplyResources(this.bbiNewDevice, "bbiNewDevice");
+            this.bbiNewDevice.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.NewTask_16x16;
+            this.bbiNewDevice.Id = 54;
+            this.bbiNewDevice.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.NewTask_32x32;
+            this.bbiNewDevice.Name = "bbiNewDevice";
             // 
-            // bbiEditTask
+            // bbiEditDevice
             // 
-            resources.ApplyResources(this.bbiEditTask, "bbiEditTask");
-            this.bbiEditTask.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.EditTask_16x16;
-            this.bbiEditTask.Id = 55;
-            this.bbiEditTask.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.EditTask_32x32;
-            this.bbiEditTask.Name = "bbiEditTask";
+            resources.ApplyResources(this.bbiEditDevice, "bbiEditDevice");
+            this.bbiEditDevice.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.EditTask_16x16;
+            this.bbiEditDevice.Id = 55;
+            this.bbiEditDevice.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.EditTask_32x32;
+            this.bbiEditDevice.Name = "bbiEditDevice";
             // 
-            // bbiDeleteTask
+            // bbiDeleteDevice
             // 
-            resources.ApplyResources(this.bbiDeleteTask, "bbiDeleteTask");
-            this.bbiDeleteTask.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.Delete_16x16;
-            this.bbiDeleteTask.Id = 56;
-            this.bbiDeleteTask.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.Delete_32x32;
-            this.bbiDeleteTask.Name = "bbiDeleteTask";
+            resources.ApplyResources(this.bbiDeleteDevice, "bbiDeleteDevice");
+            this.bbiDeleteDevice.Glyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.Delete_16x16;
+            this.bbiDeleteDevice.Id = 56;
+            this.bbiDeleteDevice.LargeGlyph = global::DevExpress.ProductsDemo.Win.Properties.Resources.Delete_32x32;
+            this.bbiDeleteDevice.Name = "bbiDeleteDevice";
             // 
             // bbiNewContact
             // 
@@ -718,6 +721,20 @@
             this.bbiNewDon.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiNewDon.LargeGlyph")));
             this.bbiNewDon.Name = "bbiNewDon";
             // 
+            // barSubItem1
+            // 
+            resources.ApplyResources(this.barSubItem1, "barSubItem1");
+            this.barSubItem1.Id = 3;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // bbiComSetup
+            // 
+            resources.ApplyResources(this.bbiComSetup, "bbiComSetup");
+            this.bbiComSetup.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiComSetup.Glyph")));
+            this.bbiComSetup.Id = 4;
+            this.bbiComSetup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiComSetup.LargeGlyph")));
+            this.bbiComSetup.Name = "bbiComSetup";
+            // 
             // rpContacts
             // 
             this.rpContacts.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -804,39 +821,25 @@
             // 
             this.rpTasks.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgTasks,
-            this.rpgFollowUp,
-            this.rpdCurrentViewTasks});
+            this.ribbonPageGroup5});
             this.rpTasks.Name = "rpTasks";
             this.rpTasks.Tag = "NetworkManage";
             resources.ApplyResources(this.rpTasks, "rpTasks");
             // 
             // rpgTasks
             // 
-            this.rpgTasks.ItemLinks.Add(this.bbiNewTask);
-            this.rpgTasks.ItemLinks.Add(this.bbiEditTask);
-            this.rpgTasks.ItemLinks.Add(this.bbiDeleteTask, true);
+            this.rpgTasks.ItemLinks.Add(this.bbiNewDevice);
+            this.rpgTasks.ItemLinks.Add(this.bbiEditDevice);
+            this.rpgTasks.ItemLinks.Add(this.bbiDeleteDevice, true);
             this.rpgTasks.Name = "rpgTasks";
             this.rpgTasks.ShowCaptionButton = false;
             resources.ApplyResources(this.rpgTasks, "rpgTasks");
             // 
-            // rpgFollowUp
+            // ribbonPageGroup5
             // 
-            this.rpgFollowUp.ItemLinks.Add(this.bbiTodayFlag);
-            this.rpgFollowUp.ItemLinks.Add(this.bbiTomorrowFlag);
-            this.rpgFollowUp.ItemLinks.Add(this.bbiThisWeekFlag);
-            this.rpgFollowUp.ItemLinks.Add(this.bbiNextWeekFlag);
-            this.rpgFollowUp.ItemLinks.Add(this.bbiNoDateFlag);
-            this.rpgFollowUp.ItemLinks.Add(this.bbiCustomFlag);
-            this.rpgFollowUp.Name = "rpgFollowUp";
-            this.rpgFollowUp.ShowCaptionButton = false;
-            resources.ApplyResources(this.rpgFollowUp, "rpgFollowUp");
-            // 
-            // rpdCurrentViewTasks
-            // 
-            this.rpdCurrentViewTasks.ItemLinks.Add(this.rgbiCurrentViewTasks);
-            this.rpdCurrentViewTasks.Name = "rpdCurrentViewTasks";
-            this.rpdCurrentViewTasks.ShowCaptionButton = false;
-            resources.ApplyResources(this.rpdCurrentViewTasks, "rpdCurrentViewTasks");
+            this.ribbonPageGroup5.ItemLinks.Add(this.bbiComSetup);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
             // 
             // rpView
             // 
@@ -964,7 +967,6 @@
             // navBarGroup1
             // 
             resources.ApplyResources(this.navBarGroup1, "navBarGroup1");
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Large;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -1236,14 +1238,12 @@
         private DevExpress.XtraBars.BarButtonItem bbiManageView;
         private DevExpress.XtraBars.BarButtonItem bbiSaveCurrentView;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiCurrentViewTasks;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpdCurrentViewTasks;
         private DevExpress.XtraBars.BarButtonItem bbiTodayFlag;
         private DevExpress.XtraBars.BarButtonItem bbiTomorrowFlag;
         private DevExpress.XtraBars.BarButtonItem bbiThisWeekFlag;
         private DevExpress.XtraBars.BarButtonItem bbiNextWeekFlag;
         private DevExpress.XtraBars.BarButtonItem bbiNoDateFlag;
         private DevExpress.XtraBars.BarButtonItem bbiCustomFlag;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgFollowUp;
         private DevExpress.XtraBars.PopupMenu pmFlagStatus;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl3;
         private DevExpress.ProductsDemo.Win.Controls.PrintControl printControl1;
@@ -1252,9 +1252,9 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl4;
         private DevExpress.ProductsDemo.Win.Controls.ExportControl exportControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem bvtiExport;
-        private DevExpress.XtraBars.BarButtonItem bbiNewTask;
-        private DevExpress.XtraBars.BarButtonItem bbiEditTask;
-        private DevExpress.XtraBars.BarButtonItem bbiDeleteTask;
+        private DevExpress.XtraBars.BarButtonItem bbiNewDevice;
+        private DevExpress.XtraBars.BarButtonItem bbiEditDevice;
+        private DevExpress.XtraBars.BarButtonItem bbiDeleteDevice;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTasks;
         private DevExpress.XtraScheduler.UI.RepositoryItemDuration repositoryItemDuration1;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
@@ -1319,6 +1319,9 @@
         private XtraBars.BarButtonItem bbiNewCmp;
         private XtraBars.BarButtonItem bbiNewDon;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private XtraBars.BarSubItem barSubItem1;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private XtraBars.BarButtonItem bbiComSetup;
     }
 }
 

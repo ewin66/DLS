@@ -90,9 +90,9 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup2.SelectedLink = (NavBarItemLink)e.Item.Tag;
         }
         void RibbonButtonsInitialize() {
-            InitBarButtonItem(bbiNewTask, TagResources.TaskNew, Properties.Resources.NewTaskDescription);
-            InitBarButtonItem(bbiEditTask, TagResources.TaskEdit, Properties.Resources.EditTaskDescription);
-            InitBarButtonItem(bbiDeleteTask, TagResources.TaskDelete, Properties.Resources.DeleteTaskDescription);
+            InitBarButtonItem(bbiNewDevice, TagResources.TaskNew, Properties.Resources.NewTaskDescription);
+            InitBarButtonItem(bbiEditDevice, TagResources.TaskEdit, Properties.Resources.EditTaskDescription);
+            InitBarButtonItem(bbiDeleteDevice, TagResources.TaskDelete, Properties.Resources.DeleteTaskDescription);
             InitBarButtonItem(bbiTodayFlag, FlagStatus.Today, Properties.Resources.FlagTodayDescription);
             InitBarButtonItem(bbiTomorrowFlag, FlagStatus.Tomorrow, Properties.Resources.FlagTomorrowDescription);
             InitBarButtonItem(bbiThisWeekFlag, FlagStatus.ThisWeek, Properties.Resources.FlagThisWeekDescription);
@@ -106,9 +106,16 @@ namespace DevExpress.ProductsDemo.Win {
             
             InitBarButtonItem(this.bbiLoginHistorySearch, TagResources.LoginHistorySearch);
 
+            // 세대 정보 등록/수정
             InitBarButtonItem(this.bbiNewSno, TagResources.SnoNew);
             InitBarButtonItem(this.bbiEditSno, TagResources.SnoEdit);
             InitBarButtonItem(this.bbiDeleteSno, TagResources.SnoDelete);
+
+            // 네트워크 관리
+            InitBarButtonItem(this.bbiNewDevice, TagResources.DeviceNew);
+            InitBarButtonItem(this.bbiEditDevice, TagResources.DeviceEdit);
+            InitBarButtonItem(this.bbiDeleteDevice, TagResources.DeviceDelete);
+            InitBarButtonItem(this.bbiComSetup, TagResources.ComSetup);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[0], TagResources.TaskList, Properties.Resources.TaskListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[1], TagResources.TaskToDoList, Properties.Resources.TaskToDoListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[2], TagResources.TaskCompleted, Properties.Resources.TaskCompletedDescription);
@@ -166,7 +173,7 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.AlamHistory));
             this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("AptManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
             
-            this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.ComManage));
+            this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
             this.navBarGroup1.SelectedLinkIndex = 5;
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
@@ -192,8 +199,8 @@ namespace DevExpress.ProductsDemo.Win {
                     item.Down = task.FlagStatus.Equals(item.Tag);
                 else item.Down = false;
             }
-            bbiDeleteTask.Enabled = enabledCurrentTask;
-            bbiEditTask.Enabled = enabledEdit;
+            bbiDeleteDevice.Enabled = enabledCurrentTask;
+            bbiEditDevice.Enabled = enabledEdit;
         }
         internal void EnableZoomControl(bool enabled) {
             beiZoom.Visibility = enabled ? BarItemVisibility.Always : BarItemVisibility.Never;
