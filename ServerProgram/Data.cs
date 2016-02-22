@@ -333,7 +333,47 @@ namespace DevExpress.MailClient.Win {
 
         #endregion
     }
+    /// <summary>
+    /// 검침기 정보
+    /// </summary>
+    public class AMR_MST07 : IComparable
+    {
+        
+        string mst07ide;
+        string mst07nam;
 
+        public string MST07IDE { get { return mst07ide; } set { mst07ide = value; } }
+        public string MST07NAM { get { return mst07nam; } set { mst07nam = value; } }
+
+        public AMR_MST07()
+        {
+        }
+
+        public AMR_MST07(AMR_MST07 info)
+        {
+            this.Assign(info);
+        }
+
+        public void Assign(AMR_MST07 info)
+        {
+            this.MST07IDE = info.MST07IDE;
+            this.MST07NAM = info.MST07NAM;
+
+
+        }
+        public AMR_MST07 Clone()
+        {
+            return new AMR_MST07(this);
+        }
+        #region IComparable Members
+
+        public int CompareTo(object obj)
+        {
+            return Comparer<string>.Default.Compare(MST07IDE, obj.ToString());
+        }
+
+        #endregion
+    }
     public class UserInfo : IComparable
     {
         
@@ -538,6 +578,7 @@ namespace DevExpress.MailClient.Win {
     public class DataHelper {
 
         static List<AMR_MST04> amr_mst04s = null;
+        static List<AMR_MST07> amr_mst07s = null;
         static List<Contact> contacts = null;
         static List<UserInfo> userinfos = null;
         static List<Task> tasks = null;
@@ -568,6 +609,15 @@ namespace DevExpress.MailClient.Win {
                 if (amr_mst04s == null)
                     amr_mst04s = new List<AMR_MST04>();
                 return amr_mst04s;
+            }
+        }
+        public static List<AMR_MST07> AMR_MST07s
+        {
+            get
+            {
+                if (amr_mst07s == null)
+                    amr_mst07s = new List<AMR_MST07>();
+                return amr_mst07s;
             }
         }
         public static List<Task> Tasks {

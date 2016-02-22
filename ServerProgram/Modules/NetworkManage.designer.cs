@@ -1,5 +1,5 @@
 ﻿namespace DevExpress.ProductsDemo.Win.Modules {
-    partial class AptManage
+    partial class NetworkManage
     {
         /// <summary> 
         /// Required designer variable.
@@ -24,19 +24,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AptManage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetworkManage));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.indexGridControl = new DevExpress.XtraGrid.GridControl();
             this.indexGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gidControlAptManage = new DevExpress.XtraGrid.GridControl();
+            this.gidControlNetworkManage = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSno = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCmp = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHno = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
@@ -66,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.indexGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indexGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gidControlAptManage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gidControlNetworkManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -92,7 +88,7 @@
             // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.indexGridControl);
-            this.layoutControl1.Controls.Add(this.gidControlAptManage);
+            this.layoutControl1.Controls.Add(this.gidControlNetworkManage);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(554, 377, 862, 677);
@@ -139,19 +135,19 @@
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
-            // gidControlAptManage
+            // gidControlNetworkManage
             // 
-            this.gidControlAptManage.EmbeddedNavigator.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("gidControlAptManage.EmbeddedNavigator.Margin")));
-            resources.ApplyResources(this.gidControlAptManage, "gidControlAptManage");
-            this.gidControlAptManage.MainView = this.gridView1;
-            this.gidControlAptManage.Name = "gidControlAptManage";
-            this.gidControlAptManage.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gidControlNetworkManage.EmbeddedNavigator.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("gidControlNetworkManage.EmbeddedNavigator.Margin")));
+            resources.ApplyResources(this.gidControlNetworkManage, "gidControlNetworkManage");
+            this.gidControlNetworkManage.MainView = this.gridView1;
+            this.gidControlNetworkManage.Name = "gidControlNetworkManage";
+            this.gidControlNetworkManage.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageComboBox1,
             this.repositoryItemPictureEdit1,
             this.repositoryItemMemoEdit1,
             this.repositoryItemTextEdit1,
             this.repositoryItemHyperLinkEdit1});
-            this.gidControlAptManage.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gidControlNetworkManage.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.layoutView1});
             // 
@@ -159,12 +155,8 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSno,
-            this.colCmp,
-            this.colDon,
-            this.colHno,
-            this.gridColumnName,
-            this.gridColumnPhone});
-            this.gridView1.GridControl = this.gidControlAptManage;
+            this.colNam});
+            this.gridView1.GridControl = this.gidControlNetworkManage;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("gridView1.GroupSummary"))), resources.GetString("gridView1.GroupSummary1"), ((DevExpress.XtraGrid.Columns.GridColumn)(resources.GetObject("gridView1.GroupSummary2"))), resources.GetString("gridView1.GroupSummary3"))});
             this.gridView1.Name = "gridView1";
@@ -189,48 +181,20 @@
             // colSno
             // 
             resources.ApplyResources(this.colSno, "colSno");
-            this.colSno.FieldName = "MST04SNO";
+            this.colSno.FieldName = "MST07IDE";
             this.colSno.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Alphabetical;
             this.colSno.Name = "colSno";
             this.colSno.OptionsColumn.AllowFocus = false;
             this.colSno.OptionsColumn.ReadOnly = true;
             this.colSno.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
-            // colCmp
+            // colNam
             // 
-            resources.ApplyResources(this.colCmp, "colCmp");
-            this.colCmp.FieldName = "MST04CMP";
-            this.colCmp.Name = "colCmp";
-            this.colCmp.OptionsColumn.AllowFocus = false;
-            this.colCmp.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            // 
-            // colDon
-            // 
-            resources.ApplyResources(this.colDon, "colDon");
-            this.colDon.FieldName = "MST04DON";
-            this.colDon.Name = "colDon";
-            this.colDon.OptionsColumn.AllowFocus = false;
-            this.colDon.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            // 
-            // colHno
-            // 
-            resources.ApplyResources(this.colHno, "colHno");
-            this.colHno.FieldName = "MST04HNO";
-            this.colHno.Name = "colHno";
-            this.colHno.OptionsColumn.AllowFocus = false;
-            this.colHno.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            // 
-            // gridColumnName
-            // 
-            resources.ApplyResources(this.gridColumnName, "gridColumnName");
-            this.gridColumnName.FieldName = "MST04NAM";
-            this.gridColumnName.Name = "gridColumnName";
-            // 
-            // gridColumnPhone
-            // 
-            resources.ApplyResources(this.gridColumnPhone, "gridColumnPhone");
-            this.gridColumnPhone.FieldName = "MST04PHN";
-            this.gridColumnPhone.Name = "gridColumnPhone";
+            resources.ApplyResources(this.colNam, "colNam");
+            this.colNam.FieldName = "MST07NAM";
+            this.colNam.Name = "colNam";
+            this.colNam.OptionsColumn.AllowFocus = false;
+            this.colNam.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             // 
             // repositoryItemImageComboBox1
             // 
@@ -281,7 +245,7 @@
             this.layoutViewColumnName,
             this.layoutViewColumnPhone,
             this.layoutViewColumnNote});
-            this.layoutView1.GridControl = this.gidControlAptManage;
+            this.layoutView1.GridControl = this.gidControlNetworkManage;
             this.layoutView1.Name = "layoutView1";
             this.layoutView1.OptionsFind.AlwaysVisible = true;
             this.layoutView1.OptionsFind.FindFilterColumns = "Name;Email;Address;Phone";
@@ -439,7 +403,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.gidControlAptManage;
+            this.layoutControlItem1.Control = this.gidControlNetworkManage;
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -470,18 +434,18 @@
             this.lciIndex.TextSize = new System.Drawing.Size(0, 0);
             this.lciIndex.TextVisible = false;
             // 
-            // AptManage
+            // NetworkManage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "AptManage";
+            this.Name = "NetworkManage";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indexGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.indexGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gidControlAptManage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gidControlNetworkManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
@@ -508,15 +472,13 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraGrid.GridControl gidControlAptManage;
+        private DevExpress.XtraGrid.GridControl gidControlNetworkManage;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.SplitterItem splitterItem1;
         private DevExpress.XtraGrid.Columns.GridColumn colSno;
-        private DevExpress.XtraGrid.Columns.GridColumn colCmp;
-        private DevExpress.XtraGrid.Columns.GridColumn colDon;
-        private DevExpress.XtraGrid.Columns.GridColumn colHno;
+        private DevExpress.XtraGrid.Columns.GridColumn colNam;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
         private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumnPhoto;
@@ -541,7 +503,5 @@
         private XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1_4;
         private XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private XtraLayout.EmptySpaceItem Item1;
-        private XtraGrid.Columns.GridColumn gridColumnName;
-        private XtraGrid.Columns.GridColumn gridColumnPhone;
     }
 }

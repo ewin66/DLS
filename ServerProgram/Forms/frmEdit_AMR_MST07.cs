@@ -12,12 +12,12 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.MailClient.Win;
 
 namespace DevExpress.ProductsDemo.Win.Forms {
-    public partial class frmEdit_AMR_MST04 : XtraForm {
-        AMR_MST04 contact, bindingContact;
-        public frmEdit_AMR_MST04() {
+    public partial class frmEdit_AMR_MST07 : XtraForm {
+        AMR_MST07 contact, bindingContact;
+        public frmEdit_AMR_MST07() {
             InitializeComponent();
         }
-        public frmEdit_AMR_MST04(AMR_MST04 contact, IDXMenuManager menuManager)
+        public frmEdit_AMR_MST07(AMR_MST07 contact, IDXMenuManager menuManager)
         {
             InitializeComponent();
             this.contact = contact;
@@ -26,11 +26,8 @@ namespace DevExpress.ProductsDemo.Win.Forms {
             InitMenuManager(menuManager);
 
 
-            teMST04CMP.DataBindings.Add("Text", bindingContact, "MST04CMP");
-            teMST04DON.DataBindings.Add("Text", bindingContact, "MST04DON");
-            teMST04HNO.DataBindings.Add("Text", bindingContact, "MST04HNO");
-            teMST04NAM.DataBindings.Add("Text", bindingContact, "MST04NAM");  
-            teMST04PHN.DataBindings.Add("Text", bindingContact, "MST04PHN"); 
+            teMST07IDE.DataBindings.Add("Text", bindingContact, "MST07IDE");
+            teMST07NAM.DataBindings.Add("Text", bindingContact, "MST07NAM");
             
             UpdateCaption();
             InitValidationProvider();
@@ -41,12 +38,14 @@ namespace DevExpress.ProductsDemo.Win.Forms {
             //dxValidationProvider1.SetValidationRule(teMST04DON, ValidationRulesHelper.RuleIsNotBlank);
         }
         void UpdateCaption() {
-            Text = bindingContact.MST04CMP;
+            Text = bindingContact.MST07IDE;
         }
         void InitMenuManager(IDXMenuManager menuManager) {
-            foreach(Control ctrl in lcMain.Controls) {
+            foreach (Control ctrl in lcMain.Controls)
+            {
                 BaseEdit edit = ctrl as BaseEdit;
-                if(edit != null) {
+                if (edit != null)
+                {
                     edit.MenuManager = menuManager;
                 }
             }
