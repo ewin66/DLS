@@ -47,6 +47,10 @@ namespace DevExpress.MailDemo.Win {
         public const string DeviceDelete = "DeviceDelete";
         public const string ComSetup = "ComSetup";
 
+        public const string StartStopRealtimeStatus = "StartStopRealtimeStatus";
+        public const string StartStopComStart = "StartStopComStart";
+        public const string StartStopComStop = "StartStopComStop";
+        
     }
     public class CollectionResources {
         public static List<string> HouseTasks = new List<string>() {

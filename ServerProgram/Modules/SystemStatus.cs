@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
+using DevExpress.MailDemo.Win;
 using System.Threading;
 using System.Threading.Tasks;
+
 namespace DevExpress.ProductsDemo.Win.Modules
 {
     public partial class SystemStatus : BaseModule
@@ -21,9 +23,35 @@ namespace DevExpress.ProductsDemo.Win.Modules
         Thread workerThread;
 
         //private System.Windows.Forms.Timer timer1;
-        
 
+        internal override void ShowModule(bool firstShow)
+        {
+            base.ShowModule(firstShow);
+            //gidControlAptManage.Focus();
+            //UpdateActionButtons();
+            if (firstShow)
+            {
+                ButtonClick(TagResources.StartStopRealtimeStatus);
+                //    gidControlAptManage.ForceInitialize();
+                //    GridHelper.SetFindControlImages(gidControlAptManage);
+                //    if (DataHelper.AMR_MST04s.Count == 0) UpdateCurrentContact();
+            }
 
+        }
+        protected internal override void ButtonClick(string tag)
+        {
+            switch (tag)
+            {
+                case TagResources.StartStopRealtimeStatus:
+                    break;
+                case TagResources.StartStopComStart:
+                    Run();
+                    break;
+                case TagResources.StartStopComStop:
+                    Stop();
+                    break;
+            }
+        }
         public SystemStatus()
         {
             InitializeComponent();
@@ -34,7 +62,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             //timer1.Interval = 1000;
             //timer1.Tick += new EventHandler(intervalTimer_Tick);
 
-            Run();
+            
 
             button2.BackColor = Color.LightGreen;
 
@@ -104,7 +132,24 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         }
 
+        #region thread
 
+        private volatile bool _shouldStop;
+
+        /// <summary>
+        ///  스레드 시작
+        /// </summary>
+        public void RequestStart()
+        {
+            _shouldStop = false;
+        }
+        /// <summary>
+        ///  스레드 종료
+        /// </summary>
+        public void RequestStop()
+        {
+            _shouldStop = true;
+        }
               /// <summary>
         /// 모드버스 통신 스레드
         /// </summary>
@@ -112,7 +157,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public void DoWork(object cycle)
         {
             int timer = Convert.ToInt32(cycle);
-            while (true)
+            while (!_shouldStop )
             {
                 mComport.Write("hi123433");
                 System.Threading.Thread.Sleep(timer);
@@ -127,22 +172,22 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public bool Run()
         {
 
-            //// COM 포트가 이미 열려 있다면 
-            //if (mComport.IsOpen)
-            //{
-            //    // 모드버스 통신 스레드가 시작되지 않았다면 시작
-            //    if (!workerThread.IsAlive)
-            //    {
-            //        workerThread.Start(this.mInterval);
-            //        workerThread.IsBackground = true;
-            //    }
+            // COM 포트가 이미 열려 있다면 
+            if (mComport.IsOpen)
+            {
+                // 모드버스 통신 스레드가 시작되지 않았다면 시작
+                if (!workerThread.IsAlive)
+                {
+                    workerThread.Start(this.mInterval);
+                    workerThread.IsBackground = true;
+                }
 
-            //    // UI 업데이트 타이머 시작되지 않았다면 시작
-            //    if (!timer1.Enabled)
-            //        timer1.Enabled = true;
+                //// UI 업데이트 타이머 시작되지 않았다면 시작
+                //if (!timer1.Enabled)
+                //    timer1.Enabled = true;
 
-            //    return false;
-            //}
+                return false;
+            }
 
 
 
@@ -173,7 +218,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 // 모드버스 인터페이스 스레드
                 workerThread = new Thread(new ParameterizedThreadStart(DoWork));
 
-
+                RequestStart();
                 if (!workerThread.IsAlive)
                 {
                     workerThread.Start(this.mInterval);
@@ -212,8 +257,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 ////timer1.Stop();
                 //timer1.Enabled = false;
 
-                // 모드버스 통신 스레드 종료
-                //RequestStop();
+                // 통신 스레드 종료
+                RequestStop();
 
 
                 // COM 포트 닫기
@@ -233,6 +278,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
 
         }
+        #endregion
 
     }
 }

@@ -586,6 +586,12 @@
     <Compile Include="Modules\AptManage.designer.cs">
       <DependentUpon>AptManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\StartStop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\StartStop.Designer.cs">
+      <DependentUpon>StartStop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\SystemStatus.cs">
       <SubType>UserControl</SubType>
     </Compile>

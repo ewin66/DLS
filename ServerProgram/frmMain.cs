@@ -116,6 +116,12 @@ namespace DevExpress.ProductsDemo.Win {
             InitBarButtonItem(this.bbiEditDevice, TagResources.DeviceEdit);
             InitBarButtonItem(this.bbiDeleteDevice, TagResources.DeviceDelete);
             InitBarButtonItem(this.bbiComSetup, TagResources.ComSetup);
+
+            // 검침
+            InitBarButtonItem(this.bbiStartStopRealtimeStatus, TagResources.StartStopRealtimeStatus);
+            InitBarButtonItem(this.bbiStartStopComStart, TagResources.StartStopComStart);
+            InitBarButtonItem(this.bbiStartStopComStop, TagResources.StartStopComStop);
+
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[0], TagResources.TaskList, Properties.Resources.TaskListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[1], TagResources.TaskToDoList, Properties.Resources.TaskToDoListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[2], TagResources.TaskCompleted, Properties.Resources.TaskCompletedDescription);
@@ -180,7 +186,9 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.AnalyticsModule));
             //this.navBarGroup2.SelectedLinkIndex = 0;
 
-            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
+            // 검침
+            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
+            
             //this.navBarGroup3.SelectedLinkIndex = 0;
         }
         internal void EnableLayoutButtons(bool enabled) {
