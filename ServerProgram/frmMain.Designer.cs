@@ -93,6 +93,10 @@
             this.bbiNewDon = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.bbiComSetup = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.rpContacts = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgContacts = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgCurrentView = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -106,6 +110,8 @@
             this.rpTasks = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpView = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.prgAppearance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -129,6 +135,8 @@
             this.navBarGroup2Item2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3Item1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -147,6 +155,12 @@
             this.nbiPdf = new DevExpress.XtraNavBar.NavBarItem();
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
             this.pmFlagStatus = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -213,9 +227,13 @@
             this.bbiNewCmp,
             this.bbiNewDon,
             this.barSubItem1,
-            this.bbiComSetup});
+            this.bbiComSetup,
+            this.barButtonItem1,
+            this.barButtonItem4,
+            this.barButtonItem5,
+            this.barButtonItem6});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 5;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpContacts,
@@ -223,6 +241,11 @@
             this.ribbonPage2,
             this.ribbonPage3,
             this.rpTasks,
+            this.ribbonPage4,
+            this.ribbonPage6,
+            this.ribbonPage7,
+            this.ribbonPage8,
+            this.ribbonPage9,
             this.rpView});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemZoomTrackBar1,
@@ -735,6 +758,36 @@
             this.bbiComSetup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiComSetup.LargeGlyph")));
             this.bbiComSetup.Name = "bbiComSetup";
             // 
+            // barButtonItem1
+            // 
+            resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 5;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem4
+            // 
+            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
+            this.barButtonItem4.Id = 6;
+            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barButtonItem5
+            // 
+            resources.ApplyResources(this.barButtonItem5, "barButtonItem5");
+            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
+            this.barButtonItem5.Id = 7;
+            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // barButtonItem6
+            // 
+            resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
+            this.barButtonItem6.Id = 8;
+            this.barButtonItem6.Name = "barButtonItem6";
+            // 
             // rpContacts
             // 
             this.rpContacts.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -840,6 +893,21 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.bbiComSetup);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
+            // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup6});
+            this.ribbonPage4.Name = "ribbonPage4";
+            resources.ApplyResources(this.ribbonPage4, "ribbonPage4");
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            resources.ApplyResources(this.ribbonPageGroup6, "ribbonPageGroup6");
             // 
             // rpView
             // 
@@ -950,7 +1018,9 @@
             this.navBarGroup3Item1,
             this.navBarGroup4Item1,
             this.navBarGroup5Item1,
-            this.navBarGroup5Item2});
+            this.navBarGroup5Item2,
+            this.navBarItem1,
+            this.navBarItem2});
             this.navBarControl1.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
             this.navBarControl1.MenuManager = this.ribbonControl1;
             this.navBarControl1.Name = "navBarControl1";
@@ -980,7 +1050,6 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup1Item8),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup1Item9)});
             this.navBarGroup1.Name = "navBarGroup1";
-            this.navBarGroup1.SelectedLinkIndex = 0;
             // 
             // navBarGroup1Item1
             // 
@@ -1053,13 +1122,26 @@
             this.navBarGroup3.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Large;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup3Item1)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup3Item1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup3.Name = "navBarGroup3";
+            this.navBarGroup3.SelectedLinkIndex = 2;
             // 
             // navBarGroup3Item1
             // 
             resources.ApplyResources(this.navBarGroup3Item1, "navBarGroup3Item1");
             this.navBarGroup3Item1.Name = "navBarGroup3Item1";
+            // 
+            // navBarItem1
+            // 
+            resources.ApplyResources(this.navBarItem1, "navBarItem1");
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem2
+            // 
+            resources.ApplyResources(this.navBarItem2, "navBarItem2");
+            this.navBarItem2.Name = "navBarItem2";
             // 
             // navBarGroup4
             // 
@@ -1084,7 +1166,6 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup5Item1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup5Item2)});
             this.navBarGroup5.Name = "navBarGroup5";
-            this.navBarGroup5.SelectedLinkIndex = 1;
             // 
             // navBarGroup5Item1
             // 
@@ -1179,6 +1260,38 @@
             this.pmFlagStatus.ItemLinks.Add(this.bbiCustomFlag, true);
             this.pmFlagStatus.Name = "pmFlagStatus";
             this.pmFlagStatus.Ribbon = this.ribbonControl1;
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            resources.ApplyResources(this.ribbonPageGroup7, "ribbonPageGroup7");
+            // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7});
+            this.ribbonPage5.Name = "ribbonPage5";
+            resources.ApplyResources(this.ribbonPage5, "ribbonPage5");
+            // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Name = "ribbonPage6";
+            resources.ApplyResources(this.ribbonPage6, "ribbonPage6");
+            // 
+            // ribbonPage7
+            // 
+            this.ribbonPage7.Name = "ribbonPage7";
+            resources.ApplyResources(this.ribbonPage7, "ribbonPage7");
+            // 
+            // ribbonPage8
+            // 
+            this.ribbonPage8.Name = "ribbonPage8";
+            resources.ApplyResources(this.ribbonPage8, "ribbonPage8");
+            // 
+            // ribbonPage9
+            // 
+            this.ribbonPage9.Name = "ribbonPage9";
+            resources.ApplyResources(this.ribbonPage9, "ribbonPage9");
             // 
             // frmMain
             // 
@@ -1322,6 +1435,20 @@
         private XtraBars.BarSubItem barSubItem1;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private XtraBars.BarButtonItem bbiComSetup;
+        private XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private XtraBars.BarButtonItem barButtonItem1;
+        private XtraBars.BarButtonItem barButtonItem4;
+        private XtraBars.BarButtonItem barButtonItem5;
+        private XtraBars.BarButtonItem barButtonItem6;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private XtraNavBar.NavBarItem navBarItem1;
+        private XtraNavBar.NavBarItem navBarItem2;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private XtraBars.Ribbon.RibbonPage ribbonPage8;
+        private XtraBars.Ribbon.RibbonPage ribbonPage9;
     }
 }
 

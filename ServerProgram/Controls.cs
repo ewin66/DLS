@@ -22,6 +22,7 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraSplashScreen;
 using MySql.Data.MySqlClient;
+using DevExpress.ProductsDemo.Win.Common;
 
 namespace DevExpress.ProductsDemo.Win {
     public class ModulesNavigator {
@@ -136,7 +137,8 @@ namespace DevExpress.ProductsDemo.Win {
     public class BaseModule : BaseControl {
         protected string partName = string.Empty;
         protected OleDbConnection connection;
-        protected MySqlConnection mariaDbConnection;  
+        protected MySqlConnection mariaDbConnection;
+        protected modbus serialConnection;
 
         public BaseModule() { }
 
@@ -287,6 +289,11 @@ namespace DevExpress.ProductsDemo.Win {
         {
             get { return mariaDbConnection; }
             set { mariaDbConnection = value; }
+        }
+        protected virtual modbus SerialConnection
+        {
+            get { return serialConnection; }
+            set { serialConnection = value; }
         }
         protected virtual bool AllowZoomControl { get { return false; } }
         protected virtual void SetZoomCaption() { }

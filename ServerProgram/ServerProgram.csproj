@@ -433,6 +433,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Common\Extension.cs" />
+    <Compile Include="Common\modbus.cs" />
     <Compile Include="Common\MySqlManage.cs" />
     <Compile Include="Controls.cs">
       <SubType>UserControl</SubType>
