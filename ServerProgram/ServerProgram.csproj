@@ -432,6 +432,7 @@
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
     <Compile Include="Common\modbus.cs" />
     <Compile Include="Common\MySqlManage.cs" />
@@ -556,6 +557,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
+    <Compile Include="Item\DK1Item.cs" />
     <Compile Include="Modules\NetworkManage.cs">
       <SubType>UserControl</SubType>
     </Compile>

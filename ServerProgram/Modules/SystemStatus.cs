@@ -10,6 +10,9 @@ using System.IO.Ports;
 using DevExpress.MailDemo.Win;
 using System.Threading;
 using System.Threading.Tasks;
+using DevExpress.ProductsDemo.Win.Item;
+using DevExpress.ProductsDemo.Win.Common;
+using System.Runtime.InteropServices;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
@@ -38,6 +41,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             }
 
         }
+
         protected internal override void ButtonClick(string tag)
         {
             switch (tag)
@@ -62,7 +66,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             //timer1.Interval = 1000;
             //timer1.Tick += new EventHandler(intervalTimer_Tick);
 
-            
+            mComport.DataReceived += mComport_DataReceived;
 
             button2.BackColor = Color.LightGreen;
 
@@ -111,6 +115,17 @@ namespace DevExpress.ProductsDemo.Win.Modules
             //sp.Write("hi1234");
         }
 
+        void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            int bytes = mComport.BytesToRead;
+
+            // Create a byte array buffer to hold the incoming data
+            byte[] buffer = new byte[bytes];
+            mComport.Read(buffer, 0, bytes);
+            Console.WriteLine(DK1Util.ByteArrayToHexString(buffer));
+            //throw new NotImplementedException();
+        }
+
         /// <summary>
         /// UI 업데이트 타이머
         /// </summary>
@@ -157,9 +172,22 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public void DoWork(object cycle)
         {
             int timer = Convert.ToInt32(cycle);
+
+            byte[] item = new byte[9];
+
+            item[0] = 0x02;
+            item[1] = 0x00;
+            item[2] = 0xFF;
+            item[3] = 0xFF;
+            item[4] = 0xFF;
+            item[5] = 0xFF;
+            item[6] = 0x11;
+            item[7] = 0x0F;
+            item[8] = 0x1C;
+
             while (!_shouldStop )
             {
-                mComport.Write("hi123433");
+                mComport.Write(item, 0, item.Length);
                 System.Threading.Thread.Sleep(timer);
             }
         }
@@ -195,7 +223,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             {
 
                 // COM 포트 설정
-                mComport.BaudRate = 19200;
+                mComport.BaudRate = 9600;
                 mComport.DataBits = 8;
                 mComport.Parity = Parity.None;
                 mComport.StopBits = StopBits.One;
