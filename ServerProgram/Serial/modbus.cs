@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO.Ports;
 
-namespace DevExpress.ProductsDemo.Win.Common
+namespace DevExpress.ProductsDemo.Win.Serial
 {
-    public class modbus
+    public class Modbus
     {
         private SerialPort sp = new SerialPort();
         public string modbusStatus;
 
         #region Constructor / Deconstructor
-        public modbus()
+        public Modbus()
         {
         }
-        ~modbus()
+        ~Modbus()
         {
         }
         #endregion

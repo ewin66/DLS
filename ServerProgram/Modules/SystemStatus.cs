@@ -10,8 +10,9 @@ using System.IO.Ports;
 using DevExpress.MailDemo.Win;
 using System.Threading;
 using System.Threading.Tasks;
-using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.ProductsDemo.Win.Common;
+using DevExpress.ProductsDemo.Win.Item;
+using DevExpress.ProductsDemo.Win.DB;
 using System.Runtime.InteropServices;
 
 namespace DevExpress.ProductsDemo.Win.Modules
@@ -24,7 +25,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         private bool mTimeSync = false;
         Thread workerThread;
-
+        DataTable mSensorInfoTable;
         //private System.Windows.Forms.Timer timer1;
 
         internal override void ShowModule(bool firstShow)
@@ -47,6 +48,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             switch (tag)
             {
                 case TagResources.StartStopRealtimeStatus:
+
                     break;
                 case TagResources.StartStopComStart:
                     Run();
@@ -54,11 +56,19 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 case TagResources.StartStopComStop:
                     Stop();
                     break;
+                default:
+
+                    break;
             }
         }
         public SystemStatus()
         {
             InitializeComponent();
+
+            
+            CreateGridTable();
+            InitGridData();
+
 
             mCom = "COM1";
             mInterval = "1000";
@@ -68,45 +78,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             mComport.DataReceived += mComport_DataReceived;
 
-            button2.BackColor = Color.LightGreen;
-
-            
-            this.simpleButton37.BackColor = Color.LightGreen;
-            this.simpleButton36.BackColor = Color.LightGreen;
-            this.simpleButton34.BackColor = Color.LightGreen;
-            this.simpleButton33.BackColor = Color.LightGreen;
-            this.simpleButton32.BackColor = Color.LightGreen;
-            this.simpleButton31.BackColor = Color.LightGreen;
-            this.simpleButton30.BackColor = Color.LightGreen;
-            this.simpleButton29.BackColor = Color.LightGreen;
-            this.simpleButton28.BackColor = Color.LightGreen;
-            this.simpleButton27.BackColor = Color.LightGreen;
-            this.simpleButton26.BackColor = Color.OrangeRed;
-            this.simpleButton25.BackColor = Color.LightGreen;
-            this.simpleButton24.BackColor = Color.LightGreen;
-            this.simpleButton23.BackColor = Color.LightGreen;
-            this.simpleButton22.BackColor = Color.LightGreen;
-            this.simpleButton21.BackColor = Color.LightGreen;
-            this.simpleButton20.BackColor = Color.LightGreen;
-            this.simpleButton19.BackColor = Color.LightGreen;
-            this.simpleButton18.BackColor = Color.LightGreen;
-            this.simpleButton17.BackColor = Color.LightGreen;
-            this.simpleButton16.BackColor = Color.LightGreen;
-            this.simpleButton15.BackColor = Color.LightGreen;
-            this.simpleButton14.BackColor = Color.LightGreen;
-            this.simpleButton5.BackColor = Color.OrangeRed;
-            this.simpleButton13.BackColor = Color.LightGreen;
-            this.simpleButton12.BackColor = Color.OrangeRed;
-            this.simpleButton11.BackColor = Color.LightGreen;
-            this.simpleButton10.BackColor = Color.LightGreen;
-            this.simpleButton9.BackColor = Color.LightGreen;
-            this.simpleButton3.BackColor = Color.LightGreen;
-            this.simpleButton2.BackColor = Color.LightGreen;
-            this.simpleButton4.BackColor = Color.LightGreen;
-            this.simpleButton8.BackColor = Color.LightGreen;
-            this.simpleButton7.BackColor = Color.LightGreen;
-            this.simpleButton6.BackColor = Color.LightGreen;
-            this.simpleButton1.BackColor = Color.LightGreen;
+  
 
             //this.serialConnection.Open("COM1", 115200, 8, System.IO.Ports.Parity.None, System.IO.Ports.StopBits.One);
             //this.serialConnection
@@ -115,14 +87,138 @@ namespace DevExpress.ProductsDemo.Win.Modules
             //sp.Write("hi1234");
         }
 
+        void CreateGridTable()
+        {
+            try
+            {
+
+                mSensorInfoTable = new DataTable();
+                DataColumn column;
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "NO";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "검침시간";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "동";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "호";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "전기";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "수도";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "온수";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "가스";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "열량";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "냉방";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "통신상태";
+
+                // Add the column to the DataTable.Columns collection.
+                mSensorInfoTable.Columns.Add(column);
+
+                // Make the ID column the primary key column.
+                DataColumn[] PrimaryKeyColumns = new DataColumn[2];
+                PrimaryKeyColumns[0] = mSensorInfoTable.Columns["동"];
+                PrimaryKeyColumns[1] = mSensorInfoTable.Columns["호"];
+                mSensorInfoTable.PrimaryKey = PrimaryKeyColumns;
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+        
+        void InitGridData()
+        {
+            this.gridControl1.SafeInvoke(d => d.DataSource = null);
+            MySqlManage crud = new MySqlManage();
+
+            string query = "select MST04SNO, MST04DON, MST04HNO from amr_mst04";
+            DataSet ds = new DataSet();
+            ds = crud.SelectMariaDBTable(crud.Connection, query);
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                mSensorInfoTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
+            }
+            gridControl1.DataSource = mSensorInfoTable;
+        }
+
+        /// <summary>
+        /// 시리얼 데이터 수신
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             int bytes = mComport.BytesToRead;
 
-            // Create a byte array buffer to hold the incoming data
             byte[] buffer = new byte[bytes];
+
             mComport.Read(buffer, 0, bytes);
-            Console.WriteLine(DK1Util.ByteArrayToHexString(buffer));
+
+            memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + DK1Util.ByteArrayToHexString(buffer) + "\r\n"));
+            memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+
             //throw new NotImplementedException();
         }
 
@@ -188,6 +284,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
             while (!_shouldStop )
             {
                 mComport.Write(item, 0, item.Length);
+
+                memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [SEND] ") + DK1Util.ByteArrayToHexString(item) + "\r\n"));
+                memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+
                 System.Threading.Thread.Sleep(timer);
             }
         }

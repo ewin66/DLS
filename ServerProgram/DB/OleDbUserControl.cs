@@ -7,7 +7,7 @@ using System.Data.OleDb;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DevExpress.ProductsDemo.Win.Controls
+namespace DevExpress.ProductsDemo.Win.DB
 {
     class OleDbUserControl
     {

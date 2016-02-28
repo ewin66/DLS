@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
-namespace DevExpress.ProductsDemo.Win.Common
+namespace DevExpress.ProductsDemo.Win.DB
 {
     class MySqlManage
     {

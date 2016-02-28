@@ -15,6 +15,7 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Layout.ViewInfo;
 using DevExpress.ProductsDemo.Win.Forms;
 using DevExpress.ProductsDemo.Win.Common;
+using DevExpress.ProductsDemo.Win.DB;
 using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
 using System.Collections;

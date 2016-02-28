@@ -23,6 +23,7 @@ using DevExpress.XtraRichEdit;
 using DevExpress.XtraSplashScreen;
 using MySql.Data.MySqlClient;
 using DevExpress.ProductsDemo.Win.Common;
+using DevExpress.ProductsDemo.Win.Serial;
 
 namespace DevExpress.ProductsDemo.Win {
     public class ModulesNavigator {
@@ -138,7 +139,7 @@ namespace DevExpress.ProductsDemo.Win {
         protected string partName = string.Empty;
         protected OleDbConnection connection;
         protected MySqlConnection mariaDbConnection;
-        protected modbus serialConnection;
+        protected Modbus serialConnection;
 
         public BaseModule() { }
 
@@ -290,7 +291,7 @@ namespace DevExpress.ProductsDemo.Win {
             get { return mariaDbConnection; }
             set { mariaDbConnection = value; }
         }
-        protected virtual modbus SerialConnection
+        protected virtual Modbus SerialConnection
         {
             get { return serialConnection; }
             set { serialConnection = value; }

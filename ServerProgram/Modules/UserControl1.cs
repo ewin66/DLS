@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.ProductsDemo.Win.Controls;
 using DevExpress.ProductsDemo.Win.Common;
-
+using DevExpress.ProductsDemo.Win.DB;
 using DevExpress.MailDemo.Win;
 
 namespace DevExpress.ProductsDemo.Win.Modules

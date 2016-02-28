@@ -14,7 +14,7 @@ using DevExpress.MailClient.Win;
 using DevExpress.ProductsDemo.Win;
 using DevExpress.ProductsDemo.Win.Controls;
 using DevExpress.ProductsDemo.Win.Common;
-
+using DevExpress.ProductsDemo.Win.DB;
 namespace DevExpress.ProductsDemo.Win.Forms {
     public partial class fmLogin : XtraForm {
         MySqlManage db;

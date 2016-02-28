@@ -7,6 +7,7 @@ using DevExpress.MailDemo.Win;
 using DevExpress.ProductsDemo.Win.Forms;
 using DevExpress.ProductsDemo.Win.Controls;
 using DevExpress.ProductsDemo.Win.Common;
+using DevExpress.ProductsDemo.Win.DB;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;

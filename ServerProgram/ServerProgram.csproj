@@ -432,10 +432,12 @@
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Common\DK1EventArgs.cs" />
     <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
-    <Compile Include="Common\modbus.cs" />
-    <Compile Include="Common\MySqlManage.cs" />
+    <Compile Include="Common\IniFileHandle.cs" />
+    <Compile Include="Serial\Modbus.cs" />
+    <Compile Include="DB\MySqlManage.cs" />
     <Compile Include="Controls.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -451,7 +453,7 @@
     <Compile Include="Controls\HelpControl.Designer.cs">
       <DependentUpon>HelpControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\OleDbUserControl.cs" />
+    <Compile Include="DB\OleDbUserControl.cs" />
     <Compile Include="Controls\PrintControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -558,6 +560,12 @@
     </Compile>
     <Compile Include="Helpers.cs" />
     <Compile Include="Item\DK1Item.cs" />
+    <Compile Include="Modules\SystemMonitoring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemMonitoring.Designer.cs">
+      <DependentUpon>SystemMonitoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\NetworkManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -587,6 +595,12 @@
     </Compile>
     <Compile Include="Modules\AptManage.designer.cs">
       <DependentUpon>AptManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseBackup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseBackup.Designer.cs">
+      <DependentUpon>BaseBackup.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\StartStop.cs">
       <SubType>UserControl</SubType>
@@ -719,6 +733,7 @@
     <Compile Include="Sales.Model\OleDataProvider.cs" />
     <Compile Include="Sales.Model\SalesForecastMaker.cs" />
     <Compile Include="Sales.Model\Utils.cs" />
+    <Compile Include="Serial\DK1Interface.cs" />
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -798,6 +813,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\AptManage.resx">
       <DependentUpon>AptManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SystemMonitoring.resx">
+      <DependentUpon>SystemMonitoring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\SystemStatus.resx">
       <DependentUpon>SystemStatus.cs</DependentUpon>

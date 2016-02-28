@@ -180,6 +180,7 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("AptManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
             
             this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.NetworkManage));
+            this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.SystemMonitoring));
             this.navBarGroup1.SelectedLinkIndex = 5;
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
