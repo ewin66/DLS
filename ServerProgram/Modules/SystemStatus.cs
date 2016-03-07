@@ -13,20 +13,60 @@ using System.Threading.Tasks;
 using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.ProductsDemo.Win.DB;
+using DevExpress.ProductsDemo.Win.Serial;
 using System.Runtime.InteropServices;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
     public partial class SystemStatus : BaseModule
     {
+ 
+        public SystemStatus()
+        {
+            InitializeComponent();
+
+
+            mSensorInfoTable = initCommDataTable();
+            InitGridData();
+
+            // 실시간 데이터 저장 테이블
+            mCommTable = new DataTable();
+            mCommTable = initCommDataTable();
+
+
+
+            mCom = "COM1";
+            mInterval = "1000";
+
+            //timer1.Interval = 1000;
+            //timer1.Tick += new EventHandler(intervalTimer_Tick);
+
+            mComport.DataReceived += mComport_DataReceived;
+
+  
+
+            //this.serialConnection.Open("COM1", 115200, 8, System.IO.Ports.Parity.None, System.IO.Ports.StopBits.One);
+            //this.serialConnection
+            //SerialPort sp = new SerialPort("COM1", 115200, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
+            //sp.Open();
+            //sp.Write("hi1234");
+        }
+
+        private DK1Interface comm;
         private string mCom;
         private string mInterval;
         private SerialPort mComport = new SerialPort();
 
         private bool mTimeSync = false;
         Thread workerThread;
-        DataTable mSensorInfoTable;
+
         //private System.Windows.Forms.Timer timer1;
+
+        DataTable mSensorInfoTable = new DataTable();
+        DataTable mCommTable = new DataTable();
+        DataTable mErrorTable = new DataTable();
+        DataTable mDataTable = new DataTable();
+
 
         internal override void ShowModule(bool firstShow)
         {
@@ -61,66 +101,44 @@ namespace DevExpress.ProductsDemo.Win.Modules
                     break;
             }
         }
-        public SystemStatus()
+
+
+        DataTable initCommDataTable()
         {
-            InitializeComponent();
+            DataTable table = new DataTable();
 
-            
-            CreateGridTable();
-            InitGridData();
-
-
-            mCom = "COM1";
-            mInterval = "1000";
-
-            //timer1.Interval = 1000;
-            //timer1.Tick += new EventHandler(intervalTimer_Tick);
-
-            mComport.DataReceived += mComport_DataReceived;
-
-  
-
-            //this.serialConnection.Open("COM1", 115200, 8, System.IO.Ports.Parity.None, System.IO.Ports.StopBits.One);
-            //this.serialConnection
-            //SerialPort sp = new SerialPort("COM1", 115200, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
-            //sp.Open();
-            //sp.Write("hi1234");
-        }
-
-        void CreateGridTable()
-        {
             try
             {
 
-                mSensorInfoTable = new DataTable();
+                
                 DataColumn column;
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "NO";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "검침시간";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "동";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "호";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
 
                 column = new DataColumn();
@@ -128,55 +146,55 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 column.ColumnName = "전기";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "수도";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "온수";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "가스";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "열량";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "냉방";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "통신상태";
 
                 // Add the column to the DataTable.Columns collection.
-                mSensorInfoTable.Columns.Add(column);
+                table.Columns.Add(column);
 
                 // Make the ID column the primary key column.
                 DataColumn[] PrimaryKeyColumns = new DataColumn[2];
-                PrimaryKeyColumns[0] = mSensorInfoTable.Columns["동"];
-                PrimaryKeyColumns[1] = mSensorInfoTable.Columns["호"];
-                mSensorInfoTable.PrimaryKey = PrimaryKeyColumns;
+                PrimaryKeyColumns[0] = table.Columns["동"];
+                PrimaryKeyColumns[1] = table.Columns["호"];
+                table.PrimaryKey = PrimaryKeyColumns;
 
 
             }
@@ -184,6 +202,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
             {
                 Console.WriteLine(e.Message);
             }
+
+            return table;
 
         }
         
@@ -283,12 +303,18 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             while (!_shouldStop )
             {
-                mComport.Write(item, 0, item.Length);
 
-                memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [SEND] ") + DK1Util.ByteArrayToHexString(item) + "\r\n"));
-                memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+                foreach (DataRow row in mCommTable.Rows)
+                {
+                    mComport.Write(item, 0, item.Length);
 
-                System.Threading.Thread.Sleep(timer);
+                    memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [SEND] ") + DK1Util.ByteArrayToHexString(item) + "\r\n"));
+                    memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+
+                    System.Threading.Thread.Sleep(timer);
+
+                }
+
             }
         }
 
@@ -299,6 +325,15 @@ namespace DevExpress.ProductsDemo.Win.Modules
         /// <returns></returns>
         public bool Run()
         {
+
+            if( comm == null )
+                comm = new DK1Interface(mDataTable, mCommTable, mErrorTable, 1000);
+
+
+            return true;
+
+
+
 
             // COM 포트가 이미 열려 있다면 
             if (mComport.IsOpen)
@@ -334,8 +369,6 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 mComport.Open();
 
 
-
-
                 //// UI 업데이트 타이머 시작
                 ////timer1.Start();
                 //// UI 업데이트 타이머 시작되지 않았다면 시작
@@ -369,41 +402,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
         /// </summary>
         public void Stop()
         {
-
-            try
-            {
-
-                //dataGridViewBMSStatus.SafeInvoke(d => d.Rows.Clear());
-                //foreach (DataRow row in mDataTable.Rows)
-                //{
-                //    dataGridViewBMSStatus.SafeInvoke(d => d.Rows.Add(row["Name"], "null", "null", "null", "null", "null", "null", "null", "null", row["Contact1"], row["Contact2"], row["Contact3"], row["Contact4"]));
-                //}
-
-
-
-                //// UI 업데이트 종료
-                ////timer1.Stop();
-                //timer1.Enabled = false;
-
-                // 통신 스레드 종료
-                RequestStop();
-
-
-                // COM 포트 닫기
-                if (mComport.IsOpen)
-                    mComport.Close();
-
-
-                //// 에러카운트 초기화(에러 발생시 탭이 점멸시 확인하는 에러 갯수 - 하나의 에러가 취소 되더라도 다른 애러가 있다면 점멸을 계속 유지하기)
-                //mErrorCount = 0;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
+            comm.Dispose();
+            GC.SuppressFinalize(comm);
 
         }
         #endregion

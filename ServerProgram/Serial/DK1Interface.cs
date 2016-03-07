@@ -11,7 +11,7 @@ using DevExpress.XtraCharts;
 
 namespace DevExpress.ProductsDemo.Win.Serial
 {
-    public class DK1Interface
+    public class DK1Interface : IDisposable
     {
 
         #region Events
@@ -44,18 +44,23 @@ namespace DevExpress.ProductsDemo.Win.Serial
         
         #region Variables
 
+        private bool isDispose = false;
+
+        private SerialPort mComport = new SerialPort();
 
         private DataTable mDataTable;   // contact에러시 기정의된 이름으로 출력하기 위한 참조 테이블
         private DataTable mCommTable;
         private DataTable mErrorTable;
-        private Dictionary<string, DataTable> mErrorSetTable = new Dictionary<string, DataTable>();
+        
         private DataTable mErrorListTable;
         private string mLineName;
         private string mBMSName;
         private string mCom;
-  
+        
         
         private IniFileHandle mErrorLog;
+
+        public bool actived = false;
 
         public DataTable CommTable
         {
@@ -66,11 +71,6 @@ namespace DevExpress.ProductsDemo.Win.Serial
         {
             get { return mErrorTable; }
             set { mErrorTable = value; }
-        }
-        public Dictionary<string, DataTable> ErrorSetTable
-        {
-            get { return mErrorSetTable; }
-            set { mErrorSetTable = value; }
         }
         public DataTable ErrorListTable
         {
@@ -94,27 +94,90 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
         #region public method
 
-        /// <summary>
-        /// 클래스 초기화
-        /// </summary>
-        public DK1Interface()
+
+        public DK1Interface( DataTable dataTable, DataTable commTable, DataTable errorTable, UInt16 interval )
         {
+            // COM 포트 설정
+            mComport.BaudRate = 9600;
+            mComport.DataBits = 8;
+            mComport.Parity = Parity.None;
+            mComport.StopBits = StopBits.One;
+            mComport.PortName = "COM1";
 
-        }
 
+            // COM 포트 열기
+            mComport.Open();
 
-        public DK1Interface( DataTable dataTable, DataTable commTable, DataTable errorTable, Dictionary<string, DataTable> errorSetTable)
-        {
-
+            mComport.DataReceived += mComport_DataReceived;
 
             mDataTable = dataTable;
             mCommTable = commTable;
             mErrorTable = errorTable;
-            mErrorSetTable = errorSetTable;
-   
-        
+
+            this.pollingTimer = new System.Timers.Timer();
+            this.pollingTimer.AutoReset = false;
+            this.pollingTimer.Elapsed += pollingTimer_Elapsed;
+            this.PollingInterval = interval;
+            this.pollingTimer.Enabled = true;
+
+            this.actived = true;
         }
 
+        void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void pollingTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+
+            byte[] item = new byte[9];
+
+            item[0] = 0x02;
+            item[1] = 0x00;
+            item[2] = 0xFF;
+            item[3] = 0xFF;
+            item[4] = 0xFF;
+            item[5] = 0xFF;
+            item[6] = 0x11;
+            item[7] = 0x0F;
+            item[8] = 0x1C;
+
+            //foreach (DataRow row in mCommTable.Rows)
+            {
+                mComport.Write(item, 0, item.Length);
+
+
+            }
+
+            this.pollingTimer.Enabled = true;
+
+        }
+
+        ~DK1Interface()
+        {
+            if (!isDispose)
+            {
+                Dispose();
+            }
+        }
+
+        private readonly System.Timers.Timer pollingTimer;
+        private int pollingInterval;
+        public int PollingInterval
+        {
+            get { return pollingInterval; }
+            set
+            {
+                pollingInterval = value;
+                // workaround from doc to avoid firing the event
+
+                this.pollingTimer.AutoReset = true;
+                //this.pollingCycle.Interval = 1000d * value;
+                this.pollingTimer.Interval = value;
+                this.pollingTimer.AutoReset = false;
+            }
+        }
 
 
         /// <summary>
@@ -206,6 +269,21 @@ namespace DevExpress.ProductsDemo.Win.Serial
         #endregion
 
 
+
+        #region IDisposable 멤버
+
+        public void Dispose()
+        {
+            isDispose = true;
+
+            this.pollingTimer.Enabled = false;
+            this.actived = false;
+
+            
+
+        }
+
+        #endregion
 
     }
 }
