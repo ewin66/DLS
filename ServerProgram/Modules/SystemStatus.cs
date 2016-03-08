@@ -34,16 +34,13 @@ namespace DevExpress.ProductsDemo.Win.Modules
             mCommTable = initCommDataTable();
 
 
-
-            mCom = "COM1";
-            mInterval = "1000";
+            
+            
 
             //timer1.Interval = 1000;
             //timer1.Tick += new EventHandler(intervalTimer_Tick);
 
-            mComport.DataReceived += mComport_DataReceived;
-
-  
+           
 
             //this.serialConnection.Open("COM1", 115200, 8, System.IO.Ports.Parity.None, System.IO.Ports.StopBits.One);
             //this.serialConnection
@@ -55,10 +52,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
         private DK1Interface comm;
         private string mCom;
         private string mInterval;
-        private SerialPort mComport = new SerialPort();
+        
 
         private bool mTimeSync = false;
-        Thread workerThread;
+
 
         //private System.Windows.Forms.Timer timer1;
 
@@ -223,101 +220,37 @@ namespace DevExpress.ProductsDemo.Win.Modules
             gridControl1.DataSource = mSensorInfoTable;
         }
 
-        /// <summary>
-        /// 시리얼 데이터 수신
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
+
+        void comm_eDataReceive(object sender, DK1EventArgs e)
         {
-            int bytes = mComport.BytesToRead;
-
-            byte[] buffer = new byte[bytes];
-
-            mComport.Read(buffer, 0, bytes);
-
-            memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + DK1Util.ByteArrayToHexString(buffer) + "\r\n"));
-            memoEdit1.SafeInvoke(d => d.ScrollToCaret());
-
-            //throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// UI 업데이트 타이머
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void intervalTimer_Tick(object sender, EventArgs e)
-        {
-            //int index = 0;
-
-            //mCommTable = mComm.CommTable;
-            //mErrorTable = mComm.ErrorTable;
-            //DataTable errorList = mComm.ErrorListTable;
-            //foreach (DataRow row in mCommTable.Rows)
-            //{
-            //    index = mCommTable.Rows.IndexOf(row);
-            //    BMSStatusDataGridViewInvoke(dataGridViewBMSStatus, index, row, mErrorTable.Rows[index]);
-            //}
-            //mComport.Write("hi123433");
-
-        }
-
-        #region thread
-
-        private volatile bool _shouldStop;
-
-        /// <summary>
-        ///  스레드 시작
-        /// </summary>
-        public void RequestStart()
-        {
-            _shouldStop = false;
-        }
-        /// <summary>
-        ///  스레드 종료
-        /// </summary>
-        public void RequestStop()
-        {
-            _shouldStop = true;
-        }
-              /// <summary>
-        /// 모드버스 통신 스레드
-        /// </summary>
-        /// <param name="cycle"></param>
-        public void DoWork(object cycle)
-        {
-            int timer = Convert.ToInt32(cycle);
-
-            byte[] item = new byte[9];
-
-            item[0] = 0x02;
-            item[1] = 0x00;
-            item[2] = 0xFF;
-            item[3] = 0xFF;
-            item[4] = 0xFF;
-            item[5] = 0xFF;
-            item[6] = 0x11;
-            item[7] = 0x0F;
-            item[8] = 0x1C;
-
-            while (!_shouldStop )
+            if (e.GetType().Equals(typeof(DK1DataArgs)))
             {
 
-                foreach (DataRow row in mCommTable.Rows)
-                {
-                    mComport.Write(item, 0, item.Length);
 
-                    memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [SEND] ") + DK1Util.ByteArrayToHexString(item) + "\r\n"));
-                    memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+                // add log
+                DK1DataArgs test = (DK1DataArgs)e;
+                memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + test.Data + "\r\n"));
+                memoEdit1.SafeInvoke(d => d.SelectionStart = memoEdit1.Text.Length);
+                memoEdit1.SafeInvoke(d => d.ScrollToCaret());
 
-                    System.Threading.Thread.Sleep(timer);
+                // update grid view
+                //updateDevice( (DK1DataArgs)e );
+                //DataRow foundRow = mSensorInfoTable.Rows.Find(new string[2] { "1221", test.address });
+                //if (foundRow != null)
+                //{
+                   
+                //    try
+                //    {
+                //        foundRow[5] = "999999";
+                //    }
+                //    catch(Exception ex)
+                //    {
+                //        Console.WriteLine(ex.Message);
+                //    }
 
-                }
-
+                //}
             }
         }
-
 
         /// <summary>
         /// 통신 시작
@@ -326,75 +259,17 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public bool Run()
         {
 
-            if( comm == null )
+            //if( comm == null )
+            if ( comm == null || !comm.actived )
+            {
                 comm = new DK1Interface(mDataTable, mCommTable, mErrorTable, 1000);
+                comm.eDataReceive += new EventHandler<DK1EventArgs>(comm_eDataReceive);
+            }
+                
 
 
             return true;
 
-
-
-
-            // COM 포트가 이미 열려 있다면 
-            if (mComport.IsOpen)
-            {
-                // 모드버스 통신 스레드가 시작되지 않았다면 시작
-                if (!workerThread.IsAlive)
-                {
-                    workerThread.Start(this.mInterval);
-                    workerThread.IsBackground = true;
-                }
-
-                //// UI 업데이트 타이머 시작되지 않았다면 시작
-                //if (!timer1.Enabled)
-                //    timer1.Enabled = true;
-
-                return false;
-            }
-
-
-
-            try
-            {
-
-                // COM 포트 설정
-                mComport.BaudRate = 9600;
-                mComport.DataBits = 8;
-                mComport.Parity = Parity.None;
-                mComport.StopBits = StopBits.One;
-                mComport.PortName = mCom;
-
-
-                // COM 포트 열기
-                mComport.Open();
-
-
-                //// UI 업데이트 타이머 시작
-                ////timer1.Start();
-                //// UI 업데이트 타이머 시작되지 않았다면 시작
-                //if (!timer1.Enabled)
-                //    timer1.Enabled = true;
-
-
-                // 모드버스 인터페이스 스레드
-                workerThread = new Thread(new ParameterizedThreadStart(DoWork));
-
-                RequestStart();
-                if (!workerThread.IsAlive)
-                {
-                    workerThread.Start(this.mInterval);
-                    workerThread.IsBackground = true;
-                }
-
-
-            }
-            catch (Exception e)
-            {
-                //MetroMessageBox.Show(mParent, e.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            return true;
         }
 
         /// <summary>
@@ -402,11 +277,12 @@ namespace DevExpress.ProductsDemo.Win.Modules
         /// </summary>
         public void Stop()
         {
+            
             comm.Dispose();
-            GC.SuppressFinalize(comm);
+            //GC.SuppressFinalize(comm);
 
         }
-        #endregion
+
 
     }
 }

@@ -432,7 +432,7 @@
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Common\DK1EventArgs.cs" />
+    <Compile Include="Item\DK1EventArgs.cs" />
     <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
     <Compile Include="Common\IniFileHandle.cs" />

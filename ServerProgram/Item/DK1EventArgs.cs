@@ -5,19 +5,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevExpress.ProductsDemo.Win.Common
+namespace DevExpress.ProductsDemo.Win.Item
 {
+    //public class DK1EventArgs : EventArgs
+    //{
+    //    private DataRow newErrorList;
+
+    //    public DK1EventArgs(DataRow d)
+    //    {
+    //        newErrorList = d;
+    //    }
+    //    public DataRow NewErrorList
+    //    {
+    //        get { return newErrorList; }
+    //    }
+
+    //}
     public class DK1EventArgs : EventArgs
     {
-        private DataRow newErrorList;
+        public string address { get; set; }
+    }
+    public class DK1DataArgs : DK1EventArgs
+    {
+        private string data;
 
-        public DK1EventArgs(DataRow d)
+        public DK1DataArgs()
         {
-            newErrorList = d;
+            
         }
-        public DataRow NewErrorList
+        public string Data
         {
-            get { return newErrorList; }
+            get { return data; }
+            set { data = value; }
         }
 
     }

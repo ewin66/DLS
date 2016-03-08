@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.IO.Ports;
 using DevExpress.ProductsDemo.Win.Common;
+using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.XtraCharts;
 
 namespace DevExpress.ProductsDemo.Win.Serial
@@ -15,6 +16,19 @@ namespace DevExpress.ProductsDemo.Win.Serial
     {
 
         #region Events
+
+        public event EventHandler<DK1EventArgs> eDataReceive;
+        protected void eHandler(DK1EventArgs e)
+        {
+            EventHandler<DK1EventArgs> handler = eDataReceive;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+
+
         // 에러 발생 이벤트
         public event EventHandler<ErrorMessageEventArgs> DataRowErrorInfo;
         protected void OnErrorMessageChanged(ErrorMessageEventArgs e)
@@ -125,7 +139,19 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
         void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            throw new NotImplementedException();
+            int bytes = mComport.BytesToRead;
+
+            byte[] buffer = new byte[bytes];
+
+            mComport.Read(buffer, 0, bytes);
+
+
+            eHandler(new DK1DataArgs
+            {
+                address = "1107",
+                Data = DK1Util.ByteArrayToHexString(buffer)
+
+            });
         }
 
         private void pollingTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -278,8 +304,7 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
             this.pollingTimer.Enabled = false;
             this.actived = false;
-
-            
+            this.mComport.Close();
 
         }
 
