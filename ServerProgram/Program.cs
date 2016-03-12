@@ -51,6 +51,8 @@ namespace DevExpress.ProductsDemo.Win {
 
             if( login.DialogResult == DialogResult.OK )
             {
+                //DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
+
                 Application.Run(new frmMain());
 
                 MySqlManage db = new MySqlManage();

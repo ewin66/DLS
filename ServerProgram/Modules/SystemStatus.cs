@@ -10,11 +10,17 @@ using System.IO.Ports;
 using DevExpress.MailDemo.Win;
 using System.Threading;
 using System.Threading.Tasks;
+
 using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.ProductsDemo.Win.DB;
 using DevExpress.ProductsDemo.Win.Serial;
 using System.Runtime.InteropServices;
+
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
@@ -26,19 +32,18 @@ namespace DevExpress.ProductsDemo.Win.Modules
             InitializeComponent();
 
 
+            // 실시간 데이터 저장 테이블
+            mCommTable = initCommDataTable();
             mSensorInfoTable = initCommDataTable();
             InitGridData();
 
-            // 실시간 데이터 저장 테이블
-            mCommTable = new DataTable();
-            mCommTable = initCommDataTable();
 
 
-            
-            
 
-            //timer1.Interval = 1000;
-            //timer1.Tick += new EventHandler(intervalTimer_Tick);
+
+
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(uiUpdateTimer_Tick);
 
            
 
@@ -50,14 +55,14 @@ namespace DevExpress.ProductsDemo.Win.Modules
         }
 
         private DK1Interface comm;
-        private string mCom;
-        private string mInterval;
+        //private string mCom;
+        //private string mInterval;
         
 
-        private bool mTimeSync = false;
+        //private bool mTimeSync = false;
 
 
-        //private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer1 =  new System.Windows.Forms.Timer();
 
         DataTable mSensorInfoTable = new DataTable();
         DataTable mCommTable = new DataTable();
@@ -100,6 +105,38 @@ namespace DevExpress.ProductsDemo.Win.Modules
         }
 
 
+        /// <summary>
+        /// UI 업데이트 타이머
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void uiUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            //int index = 0;
+
+            mCommTable = comm.CommTable;
+            //mErrorTable = mComm.ErrorTable;
+            //DataTable errorList = mComm.ErrorListTable;
+
+
+            //gridControl1.SafeInvoke(d => d.DataSource = mCommTable);
+            
+            //foreach (DataRow row in mCommTable.Rows)
+            //{
+            //    index = mCommTable.Rows.IndexOf(row);
+
+
+            //    //StatusDataGridViewInvoke(gridControl1, index, row, mErrorTable.Rows[index]);
+            //    //StatusDataGridViewInvoke(gridView1, index, row, row);
+            //}
+
+        }
+
+
+        /// <summary>
+        /// 테이블 생성
+        /// </summary>
+        /// <returns></returns>
         DataTable initCommDataTable()
         {
             DataTable table = new DataTable();
@@ -204,6 +241,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         }
         
+        /// <summary>
+        /// 테이블 기본값 입력
+        /// </summary>
         void InitGridData()
         {
             this.gridControl1.SafeInvoke(d => d.DataSource = null);
@@ -216,16 +256,21 @@ namespace DevExpress.ProductsDemo.Win.Modules
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 mSensorInfoTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
+                mCommTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
             }
             gridControl1.DataSource = mSensorInfoTable;
         }
 
 
+        /// <summary>
+        /// 통신 이벤트 수신
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void comm_eDataReceive(object sender, DK1EventArgs e)
         {
             if (e.GetType().Equals(typeof(DK1DataArgs)))
             {
-
 
                 // add log
                 DK1DataArgs test = (DK1DataArgs)e;
@@ -233,24 +278,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 memoEdit1.SafeInvoke(d => d.SelectionStart = memoEdit1.Text.Length);
                 memoEdit1.SafeInvoke(d => d.ScrollToCaret());
 
-                // update grid view
-                //updateDevice( (DK1DataArgs)e );
-                //DataRow foundRow = mSensorInfoTable.Rows.Find(new string[2] { "1221", test.address });
-                //if (foundRow != null)
-                //{
-                   
-                //    try
-                //    {
-                //        foundRow[5] = "999999";
-                //    }
-                //    catch(Exception ex)
-                //    {
-                //        Console.WriteLine(ex.Message);
-                //    }
-
-                //}
             }
         }
+
 
         /// <summary>
         /// 통신 시작
@@ -265,8 +295,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 comm = new DK1Interface(mDataTable, mCommTable, mErrorTable, 1000);
                 comm.eDataReceive += new EventHandler<DK1EventArgs>(comm_eDataReceive);
             }
-                
 
+            // UI 업데이트 타이머 시작되지 않았다면 시작
+            if (!timer1.Enabled)
+                timer1.Enabled = true; 
 
             return true;
 
@@ -280,6 +312,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
             
             comm.Dispose();
             //GC.SuppressFinalize(comm);
+
+            // UI 업데이트 종료
+            timer1.Enabled = false;
 
         }
 

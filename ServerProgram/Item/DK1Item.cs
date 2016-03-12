@@ -12,13 +12,25 @@ namespace DevExpress.ProductsDemo.Win.Item
         public byte LEN { get; set; }
         public UInt32 ID { get; set; }
         public byte CMD { get; set; }
-        //public byte[] DATA { get; set; }
         public byte ADD { get; set; }
         public byte XOR { get; set; }
 
-        //public DK1Item(int size)
-        //{
-        //    DATA = new byte[size];
-        //}
     }
+
+    [Serializable]
+    class DK1Sensor
+    {
+        public UInt32[] SENSOR = new UInt32[6];
+        public byte[] ERROR = new byte[6];
+
+    }
+    [Serializable]
+    class DK1Data : DK1Sensor
+    {
+        public UInt32 DONG { get; set; }
+        public UInt32 HO { get; set; }
+
+    }
+
+
 }

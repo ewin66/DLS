@@ -137,6 +137,18 @@ namespace DevExpress.ProductsDemo.Win.Serial
             this.actived = true;
         }
 
+        /// <summary>
+        /// 소멸자
+        /// </summary>
+        ~DK1Interface()
+        {
+            if (!isDispose)
+            {
+                Dispose();
+            }
+        }
+
+        ArrayList recieveBuffer = new ArrayList();
         void mComport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             int bytes = mComport.BytesToRead;
@@ -146,14 +158,183 @@ namespace DevExpress.ProductsDemo.Win.Serial
             mComport.Read(buffer, 0, bytes);
 
 
+            recieveBuffer.AddRange(buffer);
+
+            ArrayList remainder = ReceiveValue(recieveBuffer);
+
+            recieveBuffer.Clear();
+            recieveBuffer.AddRange(remainder);
+
             eHandler(new DK1DataArgs
             {
-                address = "1107",
+                address = "null",
                 Data = DK1Util.ByteArrayToHexString(buffer)
 
             });
         }
+        private ArrayList ReceiveValue(ArrayList cvalue)
+        {
+            ArrayList remainder = new ArrayList();
+            int startIndex = 0;
+            byte tlen,dataLen = 0;
+            byte[] data = new byte[cvalue.Count];
 
+            cvalue.CopyTo(0, data, 0, cvalue.Count);
+
+            int nextstartIndex = 0;
+
+            
+
+            for (startIndex = 0; startIndex < cvalue.Count; )
+            {
+
+                try
+                {
+
+                    // STX  LEN  검침기ID   CMD
+                    // 1    1       4       1
+                    //int offset = 2;
+                    int indexof = cvalue.IndexOf(byte.Parse("2"), startIndex);
+                    if (indexof == -1)
+                        break;
+
+                    if (cvalue.Count >= indexof + 6) {
+                        tlen = data[indexof + 1];
+                    }
+                    else break;
+
+                    if( cvalue.Count >= tlen )
+                    {
+                        dataLen = getDataLength(data[indexof+6]);
+
+                        DK1Util.GetCheckSum(data, indexof, tlen - 1);
+                        DK1Util.GetCheckXOR(data, indexof, tlen - 2);
+
+                        byte[] dk1data = new byte[dataLen];
+                        cvalue.CopyTo(indexof+7, dk1data, 0, dk1data.Length);
+
+                        updateData(dk1data);
+                            //getDataLength
+                        //tlen = data[indexof + 1];
+                        //// 파싱한 패킷 길이가 수신된 패킷의 길이 보다 클경우 에러 패킷을 판단하고 초기화 한다.
+                        //if (tlen > cvalue.Count)
+                        //{
+                        //    remainder = new ArrayList();
+                        //    return remainder;
+                        //}
+         
+
+                        startIndex = startIndex + tlen;
+                        nextstartIndex = startIndex;
+
+
+                    }
+                    else
+                    {
+                        startIndex += indexof;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    //eHandler(new Dabom.CommPlugIn.Item.PlugInDriverState
+                    //{
+                    //    DeviceId = this.deviceid,
+                    //    Message = string.Format(" Packet Error : [{0}][{1}]", data.Length, BitConverter.ToString(data, 0, data.Length).Replace("-", "")),
+                    //    State = Dabom.CommPlugIn.Item.DriverState.Run_Read
+                    //});
+                    //eHandler(new Dabom.CommPlugIn.Item.PlugInDriverErrorArgs { DeviceId = this.deviceid, Mode = "Read:", Error = ex.Message });
+                    remainder = new ArrayList();
+                    return remainder;
+                }
+
+
+            }
+
+            if (cvalue.Count > startIndex)
+            {
+                remainder.AddRange(cvalue.GetRange(nextstartIndex + 1, cvalue.Count - nextstartIndex - 1));
+            }
+            else
+            {
+                remainder = new ArrayList();
+            }
+
+            return remainder;
+        }
+        private byte getDataLength(byte cmd)
+        {
+            byte length = 0;
+
+            switch (cmd)
+            {
+                case 0x11:
+                    length = 34;
+                    break;
+                case 0x12:
+                    length = 28;
+                    break;
+
+                default:
+
+                    break;
+            }
+
+            return length;
+        }
+
+        /// <summary>
+        /// 디바이스로 전달 받은 데이터 업데이트
+        /// </summary>
+        /// <param name="data"></param>
+        private void updateData(byte[] data)
+        {
+
+            int offset = 0;
+            DK1Data item = new DK1Data();
+
+            item.DONG = (0x00ff & Convert.ToUInt32(data[offset++])) << 8;
+            item.DONG |= (0x00ff & Convert.ToUInt32(data[offset++])) << 0;
+            
+            item.HO = (0x00ff & Convert.ToUInt32(data[offset++])) << 8;
+            item.HO |= (0x00ff & Convert.ToUInt32(data[offset++])) << 0;
+
+            for (int i = 0; i < 6; i++ )
+            {
+                item.SENSOR[i] = (0x000000ff & Convert.ToUInt32(data[offset++])) << 16;
+                item.SENSOR[i] |= (0x000000ff & Convert.ToUInt32(data[offset++])) << 8;
+                item.SENSOR[i] |= (0x000000ff & Convert.ToUInt32(data[offset++])) << 0;
+
+                item.ERROR[i] = data[offset++];
+            }
+
+            // 리스트 테이블에 수신한 ID 찾기
+            DataRow foundRow = mCommTable.Rows.Find(new string[2] { item.DONG.ToString(), item.HO.ToString() });
+            
+            // 있다면 업데이트
+            if (foundRow != null)
+            {
+                //int index = mCommTable.Rows.IndexOf(foundRow);
+
+                //전기	수도	온수	가스	열량	냉방
+                foundRow["전기"] = item.SENSOR[0];
+                foundRow["수도"] = item.SENSOR[1];
+                foundRow["온수"] = item.SENSOR[2];
+                foundRow["가스"] = item.SENSOR[3];
+                foundRow["열량"] = item.SENSOR[4];
+                foundRow["냉방"] = item.SENSOR[5];
+                
+            }
+
+        }
+
+
+        /// <summary>
+        /// 장비에 데이터 요청
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pollingTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
 
@@ -180,13 +361,7 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
         }
 
-        ~DK1Interface()
-        {
-            if (!isDispose)
-            {
-                Dispose();
-            }
-        }
+
 
         private readonly System.Timers.Timer pollingTimer;
         private int pollingInterval;
