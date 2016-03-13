@@ -339,25 +339,32 @@ namespace DevExpress.ProductsDemo.Win.Serial
         {
 
             byte[] item = new byte[9];
+            UInt16 dong = 0;
+            UInt16 ho = 0;
 
-            item[0] = 0x02;
-            item[1] = 0x00;
-            item[2] = 0xFF;
-            item[3] = 0xFF;
-            item[4] = 0xFF;
-            item[5] = 0xFF;
-            item[6] = 0x11;
-            item[7] = 0x0F;
-            item[8] = 0x1C;
-
-            //foreach (DataRow row in mCommTable.Rows)
+            foreach (DataRow row in mDataTable.Rows)
             {
-                mComport.Write(item, 0, item.Length);
+                item[0] = 0x02;
+                item[1] = 0x09;
+                dong = Convert.ToUInt16(row.ItemArray[2]);
+                item[2] = (byte)(dong >> 8);
+                item[3] = (byte)(dong >> 0);
+                ho = Convert.ToUInt16(row.ItemArray[3]);
+                item[4] = (byte)(ho >> 8);
+                item[5] = (byte)(ho >> 0);
+                item[6] = 0x11;
+                item[7] = 0x0F;
+                item[8] = 0x1C;
 
+                //foreach (DataRow row in mCommTable.Rows)
 
+                if (mComport.IsOpen)
+                {
+                    mComport.Write(item, 0, item.Length);
+
+                    this.pollingTimer.Enabled = true;
+                }
             }
-
-            this.pollingTimer.Enabled = true;
 
         }
 
@@ -477,9 +484,13 @@ namespace DevExpress.ProductsDemo.Win.Serial
         {
             isDispose = true;
 
+            this.mComport.Close();
+            //this.mComport.DataReceived -= mComport_DataReceived;
+
             this.pollingTimer.Enabled = false;
             this.actived = false;
-            this.mComport.Close();
+
+            
 
         }
 

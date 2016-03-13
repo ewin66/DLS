@@ -188,8 +188,8 @@ namespace DevExpress.ProductsDemo.Win {
             //this.navBarGroup2.SelectedLinkIndex = 0;
 
             // 검침
-            //this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
-            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Controls.GridRealTime));
+            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
+            //this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Controls.GridRealTime));
             
             //this.navBarGroup3.SelectedLinkIndex = 0;
         }

@@ -22,8 +22,120 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 
 
+using System.Collections;
+
+
+
 namespace DevExpress.ProductsDemo.Win.Modules
 {
+    #region record
+    public class RecordCollection : CollectionBase, IBindingList, ITypedList
+    {
+        public Record this[int i] { get { return (Record)List[i]; } }
+        public void Add(Record record)
+        {
+            int res = List.Add(record);
+            record.owner = this;
+            record.Index = res;
+        }
+        public void SetValue(int row, int col, object val)
+        {
+            this[row].SetValue(col, val);
+        }
+        internal void OnListChanged(Record rec)
+        {
+            if (listChangedHandler != null) listChangedHandler(this, new ListChangedEventArgs(ListChangedType.ItemChanged, rec.Index, rec.Index));
+        }
+
+        PropertyDescriptorCollection ITypedList.GetItemProperties(PropertyDescriptor[] accessors)
+        {
+            PropertyDescriptorCollection coll = TypeDescriptor.GetProperties(typeof(Record));
+            ArrayList list = new ArrayList(coll);
+            list.Sort(new PDComparer());
+            PropertyDescriptorCollection res = new PropertyDescriptorCollection(null);
+            for (int n = 0; n < SystemStatus.ColumnCount; n++)
+            {
+                res.Add(list[n] as PropertyDescriptor);
+            }
+            return res;
+        }
+        class PDComparer : IComparer
+        {
+            int IComparer.Compare(object a, object b)
+            {
+                return Comparer.Default.Compare(GetName(a), GetName(b));
+            }
+            int GetName(object a)
+            {
+                PropertyDescriptor pd = (PropertyDescriptor)a;
+                if (pd.Name.StartsWith("Column")) return Convert.ToInt32(pd.Name.Substring(6));
+                return -1;
+
+            }
+        }
+        string ITypedList.GetListName(PropertyDescriptor[] accessors) { return ""; }
+        public object AddNew() { return null; }
+        public bool AllowEdit { get { return true; } }
+        public bool AllowNew { get { return false; } }
+        public bool AllowRemove { get { return false; } }
+
+        private ListChangedEventHandler listChangedHandler;
+        public event ListChangedEventHandler ListChanged
+        {
+            add { listChangedHandler += value; }
+            remove { listChangedHandler -= value; }
+        }
+        public void AddIndex(PropertyDescriptor pd) { throw new NotSupportedException(); }
+        public void ApplySort(PropertyDescriptor pd, ListSortDirection dir) { throw new NotSupportedException(); }
+        public int Find(PropertyDescriptor property, object key) { throw new NotSupportedException(); }
+        public bool IsSorted { get { return false; } }
+        public void RemoveIndex(PropertyDescriptor pd) { throw new NotSupportedException(); }
+        public void RemoveSort() { throw new NotSupportedException(); }
+        public ListSortDirection SortDirection { get { throw new NotSupportedException(); } }
+        public PropertyDescriptor SortProperty { get { throw new NotSupportedException(); } }
+        public bool SupportsChangeNotification { get { return true; } }
+        public bool SupportsSearching { get { return false; } }
+        public bool SupportsSorting { get { return false; } }
+
+    }
+    
+    public class Record
+    {
+        internal int Index = -1;
+        internal RecordCollection owner;
+        string[] values = new string[20];
+        public string Column0 { get { return values[0]; } set { SetValue(0, value); } }
+        public string Column1 { get { return values[1]; } set { SetValue(1, value); } }
+        public string Column2 { get { return values[2]; } set { SetValue(2, value); } }
+        public string Column3 { get { return values[3]; } set { SetValue(3, value); } }
+        public string Column4 { get { return values[4]; } set { SetValue(4, value); } }
+        public string Column5 { get { return values[5]; } set { SetValue(5, value); } }
+        public string Column6 { get { return values[6]; } set { SetValue(6, value); } }
+        public string Column7 { get { return values[7]; } set { SetValue(7, value); } }
+        public string Column8 { get { return values[8]; } set { SetValue(8, value); } }
+        public string Column9 { get { return values[9]; } set { SetValue(9, value); } }
+        public string Column10 { get { return values[10]; } set { SetValue(10, value); } }
+        public string Column11 { get { return values[11]; } set { SetValue(11, value); } }
+        public string Column12 { get { return values[12]; } set { SetValue(12, value); } }
+        public string Column13 { get { return values[13]; } set { SetValue(13, value); } }
+        public string Column14 { get { return values[14]; } set { SetValue(14, value); } }
+        public string Column15 { get { return values[15]; } set { SetValue(15, value); } }
+        public string Column16 { get { return values[16]; } set { SetValue(16, value); } }
+        public string Column17 { get { return values[17]; } set { SetValue(17, value); } }
+        public string Column18 { get { return values[18]; } set { SetValue(18, value); } }
+        public string Column19 { get { return values[19]; } set { SetValue(19, value); } }
+        public string GetValue(int index) { return values[index]; }
+        //<label1>
+        public void SetValue(int index, object val)
+        {
+            values[index] = (string)val;
+            if (this.owner != null) this.owner.OnListChanged(this);
+        }
+        //</label1>
+    }
+    #endregion
+
+
     public partial class SystemStatus : BaseModule
     {
  
@@ -34,12 +146,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             // 실시간 데이터 저장 테이블
             mCommTable = initCommDataTable();
-            mSensorInfoTable = initCommDataTable();
+            mDataTable = initCommDataTable();
             InitGridData();
-
-
-
-
 
 
             timer1.Interval = 1000;
@@ -54,6 +162,20 @@ namespace DevExpress.ProductsDemo.Win.Modules
             //sp.Write("hi1234");
         }
 
+
+        public IList CreateData()
+        {
+            
+            RecordCollection coll = new RecordCollection();
+            for (int n = 0; n < mCommTable.Rows.Count; n++)
+            {
+                Record row = new Record();
+                coll.Add(row);
+            }
+            return coll;
+        }
+
+
         private DK1Interface comm;
         //private string mCom;
         //private string mInterval;
@@ -61,10 +183,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         //private bool mTimeSync = false;
 
-
+        public const int ColumnCount = 10, RowCount = 40;
         private System.Windows.Forms.Timer timer1 =  new System.Windows.Forms.Timer();
 
-        DataTable mSensorInfoTable = new DataTable();
+        //DataTable mSensorInfoTable = new DataTable();
         DataTable mCommTable = new DataTable();
         DataTable mErrorTable = new DataTable();
         DataTable mDataTable = new DataTable();
@@ -112,24 +234,28 @@ namespace DevExpress.ProductsDemo.Win.Modules
         /// <param name="e"></param>
         private void uiUpdateTimer_Tick(object sender, EventArgs e)
         {
-            //int index = 0;
-
+  
             mCommTable = comm.CommTable;
-            //mErrorTable = mComm.ErrorTable;
-            //DataTable errorList = mComm.ErrorListTable;
 
+            int rowCount = 0;
+            foreach (DataRow row in mCommTable.Rows)
+            {
+                int colCount = 0;
+                foreach (object item in row.ItemArray)
+                {
+                    SetValue(gridControl1.DataSource, rowCount, colCount++, item);
+                }
+                rowCount++;
+                    
+            }
+ 
+        }
 
-            //gridControl1.SafeInvoke(d => d.DataSource = mCommTable);
-            
-            //foreach (DataRow row in mCommTable.Rows)
-            //{
-            //    index = mCommTable.Rows.IndexOf(row);
-
-
-            //    //StatusDataGridViewInvoke(gridControl1, index, row, mErrorTable.Rows[index]);
-            //    //StatusDataGridViewInvoke(gridView1, index, row, row);
-            //}
-
+        //<label1>
+        void SetValue(object data, int row, int column, object val)
+        {
+            RecordCollection rc = data as RecordCollection;
+            rc.SetValue(row, column, val);
         }
 
 
@@ -255,10 +381,13 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                mSensorInfoTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
+                mDataTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
                 mCommTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
             }
-            gridControl1.DataSource = mSensorInfoTable;
+            
+            //gridControl1.DataSource = mSensorInfoTable;
+
+            gridControl1.DataSource = CreateData();
         }
 
 
@@ -277,6 +406,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + test.Data + "\r\n"));
                 memoEdit1.SafeInvoke(d => d.SelectionStart = memoEdit1.Text.Length);
                 memoEdit1.SafeInvoke(d => d.ScrollToCaret());
+
+                //byte[] data = DK1Util.HexStringToByteArray(test.Data);
+                //SetValue(gridControl1.DataSource, 3, 5, Convert.ToInt64(data[15]));
 
             }
         }
@@ -309,12 +441,13 @@ namespace DevExpress.ProductsDemo.Win.Modules
         /// </summary>
         public void Stop()
         {
-            
+            // UI 업데이트 종료
+            timer1.Enabled = false;
+
             comm.Dispose();
             //GC.SuppressFinalize(comm);
 
-            // UI 업데이트 종료
-            timer1.Enabled = false;
+
 
         }
 
