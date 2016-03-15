@@ -9,20 +9,30 @@ using MySql.Data.MySqlClient;
 
 namespace DevExpress.ProductsDemo.Win.DB
 {
-    class MySqlManage
+    class MySqlManage : IDisposable
     {
-        MySqlConnection connection;
-        public MySqlConnection Connection { get { return connection; } }
-        public MySqlManage()
+
+        public MySqlManage(string connectionString)
         {
-            string MyConString = "SERVER=localhost; DATABASE=AMR; UID=root; PASSWORD=root;";
-
-            connection = new MySqlConnection(MyConString);
-
+            
+            connection = new MySqlConnection(connectionString);
 
             connection.Open();
   
         }
+        ~MySqlManage()
+        {
+            if (!isDispose)
+            {
+                Dispose();
+            }
+        }
+
+
+        private bool isDispose = false;
+        MySqlConnection connection;
+        public MySqlConnection Connection { get { return connection; } }
+
 
         public DataSet SelectMariaDBTable(MySqlConnection conn, string query)
         {
@@ -72,14 +82,24 @@ namespace DevExpress.ProductsDemo.Win.DB
             return false;
         }
 
-        public void InsertLoginHistory(MySqlConnection conn, string query, string userid)
+        public void InsertMariaDB(MySqlConnection conn, string query)
         {
             MySqlDataReader Reader;
             MySqlCommand command = conn.CreateCommand();
             command.CommandText = query;
             Reader = command.ExecuteReader();
-
+            Reader.Close();
     
         }
+
+
+        public void Dispose()
+        {
+            isDispose = true;
+            //... 리소스를 해제함...
+            GC.SuppressFinalize(this);
+        }
+
+
     }
 }

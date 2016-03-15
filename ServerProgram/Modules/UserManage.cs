@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Drawing;
 using System.Data;
 using System.Linq;
@@ -339,7 +340,7 @@ namespace DevExpress.ProductsDemo.Win.Modules {
 
             MariaDbConnection = new MySqlConnection(connectionString);
             MariaDbConnection.Open();
-            MySqlManage sql = new MySqlManage();
+            MySqlManage sql = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
             DataSet ds = new DataSet();
             ds = sql.SelectMariaDBTable(MariaDbConnection, "SELECT * FROM AMR_MST06");
             

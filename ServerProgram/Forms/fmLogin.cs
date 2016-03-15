@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
@@ -23,7 +24,7 @@ namespace DevExpress.ProductsDemo.Win.Forms {
         public fmLogin() {
             InitializeComponent();
 
-            db = new MySqlManage();
+            db = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
         }
 
@@ -44,7 +45,7 @@ namespace DevExpress.ProductsDemo.Win.Forms {
                 string sql = string.Format("insert into amr_iqr03 values('{0}', '{1}', '1234', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), user.ToUpper(), 12);
 
                 
-                db.InsertLoginHistory(db.Connection, sql, user.ToUpper() );
+                db.InsertMariaDB(db.Connection, sql );
                 
                 this.DialogResult = DialogResult.OK;
                 this.Close();

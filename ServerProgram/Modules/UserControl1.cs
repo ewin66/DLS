@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Drawing;
 using System.Data;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             {
                 case TagResources.LoginHistorySearch:
                     this.gcLoingHistoryGrid.SafeInvoke(d => d.DataSource = null);
-                    MySqlManage crud = new MySqlManage();
+                    MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
                     string query = "select IQR03DAT, IQR03AID,  IQR03MNO from amr_iqr03";
                     DataSet ds = new DataSet();

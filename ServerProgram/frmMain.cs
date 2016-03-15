@@ -185,7 +185,11 @@ namespace DevExpress.ProductsDemo.Win {
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
             this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.AnalyticsModule));
+            //this.navBarGroup2Item2.Visible = false;
             //this.navBarGroup2.SelectedLinkIndex = 0;
+
+
+
 
             // 검침
             this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));

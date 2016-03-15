@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Configuration;
 using System.Windows.Forms;
 using DevExpress.Data.Filtering;
 using DevExpress.MailClient.Win;
@@ -55,10 +56,13 @@ namespace DevExpress.ProductsDemo.Win {
 
                 Application.Run(new frmMain());
 
-                MySqlManage db = new MySqlManage();
+                MySqlManage db = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
                 string sql = string.Format("insert into amr_iqr03 values('{0}', '{1}', '1234', '{2}')", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), login.User, 14);
-                db.InsertLoginHistory(db.Connection, sql, login.User);
+                db.InsertMariaDB(db.Connection, sql);
+
+                db.Dispose();
+
             }
 
             

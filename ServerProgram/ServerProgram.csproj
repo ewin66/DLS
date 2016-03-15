@@ -438,6 +438,8 @@
     <Compile Include="Controls\GridRealTime.designer.cs">
       <DependentUpon>GridRealTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\Worker.cs" />
+    <Compile Include="DB\WORK_AMR_TOT00.cs" />
     <Compile Include="Item\DK1EventArgs.cs" />
     <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
