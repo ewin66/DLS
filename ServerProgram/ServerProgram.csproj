@@ -440,10 +440,22 @@
     </Compile>
     <Compile Include="DB\Worker.cs" />
     <Compile Include="DB\WORK_AMR_TOT00.cs" />
+    <Compile Include="Forms\fmLoad_AMR_MST04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fmLoad_AMR_MST04.Designer.cs">
+      <DependentUpon>fmLoad_AMR_MST04.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item\DK1EventArgs.cs" />
     <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
     <Compile Include="Common\IniFileHandle.cs" />
+    <Compile Include="Modules\G02I02Module.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\G02I02Module.Designer.cs">
+      <DependentUpon>G02I02Module.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serial\Modbus.cs" />
     <Compile Include="DB\MySqlManage.cs" />
     <Compile Include="Controls.cs">
@@ -768,6 +780,9 @@
     <EmbeddedResource Include="Controls\ucCalendar.resx">
       <DependentUpon>ucCalendar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fmLoad_AMR_MST04.resx">
+      <DependentUpon>fmLoad_AMR_MST04.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fmLogin.resx">
       <DependentUpon>fmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -830,6 +845,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\SystemStatus.resx">
       <DependentUpon>SystemStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\G02I02Module.resx">
+      <DependentUpon>G02I02Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

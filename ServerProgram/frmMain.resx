@@ -1595,6 +1595,12 @@
   <data name="rpView.Text" xml:space="preserve">
     <value>VIEW</value>
   </data>
+  <data name="ribbonPageGroup8.Text" xml:space="preserve">
+    <value>세대별 검침정보</value>
+  </data>
+  <data name="ribbonPage10.Text" xml:space="preserve">
+    <value>세대별 검침</value>
+  </data>
   <data name="repositoryItemSpinEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2039,7 +2045,7 @@
     <value>조회 / 분석</value>
   </data>
   <data name="navBarGroup2Item1.Caption" xml:space="preserve">
-    <value>검침 데이터 조회</value>
+    <value>실시간 검침</value>
   </data>
   <data name="navBarGroup2Item1.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2083,10 +2089,10 @@
         IQ+DOv9/gOS//zNQvzgKLNoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="navBarGroup2Item2.Caption" xml:space="preserve">
-    <value>검침 데이터 분석</value>
+  <data name="navBarGroup2Item4.Caption" xml:space="preserve">
+    <value>그래프 분석</value>
   </data>
-  <data name="navBarGroup2Item2.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="navBarGroup2Item4.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAQdEVYdFRpdGxlAFBpZTtDaGFydDvjZmA6AAAKVklEQVRYR52XeVBV9xXHr2m2Jk3appnOtJ3J
@@ -2135,6 +2141,12 @@
         vqP9z4iZLnSRmNLsPOm9zRHUpInYpR9LsUuYlVLM4hVaoj9YwZcfzQYnwqPh6eRHiUf3ugY+5zZeZ76H
         79WKE3T+ID2N26f/pEv/fYiOCJ4R7pinlCWPw218je95dP/PhCT9GyaC9lzhR4OcAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="navBarGroup2Item2.Caption" xml:space="preserve">
+    <value>세대별 검색</value>
+  </data>
+  <data name="navBarGroup2Item3.Caption" xml:space="preserve">
+    <value>그룹별 검색</value>
   </data>
   <data name="navBarGroup2.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3396,6 +3408,18 @@
   <data name="&gt;&gt;rpgPrint.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;ribbonPage10.Name" xml:space="preserve">
+    <value>ribbonPage10</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage10.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Name" xml:space="preserve">
+    <value>ribbonPageGroup8</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
     <value>repositoryItemSpinEdit1</value>
   </data>
@@ -3480,10 +3504,22 @@
   <data name="&gt;&gt;navBarGroup2Item1.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;navBarGroup2Item4.Name" xml:space="preserve">
+    <value>navBarGroup2Item4</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item4.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;navBarGroup2Item2.Name" xml:space="preserve">
     <value>navBarGroup2Item2</value>
   </data>
   <data name="&gt;&gt;navBarGroup2Item2.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item3.Name" xml:space="preserve">
+    <value>navBarGroup2Item3</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item3.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;navBarGroup3.Name" xml:space="preserve">

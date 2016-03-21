@@ -82,13 +82,26 @@ namespace DevExpress.ProductsDemo.Win.DB
             return false;
         }
 
-        public void InsertMariaDB(MySqlConnection conn, string query)
+        public bool InsertMariaDB(MySqlConnection conn, string query)
         {
             MySqlDataReader Reader;
             MySqlCommand command = conn.CreateCommand();
+            bool rtrn = false;
             command.CommandText = query;
-            Reader = command.ExecuteReader();
-            Reader.Close();
+            try
+            {
+                Reader = command.ExecuteReader();
+                Reader.Close();
+
+                rtrn = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                rtrn = false;
+            }
+            
+            return rtrn;
     
         }
 

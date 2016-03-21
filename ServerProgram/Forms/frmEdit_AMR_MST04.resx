@@ -138,7 +138,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;teMST04HNO.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="teMST04CMP.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 12</value>
@@ -703,11 +703,11 @@
   <data name="&gt;&gt;lciMST04CMP.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dxValidationProvider1.Name" xml:space="preserve">
-    <value>dxValidationProvider1</value>
+  <data name="&gt;&gt;lciMST04HNO.Name" xml:space="preserve">
+    <value>lciMST04HNO</value>
   </data>
-  <data name="&gt;&gt;dxValidationProvider1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;lciMST04HNO.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
     <value>emptySpaceItem1</value>
@@ -715,11 +715,11 @@
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;lciMST04HNO.Name" xml:space="preserve">
-    <value>lciMST04HNO</value>
+  <data name="&gt;&gt;dxValidationProvider1.Name" xml:space="preserve">
+    <value>dxValidationProvider1</value>
   </data>
-  <data name="&gt;&gt;lciMST04HNO.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;dxValidationProvider1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmEdit_AMR_MST04</value>

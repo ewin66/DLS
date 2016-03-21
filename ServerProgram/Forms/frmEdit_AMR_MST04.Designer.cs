@@ -27,6 +27,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEdit_AMR_MST04));
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.teMST04HNO = new DevExpress.XtraEditors.TextEdit();
             this.teMST04CMP = new DevExpress.XtraEditors.TextEdit();
             this.teMST04PHN = new DevExpress.XtraEditors.TextEdit();
             this.teMST04NAM = new DevExpress.XtraEditors.TextEdit();
@@ -44,12 +45,12 @@
             this.lciMST04NAM = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMST04PHN = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciMST04CMP = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.teMST04HNO = new DevExpress.XtraEditors.TextEdit();
             this.lciMST04HNO = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teMST04HNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04CMP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04PHN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04NAM.Properties)).BeginInit();
@@ -65,10 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04NAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04PHN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04CMP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMST04HNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04HNO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -86,6 +86,12 @@
             this.lcMain.Name = "lcMain";
             this.lcMain.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1062, 287, 450, 596);
             this.lcMain.Root = this.layoutControlGroup1;
+            // 
+            // teMST04HNO
+            // 
+            resources.ApplyResources(this.teMST04HNO, "teMST04HNO");
+            this.teMST04HNO.Name = "teMST04HNO";
+            this.teMST04HNO.StyleController = this.lcMain;
             // 
             // teMST04CMP
             // 
@@ -247,9 +253,14 @@
             resources.ApplyResources(this.lciMST04CMP, "lciMST04CMP");
             this.lciMST04CMP.TextSize = new System.Drawing.Size(78, 22);
             // 
-            // dxValidationProvider1
+            // lciMST04HNO
             // 
-            this.dxValidationProvider1.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
+            this.lciMST04HNO.Control = this.teMST04HNO;
+            this.lciMST04HNO.Location = new System.Drawing.Point(0, 96);
+            this.lciMST04HNO.Name = "lciMST04HNO";
+            this.lciMST04HNO.Size = new System.Drawing.Size(575, 32);
+            resources.ApplyResources(this.lciMST04HNO, "lciMST04HNO");
+            this.lciMST04HNO.TextSize = new System.Drawing.Size(78, 22);
             // 
             // emptySpaceItem1
             // 
@@ -259,20 +270,9 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(575, 83);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // teMST04HNO
+            // dxValidationProvider1
             // 
-            resources.ApplyResources(this.teMST04HNO, "teMST04HNO");
-            this.teMST04HNO.Name = "teMST04HNO";
-            this.teMST04HNO.StyleController = this.lcMain;
-            // 
-            // lciMST04HNO
-            // 
-            this.lciMST04HNO.Control = this.teMST04HNO;
-            this.lciMST04HNO.Location = new System.Drawing.Point(0, 96);
-            this.lciMST04HNO.Name = "lciMST04HNO";
-            this.lciMST04HNO.Size = new System.Drawing.Size(575, 32);
-            resources.ApplyResources(this.lciMST04HNO, "lciMST04HNO");
-            this.lciMST04HNO.TextSize = new System.Drawing.Size(78, 22);
+            this.dxValidationProvider1.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
             // frmEdit_AMR_MST04
             // 
@@ -283,6 +283,7 @@
             this.Name = "frmEdit_AMR_MST04";
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.teMST04HNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04CMP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04PHN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMST04NAM.Properties)).EndInit();
@@ -298,10 +299,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04NAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04PHN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04CMP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMST04HNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciMST04HNO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
