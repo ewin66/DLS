@@ -107,12 +107,16 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpTasks = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage12 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage13 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage14 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -139,8 +143,6 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2Item4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2Item2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2Item3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -159,10 +161,13 @@
             this.nbiScheduler = new DevExpress.XtraNavBar.NavBarItem();
             this.nbiGridCardView = new DevExpress.XtraNavBar.NavBarItem();
             this.nbiPdf = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2Item2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2Item3 = new DevExpress.XtraNavBar.NavBarItem();
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
             this.pmFlagStatus = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -242,9 +247,12 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
+            this.ribbonPage11,
             this.rpTasks,
+            this.ribbonPage12,
+            this.ribbonPage13,
+            this.ribbonPage14,
             this.ribbonPage4,
-            this.ribbonPage6,
             this.ribbonPage7,
             this.ribbonPage8,
             this.ribbonPage9,
@@ -873,6 +881,19 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             resources.ApplyResources(this.ribbonPageGroup4, "ribbonPageGroup4");
             // 
+            // ribbonPage11
+            // 
+            this.ribbonPage11.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup9});
+            this.ribbonPage11.Name = "ribbonPage11";
+            this.ribbonPage11.Tag = "HnoManage";
+            resources.ApplyResources(this.ribbonPage11, "ribbonPage11");
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            resources.ApplyResources(this.ribbonPageGroup9, "ribbonPageGroup9");
+            // 
             // rpTasks
             // 
             this.rpTasks.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -897,6 +918,23 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
             // 
+            // ribbonPage12
+            // 
+            this.ribbonPage12.Name = "ribbonPage12";
+            this.ribbonPage12.Tag = "DBManage";
+            resources.ApplyResources(this.ribbonPage12, "ribbonPage12");
+            // 
+            // ribbonPage13
+            // 
+            this.ribbonPage13.Name = "ribbonPage13";
+            this.ribbonPage13.Tag = "ExternalInterface";
+            resources.ApplyResources(this.ribbonPage13, "ribbonPage13");
+            // 
+            // ribbonPage14
+            // 
+            this.ribbonPage14.Name = "ribbonPage14";
+            resources.ApplyResources(this.ribbonPage14, "ribbonPage14");
+            // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -912,11 +950,6 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.bbiStartStopComStop);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             resources.ApplyResources(this.ribbonPageGroup6, "ribbonPageGroup6");
-            // 
-            // ribbonPage6
-            // 
-            this.ribbonPage6.Name = "ribbonPage6";
-            resources.ApplyResources(this.ribbonPage6, "ribbonPage6");
             // 
             // ribbonPage7
             // 
@@ -1065,7 +1098,6 @@
             this.navBarControl1.OptionsNavPane.ShowOverflowButton = false;
             this.navBarControl1.OptionsNavPane.ShowOverflowPanel = false;
             this.navBarControl1.OptionsNavPane.ShowSplitter = false;
-            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.ExplorerBar;
             this.navBarControl1.StoreDefaultPaintStyleName = true;
             this.navBarControl1.SelectedLinkChanged += new DevExpress.XtraNavBar.ViewInfo.NavBarSelectedLinkChangedEventHandler(this.navBarControl1_SelectedLinkChanged);
             this.navBarControl1.NavPaneStateChanged += new System.EventHandler(this.navBarControl1_NavPaneStateChanged);
@@ -1140,11 +1172,9 @@
             this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item3)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4)});
             this.navBarGroup2.Name = "navBarGroup2";
-            this.navBarGroup2.SelectedLinkIndex = 3;
+            this.navBarGroup2.SelectedLinkIndex = 2;
             // 
             // navBarGroup2Item1
             // 
@@ -1155,16 +1185,6 @@
             // 
             resources.ApplyResources(this.navBarGroup2Item4, "navBarGroup2Item4");
             this.navBarGroup2Item4.Name = "navBarGroup2Item4";
-            // 
-            // navBarGroup2Item2
-            // 
-            resources.ApplyResources(this.navBarGroup2Item2, "navBarGroup2Item2");
-            this.navBarGroup2Item2.Name = "navBarGroup2Item2";
-            // 
-            // navBarGroup2Item3
-            // 
-            resources.ApplyResources(this.navBarGroup2Item3, "navBarGroup2Item3");
-            this.navBarGroup2Item3.Name = "navBarGroup2Item3";
             // 
             // navBarGroup3
             // 
@@ -1280,6 +1300,14 @@
             this.nbiPdf.LargeImage = global::DevExpress.ProductsDemo.Win.Properties.Resources.PDFViewer;
             this.nbiPdf.Name = "nbiPdf";
             // 
+            // navBarGroup2Item2
+            // 
+            this.navBarGroup2Item2.Name = "navBarGroup2Item2";
+            // 
+            // navBarGroup2Item3
+            // 
+            this.navBarGroup2Item3.Name = "navBarGroup2Item3";
+            // 
             // pcMain
             // 
             this.pcMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -1309,6 +1337,11 @@
             this.ribbonPageGroup7});
             this.ribbonPage5.Name = "ribbonPage5";
             resources.ApplyResources(this.ribbonPage5, "ribbonPage5");
+            // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Name = "ribbonPage6";
+            resources.ApplyResources(this.ribbonPage6, "ribbonPage6");
             // 
             // frmMain
             // 
@@ -1460,7 +1493,6 @@
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private XtraBars.Ribbon.RibbonPage ribbonPage6;
         private XtraBars.Ribbon.RibbonPage ribbonPage7;
         private XtraBars.Ribbon.RibbonPage ribbonPage8;
         private XtraBars.Ribbon.RibbonPage ribbonPage9;
@@ -1468,6 +1500,12 @@
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private XtraNavBar.NavBarItem navBarGroup2Item2;
         private XtraNavBar.NavBarItem navBarGroup2Item3;
+        private XtraBars.Ribbon.RibbonPage ribbonPage11;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private XtraBars.Ribbon.RibbonPage ribbonPage12;
+        private XtraBars.Ribbon.RibbonPage ribbonPage13;
+        private XtraBars.Ribbon.RibbonPage ribbonPage14;
+        private XtraBars.Ribbon.RibbonPage ribbonPage6;
     }
 }
 

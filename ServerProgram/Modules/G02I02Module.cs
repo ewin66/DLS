@@ -23,7 +23,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
     public partial class G02I02Module : BaseModule
     {
 
-        AMR_MST04 mst04;
+        AMR_MST04 mMST04;
 
         public G02I02Module()
         {
@@ -31,22 +31,18 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             this.deLoginHistoryDateFrom.DateTime = DateTime.Today;
 
+            mMST04 = new AMR_MST04();
+
   
         }
 
-  
+
         protected internal override void ButtonClick(string tag)
         {
             switch (tag)
             {
                 case TagResources.LoginHistorySearch:
-                    this.gcLoingHistoryGrid.SafeInvoke(d => d.DataSource = null);
-                    MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
-                    string query = "select IQR03DAT, IQR03AID,  IQR03MNO from amr_iqr03";
-                    DataSet ds = new DataSet();
-                    ds = crud.SelectMariaDBTable(crud.Connection, query);
-                    this.gcLoingHistoryGrid.DataSource = ds.Tables[0];
 
                     break;
                 case TagResources.ContactNew:
@@ -58,16 +54,16 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         private void textEdit1_Click(object sender, EventArgs e)
         {
-            LoadMST04(mst04);
+            LoadMST04();
 
         }
 
 
 
-        DialogResult LoadMST04(AMR_MST04 mst04)
+        DialogResult LoadMST04()
         {
             //if (mst04 == null) return DialogResult.Ignore;
-            if (mst04 == null) mst04 = new AMR_MST04();
+            AMR_MST04 mst04 = new AMR_MST04();
             DialogResult ret = DialogResult.Cancel;
             Cursor.Current = Cursors.WaitCursor;
             using (fmLoad_AMR_MST04 frm = new fmLoad_AMR_MST04(mst04, OwnerForm.Ribbon))
@@ -77,8 +73,26 @@ namespace DevExpress.ProductsDemo.Win.Modules
             }
             //UpdateCurrentContact();
             textEdit1.Text = mst04.MST04DON + " / " + mst04.MST04HNO;
+
+            mMST04.MST04SNO = mst04.MST04SNO;
+            mMST04.MST04DON = mst04.MST04DON;
+            mMST04.MST04HNO = mst04.MST04HNO;
+
             Cursor.Current = Cursors.Default;
             return ret;
+        }
+
+        private void sbLoingHistorySearch_Click(object sender, EventArgs e)
+        {
+            this.gcGrid.SafeInvoke(d => d.DataSource = null);
+            MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
+
+            string query = string.Format("select TOT00DAT, TOT00PW1,  TOT00WT1, TOT00GS1, TOT00HT1, TOT00CL1 from amr_tot00 where TOT00SNO = '{0}' order by TOT00DAT asc",
+                mMST04.MST04SNO);
+            DataSet ds = new DataSet();
+            ds = crud.SelectMariaDBTable(crud.Connection, query);
+            this.gcGrid.DataSource = ds.Tables[0];
+
         }
 
 

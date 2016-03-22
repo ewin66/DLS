@@ -1556,6 +1556,12 @@
   <data name="ribbonPage3.Text" xml:space="preserve">
     <value>세대 정보 등록/수정</value>
   </data>
+  <data name="ribbonPageGroup9.Text" xml:space="preserve">
+    <value>검침 세대 설정</value>
+  </data>
+  <data name="ribbonPage11.Text" xml:space="preserve">
+    <value>검침 세대 설정</value>
+  </data>
   <data name="rpgTasks.Text" xml:space="preserve">
     <value>기기 정보</value>
   </data>
@@ -1565,14 +1571,20 @@
   <data name="rpTasks.Text" xml:space="preserve">
     <value>네트워크 관리</value>
   </data>
+  <data name="ribbonPage12.Text" xml:space="preserve">
+    <value>검침 DB 계정 관리</value>
+  </data>
+  <data name="ribbonPage13.Text" xml:space="preserve">
+    <value>시스템 연동 관리</value>
+  </data>
+  <data name="ribbonPage14.Text" xml:space="preserve">
+    <value>시스템 모니터링</value>
+  </data>
   <data name="ribbonPageGroup6.Text" xml:space="preserve">
     <value>검침</value>
   </data>
   <data name="ribbonPage4.Text" xml:space="preserve">
     <value>검침</value>
-  </data>
-  <data name="ribbonPage6.Text" xml:space="preserve">
-    <value>조회 / 분석</value>
   </data>
   <data name="ribbonPage7.Text" xml:space="preserve">
     <value>정산</value>
@@ -2045,7 +2057,7 @@
     <value>조회 / 분석</value>
   </data>
   <data name="navBarGroup2Item1.Caption" xml:space="preserve">
-    <value>실시간 검침</value>
+    <value>데이터 조회</value>
   </data>
   <data name="navBarGroup2Item1.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2090,7 +2102,7 @@
 </value>
   </data>
   <data name="navBarGroup2Item4.Caption" xml:space="preserve">
-    <value>그래프 분석</value>
+    <value>데이터 분석</value>
   </data>
   <data name="navBarGroup2Item4.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2141,12 +2153,6 @@
         vqP9z4iZLnSRmNLsPOm9zRHUpInYpR9LsUuYlVLM4hVaoj9YwZcfzQYnwqPh6eRHiUf3ugY+5zZeZ76H
         79WKE3T+ID2N26f/pEv/fYiOCJ4R7pinlCWPw218je95dP/PhCT9GyaC9lzhR4OcAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="navBarGroup2Item2.Caption" xml:space="preserve">
-    <value>세대별 검색</value>
-  </data>
-  <data name="navBarGroup2Item3.Caption" xml:space="preserve">
-    <value>그룹별 검색</value>
   </data>
   <data name="navBarGroup2.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2686,6 +2692,9 @@
   </data>
   <data name="ribbonPage5.Text" xml:space="preserve">
     <value>정산</value>
+  </data>
+  <data name="ribbonPage6.Text" xml:space="preserve">
+    <value>조회 / 분석</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3330,6 +3339,18 @@
   <data name="&gt;&gt;ribbonPageGroup4.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;ribbonPage11.Name" xml:space="preserve">
+    <value>ribbonPage11</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage11.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup9.Name" xml:space="preserve">
+    <value>ribbonPageGroup9</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup9.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;rpTasks.Name" xml:space="preserve">
     <value>rpTasks</value>
   </data>
@@ -3348,6 +3369,24 @@
   <data name="&gt;&gt;ribbonPageGroup5.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;ribbonPage12.Name" xml:space="preserve">
+    <value>ribbonPage12</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage12.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage13.Name" xml:space="preserve">
+    <value>ribbonPage13</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage13.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage14.Name" xml:space="preserve">
+    <value>ribbonPage14</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage14.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPage4.Name" xml:space="preserve">
     <value>ribbonPage4</value>
   </data>
@@ -3359,12 +3398,6 @@
   </data>
   <data name="&gt;&gt;ribbonPageGroup6.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage6.Name" xml:space="preserve">
-    <value>ribbonPage6</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage6.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonPage7.Name" xml:space="preserve">
     <value>ribbonPage7</value>
@@ -3510,18 +3543,6 @@
   <data name="&gt;&gt;navBarGroup2Item4.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;navBarGroup2Item2.Name" xml:space="preserve">
-    <value>navBarGroup2Item2</value>
-  </data>
-  <data name="&gt;&gt;navBarGroup2Item2.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navBarGroup2Item3.Name" xml:space="preserve">
-    <value>navBarGroup2Item3</value>
-  </data>
-  <data name="&gt;&gt;navBarGroup2Item3.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;navBarGroup3.Name" xml:space="preserve">
     <value>navBarGroup3</value>
   </data>
@@ -3630,6 +3651,18 @@
   <data name="&gt;&gt;nbiPdf.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;navBarGroup2Item2.Name" xml:space="preserve">
+    <value>navBarGroup2Item2</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item2.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item3.Name" xml:space="preserve">
+    <value>navBarGroup2Item3</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup2Item3.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;pmFlagStatus.Name" xml:space="preserve">
     <value>pmFlagStatus</value>
   </data>
@@ -3646,6 +3679,12 @@
     <value>ribbonPage5</value>
   </data>
   <data name="&gt;&gt;ribbonPage5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage6.Name" xml:space="preserve">
+    <value>ribbonPage6</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage6.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

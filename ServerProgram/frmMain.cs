@@ -183,10 +183,9 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.SystemMonitoring));
             this.navBarGroup1.SelectedLinkIndex = 5;
 
-            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("Test4", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
+            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("G02I02Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
+            //this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
             
-            this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
-            this.navBarGroup2Item4.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.AnalyticsModule));
             //this.navBarGroup2Item2.Visible = false;
             //this.navBarGroup2.SelectedLinkIndex = 0;
 
