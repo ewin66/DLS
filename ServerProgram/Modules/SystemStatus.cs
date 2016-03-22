@@ -341,7 +341,11 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
                 // add log
                 DK1DataArgs test = (DK1DataArgs)e;
+                if (memoEdit1.Text.Length == 1024)
+                    memoEdit1.SafeInvoke(d => d.Text = (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + test.Data + "\r\n"));
+                else
                 memoEdit1.SafeInvoke(d => d.Text += (DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss [RECV] ") + test.Data + "\r\n"));
+
                 memoEdit1.SafeInvoke(d => d.SelectionStart = memoEdit1.Text.Length);
                 memoEdit1.SafeInvoke(d => d.ScrollToCaret());
 

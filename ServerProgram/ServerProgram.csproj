@@ -456,6 +456,12 @@
     <Compile Include="Modules\G02I02Module.Designer.cs">
       <DependentUpon>G02I02Module.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\G02I01Module.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\G02I01Module.Designer.cs">
+      <DependentUpon>G02I01Module.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serial\Modbus.cs" />
     <Compile Include="DB\MySqlManage.cs" />
     <Compile Include="Controls.cs">
@@ -824,6 +830,9 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\G02I02Module.resx">
+      <DependentUpon>G02I02Module.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\NetworkManage.resx">
       <DependentUpon>NetworkManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -846,8 +855,8 @@
     <EmbeddedResource Include="Modules\SystemStatus.resx">
       <DependentUpon>SystemStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\G02I02Module.resx">
-      <DependentUpon>G02I02Module.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\G02I01Module.resx">
+      <DependentUpon>G02I01Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

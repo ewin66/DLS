@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DevExpress.XtraCharts;
 
 namespace DevExpress.ProductsDemo.Win.Item
 {
@@ -32,5 +33,14 @@ namespace DevExpress.ProductsDemo.Win.Item
 
     }
 
+    public class ChartVariable2
+    {
+        public SeriesPoint data { get; set; }
+
+        public ChartVariable2()
+        {
+            data = new SeriesPoint();
+        }
+    }
 
 }

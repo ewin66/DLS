@@ -178,13 +178,15 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item2.Tag = new NavBarGroupTagObject("LoginHistory", typeof(DevExpress.ProductsDemo.Win.Modules.UserControl1));
             this.navBarGroup1Item3.Tag = new NavBarGroupTagObject("AlamHistory", typeof(DevExpress.ProductsDemo.Win.Modules.AlamHistory));
             this.navBarGroup1Item4.Tag = new NavBarGroupTagObject("AptManage", typeof(DevExpress.ProductsDemo.Win.Modules.AptManage));
-            
+            this.navBarGroup1Item5.Tag = new NavBarGroupTagObject("HnoManage", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.NetworkManage));
+            this.navBarGroup1Item7.Tag = new NavBarGroupTagObject("DBManage", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
+            this.navBarGroup1Item8.Tag = new NavBarGroupTagObject("ExternalInterface", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.SystemMonitoring));
             this.navBarGroup1.SelectedLinkIndex = 5;
 
-            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("G02I02Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
-            //this.navBarGroup2Item2.Tag = new NavBarGroupTagObject("Test5", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
+            this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("G02I01Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I01Module));
+            this.navBarGroup2Item4.Tag = new NavBarGroupTagObject("G02I01Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
             
             //this.navBarGroup2Item2.Visible = false;
             //this.navBarGroup2.SelectedLinkIndex = 0;
@@ -197,6 +199,14 @@ namespace DevExpress.ProductsDemo.Win {
             //this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Controls.GridRealTime));
             
             //this.navBarGroup3.SelectedLinkIndex = 0;
+
+            // 정산
+            this.navBarGroup4Item1.Tag = new NavBarGroupTagObject("Sum", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
+
+            // 도움말
+            this.navBarGroup5Item1.Tag = new NavBarGroupTagObject("Help", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
+            this.navBarGroup5Item2.Tag = new NavBarGroupTagObject("Help", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
+
         }
         internal void EnableLayoutButtons(bool enabled) {
             bbiFlipLayout.Enabled = enabled;
@@ -356,6 +366,11 @@ namespace DevExpress.ProductsDemo.Win {
             form.SkinMaskColor = UserLookAndFeel.Default.SkinMaskColor;
             form.SkinMaskColor2 = UserLookAndFeel.Default.SkinMaskColor2;
             form.ShowDialog(this);
+        }
+
+        private void pcMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

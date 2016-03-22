@@ -97,6 +97,9 @@
             this.bbiStartStopComStart = new DevExpress.XtraBars.BarButtonItem();
             this.bbiStartStopComStop = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiG02I01 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiG02I02 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiG02I03 = new DevExpress.XtraBars.BarButtonItem();
             this.rpContacts = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgContacts = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgCurrentView = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -115,6 +118,8 @@
             this.ribbonPage12 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage13 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage14 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -124,8 +129,6 @@
             this.rpgNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.prgAppearance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgPrint = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -238,9 +241,12 @@
             this.bbiStartStopRealtimeStatus,
             this.bbiStartStopComStart,
             this.bbiStartStopComStop,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.bbiG02I01,
+            this.bbiG02I02,
+            this.bbiG02I03});
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
-            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MaxItemId = 4;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpContacts,
@@ -252,12 +258,12 @@
             this.ribbonPage12,
             this.ribbonPage13,
             this.ribbonPage14,
+            this.ribbonPage10,
             this.ribbonPage4,
             this.ribbonPage7,
             this.ribbonPage8,
             this.ribbonPage9,
-            this.rpView,
-            this.ribbonPage10});
+            this.rpView});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemZoomTrackBar1,
             this.repositoryItemSpinEdit1,
@@ -799,6 +805,30 @@
             this.barButtonItem6.Id = 8;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
+            // bbiG02I01
+            // 
+            resources.ApplyResources(this.bbiG02I01, "bbiG02I01");
+            this.bbiG02I01.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I01.Glyph")));
+            this.bbiG02I01.Id = 1;
+            this.bbiG02I01.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I01.LargeGlyph")));
+            this.bbiG02I01.Name = "bbiG02I01";
+            // 
+            // bbiG02I02
+            // 
+            resources.ApplyResources(this.bbiG02I02, "bbiG02I02");
+            this.bbiG02I02.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I02.Glyph")));
+            this.bbiG02I02.Id = 2;
+            this.bbiG02I02.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I02.LargeGlyph")));
+            this.bbiG02I02.Name = "bbiG02I02";
+            // 
+            // bbiG02I03
+            // 
+            resources.ApplyResources(this.bbiG02I03, "bbiG02I03");
+            this.bbiG02I03.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I03.Glyph")));
+            this.bbiG02I03.Id = 3;
+            this.bbiG02I03.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiG02I03.LargeGlyph")));
+            this.bbiG02I03.Name = "bbiG02I03";
+            // 
             // rpContacts
             // 
             this.rpContacts.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -933,7 +963,24 @@
             // ribbonPage14
             // 
             this.ribbonPage14.Name = "ribbonPage14";
+            this.ribbonPage14.Tag = "SystemMonitoring";
             resources.ApplyResources(this.ribbonPage14, "ribbonPage14");
+            // 
+            // ribbonPage10
+            // 
+            this.ribbonPage10.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage10.Name = "ribbonPage10";
+            this.ribbonPage10.Tag = "G02I01Module";
+            resources.ApplyResources(this.ribbonPage10, "ribbonPage10");
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.bbiG02I01);
+            this.ribbonPageGroup8.ItemLinks.Add(this.bbiG02I02);
+            this.ribbonPageGroup8.ItemLinks.Add(this.bbiG02I03);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            resources.ApplyResources(this.ribbonPageGroup8, "ribbonPageGroup8");
             // 
             // ribbonPage4
             // 
@@ -954,16 +1001,19 @@
             // ribbonPage7
             // 
             this.ribbonPage7.Name = "ribbonPage7";
+            this.ribbonPage7.Tag = "Sum";
             resources.ApplyResources(this.ribbonPage7, "ribbonPage7");
             // 
             // ribbonPage8
             // 
             this.ribbonPage8.Name = "ribbonPage8";
+            this.ribbonPage8.Tag = "SystemManage";
             resources.ApplyResources(this.ribbonPage8, "ribbonPage8");
             // 
             // ribbonPage9
             // 
             this.ribbonPage9.Name = "ribbonPage9";
+            this.ribbonPage9.Tag = "Help";
             resources.ApplyResources(this.ribbonPage9, "ribbonPage9");
             // 
             // rpView
@@ -998,18 +1048,6 @@
             this.rpgPrint.Name = "rpgPrint";
             this.rpgPrint.ShowCaptionButton = false;
             resources.ApplyResources(this.rpgPrint, "rpgPrint");
-            // 
-            // ribbonPage10
-            // 
-            this.ribbonPage10.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup8});
-            this.ribbonPage10.Name = "ribbonPage10";
-            resources.ApplyResources(this.ribbonPage10, "ribbonPage10");
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            resources.ApplyResources(this.ribbonPageGroup8, "ribbonPageGroup8");
             // 
             // repositoryItemSpinEdit1
             // 
@@ -1189,6 +1227,7 @@
             // navBarGroup3
             // 
             resources.ApplyResources(this.navBarGroup3, "navBarGroup3");
+            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Large;
             this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -1314,6 +1353,7 @@
             this.pcMain.Controls.Add(this.backstageViewControl1);
             resources.ApplyResources(this.pcMain, "pcMain");
             this.pcMain.Name = "pcMain";
+            this.pcMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pcMain_Paint);
             // 
             // pmFlagStatus
             // 
@@ -1496,8 +1536,6 @@
         private XtraBars.Ribbon.RibbonPage ribbonPage7;
         private XtraBars.Ribbon.RibbonPage ribbonPage8;
         private XtraBars.Ribbon.RibbonPage ribbonPage9;
-        private XtraBars.Ribbon.RibbonPage ribbonPage10;
-        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private XtraNavBar.NavBarItem navBarGroup2Item2;
         private XtraNavBar.NavBarItem navBarGroup2Item3;
         private XtraBars.Ribbon.RibbonPage ribbonPage11;
@@ -1506,6 +1544,11 @@
         private XtraBars.Ribbon.RibbonPage ribbonPage13;
         private XtraBars.Ribbon.RibbonPage ribbonPage14;
         private XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private XtraBars.Ribbon.RibbonPage ribbonPage10;
+        private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private XtraBars.BarButtonItem bbiG02I01;
+        private XtraBars.BarButtonItem bbiG02I02;
+        private XtraBars.BarButtonItem bbiG02I03;
     }
 }
 
