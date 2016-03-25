@@ -63,33 +63,33 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         private void textEdit1_Click(object sender, EventArgs e)
         {
-            LoadMST04();
+            //LoadMST04();
 
         }
 
 
 
-        DialogResult LoadMST04()
-        {
-            //if (mst04 == null) return DialogResult.Ignore;
-            AMR_MST04 mst04 = new AMR_MST04();
-            DialogResult ret = DialogResult.Cancel;
-            Cursor.Current = Cursors.WaitCursor;
-            using (fmLoad_AMR_MST04 frm = new fmLoad_AMR_MST04(mst04, OwnerForm.Ribbon))
-            {
-                frm.StartPosition = FormStartPosition.CenterParent;
-                ret = frm.ShowDialog(OwnerForm);
-            }
-            //UpdateCurrentContact();
-            textEdit1.Text = mst04.MST04DON + " / " + mst04.MST04HNO;
+        //DialogResult LoadMST04()
+        //{
+        //    //if (mst04 == null) return DialogResult.Ignore;
+            //AMR_MST04 mst04 = new AMR_MST04();
+            //DialogResult ret = DialogResult.Cancel;
+            //Cursor.Current = Cursors.WaitCursor;
+            //using (fmLoad_AMR_MST04 frm = new fmLoad_AMR_MST04(mst04, OwnerForm.Ribbon))
+            //{
+            //    frm.StartPosition = FormStartPosition.CenterParent;
+            //    ret = frm.ShowDialog(OwnerForm);
+            //}
+            ////UpdateCurrentContact();
+            //textEdit1.Text = mst04.MST04DON + " / " + mst04.MST04HNO;
 
-            mMST04.MST04SNO = mst04.MST04SNO;
-            mMST04.MST04DON = mst04.MST04DON;
-            mMST04.MST04HNO = mst04.MST04HNO;
+            //mMST04.MST04SNO = mst04.MST04SNO;
+            //mMST04.MST04DON = mst04.MST04DON;
+            //mMST04.MST04HNO = mst04.MST04HNO;
 
-            Cursor.Current = Cursors.Default;
-            return ret;
-        }
+            //Cursor.Current = Cursors.Default;
+        //    return ret;
+        //}
 
         private void sbLoingHistorySearch_Click(object sender, EventArgs e)
         {

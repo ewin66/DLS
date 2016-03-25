@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -37,6 +38,7 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -45,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -137,6 +140,10 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(ServerProgram.AMR_MST04Model);
+            // 
             // fmLoad_AMR_MST04
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -144,7 +151,8 @@
             this.ClientSize = new System.Drawing.Size(425, 368);
             this.Controls.Add(this.lcMain);
             this.Name = "fmLoad_AMR_MST04";
-            this.Text = "fmLoad_AMR_MST04";
+            this.Text = "세대정보";
+            this.Load += new System.EventHandler(this.fmLoad_AMR_MST04_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -153,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +177,6 @@
         private XtraEditors.SimpleButton simpleButton1;
         private XtraLayout.LayoutControlItem layoutControlItem2;
         private XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

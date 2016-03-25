@@ -446,20 +446,34 @@
     <Compile Include="Forms\fmLoad_AMR_MST04.Designer.cs">
       <DependentUpon>fmLoad_AMR_MST04.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AMR_MST04Model.cs" />
+    <Compile Include="Presenter\fmLoad_AMR_MST04Presenter.cs" />
+    <Compile Include="Presenter\Interfaces\IfmLoad_AMR_MST04.cs" />
     <Compile Include="Item\DK1EventArgs.cs" />
     <Compile Include="Common\DK1Util.cs" />
     <Compile Include="Common\Extension.cs" />
     <Compile Include="Common\IniFileHandle.cs" />
+    <Compile Include="Models\Interfaces\IBaseModel.cs" />
     <Compile Include="Modules\G02I02Module.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Modules\G02I02Module.Designer.cs">
       <DependentUpon>G02I02Module.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\G02I01Module.cs">
+    <Compile Include="Presenter\G02I01ModulePresenter.cs" />
+    <Compile Include="Presenter\Interfaces\IG02I01Module.cs" />
+    <Compile Include="Presenter\Interfaces\IG02I01ModulePresenter.cs" />
+    <Compile Include="Presenter\Interfaces\IfmLoad_AMR_MST04Presenter.cs" />
+    <Compile Include="Views\SubViews\G02I01ModuleTab1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\G02I01Module.Designer.cs">
+    <Compile Include="Views\SubViews\G02I01ModuleTab1.Designer.cs">
+      <DependentUpon>G02I01ModuleTab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubViews\G02I01Module.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SubViews\G02I01Module.Designer.cs">
       <DependentUpon>G02I01Module.cs</DependentUpon>
     </Compile>
     <Compile Include="Serial\Modbus.cs" />
@@ -760,6 +774,7 @@
     <Compile Include="Sales.Model\SalesForecastMaker.cs" />
     <Compile Include="Sales.Model\Utils.cs" />
     <Compile Include="Serial\DK1Interface.cs" />
+    <Compile Include="Views\SubViews\Interfaces\IBaseSubView.cs" />
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -855,7 +870,10 @@
     <EmbeddedResource Include="Modules\SystemStatus.resx">
       <DependentUpon>SystemStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\G02I01Module.resx">
+    <EmbeddedResource Include="Views\SubViews\G02I01ModuleTab1.resx">
+      <DependentUpon>G02I01ModuleTab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SubViews\G02I01Module.resx">
       <DependentUpon>G02I01Module.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\UserControl1.resx">
@@ -922,6 +940,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\ServerProgram.AMR_MST04Model.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
