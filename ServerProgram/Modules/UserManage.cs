@@ -21,6 +21,7 @@ using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
 using System.Collections;
 using MySql.Data.MySqlClient;
+using ServerProgram.DB;
 
 namespace DevExpress.ProductsDemo.Win.Modules {
     public partial class UserManage : BaseModule {

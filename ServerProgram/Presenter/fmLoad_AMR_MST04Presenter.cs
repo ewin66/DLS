@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
-using DevExpress.ProductsDemo.Win.DB;
+using ServerProgram.DB;
 
 namespace ServerProgram
 {

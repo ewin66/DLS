@@ -20,8 +20,8 @@ namespace ServerProgram
 
         void ShowMessage(string msg);
 
-
-        event EventHandler Tab1SearchEvent;
+        //void SearchComplete(IBaseModel item);
+        //event EventHandler Tab1SearchEvent;
         void Tab1SearchComplete(IBaseModel item);
     }
 }

@@ -41,7 +41,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
         AMR_MST04 mMST04;
        
         //public event EventHandler DongLoadEvent;
-        public event EventHandler Tab1SearchEvent;
+        //public event EventHandler Tab1SearchEvent;
 
         private void textEdit1_Click_1(object sender, EventArgs e)
         {
@@ -65,8 +65,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
         //}
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (Tab1SearchEvent != null)
-                Tab1SearchEvent(this, EventArgs.Empty);
+            //if (Tab1SearchEvent != null)
+            //    Tab1SearchEvent(this, EventArgs.Empty);
+            CommandCenter.StateChanged.Execute(mMST04);
         }
         
 

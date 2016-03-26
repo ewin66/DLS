@@ -429,6 +429,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandCenter\CommandCenter.cs" />
+    <Compile Include="CommandCenter\Commands\StaticCommand.cs" />
+    <Compile Include="CommandCenter\EventArgs\CanExecuteEventArgs.cs" />
+    <Compile Include="CommandCenter\EventArgs\ExecutedEventArgs.cs" />
     <Compile Include="CommonControls.cs">
       <SubType>Component</SubType>
     </Compile>

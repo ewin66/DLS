@@ -41,11 +41,11 @@ namespace DevExpress.ProductsDemo.Win.Modules
         
         G02I01ModuleTab1 tab1;
 
-        event EventHandler IG02I01Module.Tab1SearchEvent
-        {
-            add { this.tab1.Tab1SearchEvent += value; }
-            remove { this.tab1.Tab1SearchEvent -= value; }
-        }
+        //event EventHandler IG02I01Module.Tab1SearchEvent
+        //{
+        //    add { this.tab1.Tab1SearchEvent += value; }
+        //    remove { this.tab1.Tab1SearchEvent -= value; }
+        //}
 
         /// <summary>
         /// 서브폼 추가
@@ -146,7 +146,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         public void ShowMessage(string msg)
         {
-
+            MessageBox.Show(msg);
         }
 
         public void Tab1SearchComplete(IBaseModel item)
