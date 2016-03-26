@@ -36,18 +36,27 @@ namespace ServerProgram.DB
 
         public DataSet SelectMariaDBTable(MySqlConnection conn, string query)
         {
+            DataSet ds = new DataSet();
+            DataTable dataTable = new DataTable();
+
             MySqlDataReader Reader;
             MySqlCommand command = conn.CreateCommand();
             command.CommandText = query;
-            
-            Reader = command.ExecuteReader();
 
-            DataSet ds = new DataSet();
-            DataTable dataTable = new DataTable();
-            ds.Tables.Add(dataTable);
-            ds.EnforceConstraints = false;
-            dataTable.Load(Reader);
-            Reader.Close();
+            try
+            {
+                Reader = command.ExecuteReader();
+
+                ds.Tables.Add(dataTable);
+                ds.EnforceConstraints = false;
+                dataTable.Load(Reader);
+                Reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
            
             return ds;
         }

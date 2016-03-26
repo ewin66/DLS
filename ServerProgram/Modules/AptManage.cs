@@ -17,6 +17,7 @@ using DevExpress.MailClient.Win;
 using DevExpress.MailDemo.Win;
 
 using System.Collections;
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Modules {
     public partial class AptManage : BaseModule {
@@ -45,9 +46,12 @@ namespace DevExpress.ProductsDemo.Win.Modules {
             OwnerForm.EnableLayoutButtons(gidControlAptManage.MainView != layoutView1);
             OwnerForm.EnableZoomControl(gidControlAptManage.MainView != layoutView1);
         }
-        AMR_MST04 CurrentContact {
+
+        AMR_MST04 CurrentContact
+        {
             get { return gridView1.GetRow(gridView1.FocusedRowHandle) as AMR_MST04; }
         }
+
         private void gridView1_ColumnFilterChanged(object sender, EventArgs e) {
             UpdateCurrentContact();
         }

@@ -10,14 +10,15 @@ using DevExpress.XtraEditors;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.MailClient.Win;
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Forms {
     public partial class frmEdit_COM_SET : XtraForm {
-        AMR_MST04 contact, bindingContact;
+        AMR_MST04Model contact, bindingContact;
         public frmEdit_COM_SET() {
             InitializeComponent();
         }
-        public frmEdit_COM_SET(AMR_MST04 contact, IDXMenuManager menuManager)
+        public frmEdit_COM_SET(AMR_MST04Model contact, IDXMenuManager menuManager)
         {
             InitializeComponent();
             this.contact = contact;

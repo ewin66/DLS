@@ -279,11 +279,9 @@ namespace DevExpress.MailClient.Win {
 
         #endregion
     }
+        
 
-    /// <summary>
-    /// 세대 정보
-    /// </summary>
-    public class AMR_MST04 : IComparable
+    public class AMR_MST04
     {
         UInt32 mst04sno;
         string mst04cmp;
@@ -303,12 +301,12 @@ namespace DevExpress.MailClient.Win {
         public AMR_MST04()
         {
         }
-                
+
         public AMR_MST04(AMR_MST04 info)
         {
             this.Assign(info);
         }
-                
+
         public void Assign(AMR_MST04 info)
         {
             this.MST04SNO = info.MST04SNO;
@@ -324,15 +322,18 @@ namespace DevExpress.MailClient.Win {
         {
             return new AMR_MST04(this);
         }
-        #region IComparable Members
 
-        public int CompareTo(object obj)
-        {
-            return Comparer<string>.Default.Compare(MST04CMP, obj.ToString());
-        }
+        //#region IComparable Members
 
-        #endregion
+        //public int CompareTo(object obj)
+        //{
+        //    return Comparer<string>.Default.Compare(MST04SNO, obj.ToString());
+        //}
+
+        //#endregion
     }
+
+
     /// <summary>
     /// 검침기 정보
     /// </summary>

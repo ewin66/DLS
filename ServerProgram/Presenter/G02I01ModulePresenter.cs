@@ -25,21 +25,28 @@ namespace ServerProgram
 
         void StateChanged_Executed(object sender, ExecutedEventArgs e)
         {
-            AMR_MST04 data = new AMR_MST04();
-                
-            data = (AMR_MST04)e.Parameter;
+            string messgae = "불러오기를 완료하였습니다.";
+            AMR_MST04Model model = new AMR_MST04Model();
+            
+            model = (AMR_MST04Model)e.Parameter;
 
             MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
-            string query = string.Format("select TOT00DAT, TOT00PW1,  TOT00WT1, TOT00GS1, TOT00HT1, TOT00CL1 from amr_tot00 where TOT00SNO = '{0}' order by TOT00DAT asc",
-                data.MST04SNO);
+            string query = string.Format("select TOT00DAT, TOT00PW1,  TOT00WT1, TOT00GS1, TOT00HT1, TOT00CL1 from amr_tot00 " +
+                "where TOT00SNO = '{0}' and TOT00DAT between '{1}' and '{2}' " + 
+                "order by TOT00DAT asc ",
+                model.MST04SNO,
+                model.from.ToString("yyyy-MM-dd"),
+                model.to.ToString("yyyy-MM-dd"));
             DataSet ds = new DataSet();
             ds = crud.SelectMariaDBTable(crud.Connection, query);
-
-            AMR_MST04Model model = new AMR_MST04Model();
-            model.DataTable = ds.Tables[0];
-            CurrentForm.Tab1SearchComplete(model);
-            CurrentForm.ShowMessage("불러오기를 완료하였습니다.");
+            if (ds.Tables.Count > 0)
+            {
+                model.DataTable = ds.Tables[0];
+                
+                CurrentForm.Tab1SearchComplete(model);
+            }
+            CurrentForm.ShowMessage(messgae);
         }
 
         void CurrentForm_OnTab1Search(object sender, EventArgs e)

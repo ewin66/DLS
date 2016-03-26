@@ -2265,7 +2265,7 @@
     <value>조회 / 분석</value>
   </data>
   <data name="navBarGroup2Item1.Caption" xml:space="preserve">
-    <value>데이터 조회</value>
+    <value>세대별 조회</value>
   </data>
   <data name="navBarGroup2Item1.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2310,7 +2310,7 @@
 </value>
   </data>
   <data name="navBarGroup2Item4.Caption" xml:space="preserve">
-    <value>데이터 분석</value>
+    <value>세대별 분석</value>
   </data>
   <data name="navBarGroup2Item4.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2361,6 +2361,12 @@
         vqP9z4iZLnSRmNLsPOm9zRHUpInYpR9LsUuYlVLM4hVaoj9YwZcfzQYnwqPh6eRHiUf3ugY+5zZeZ76H
         79WKE3T+ID2N26f/pEv/fYiOCJ4R7pinlCWPw218je95dP/PhCT9GyaC9lzhR4OcAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="navBarItem1.Caption" xml:space="preserve">
+    <value>navBarItem1</value>
+  </data>
+  <data name="navBarItem2.Caption" xml:space="preserve">
+    <value>navBarItem2</value>
   </data>
   <data name="navBarGroup2.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3770,6 +3776,18 @@
     <value>navBarGroup2Item4</value>
   </data>
   <data name="&gt;&gt;navBarGroup2Item4.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
+    <value>navBarItem1</value>
+  </data>
+  <data name="&gt;&gt;navBarItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarItem2.Name" xml:space="preserve">
+    <value>navBarItem2</value>
+  </data>
+  <data name="&gt;&gt;navBarItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;navBarGroup3.Name" xml:space="preserve">

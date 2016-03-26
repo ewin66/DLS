@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(G02I01Module));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.cbeAction = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbeUser = new DevExpress.XtraEditors.ComboBoxEdit();
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -95,33 +92,19 @@
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2,
-            this.xtraTabPage3,
-            this.xtraTabPage4});
+            this.xtraTabPage2});
             // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage1.Text = "시간별";
+            this.xtraTabPage1.Text = "기간별";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage2.Text = "일별";
-            // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage3.Text = "월별";
-            // 
-            // xtraTabPage4
-            // 
-            this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage4.Text = "연별";
+            this.xtraTabPage2.Text = "시간별";
             // 
             // cbeAction
             // 
@@ -145,14 +128,11 @@
             // 
             // sbSearch
             // 
-            this.sbSearch.Image = ((System.Drawing.Image)(resources.GetObject("sbSearch.Image")));
-            this.sbSearch.Location = new System.Drawing.Point(741, 12);
+            this.sbSearch.Location = new System.Drawing.Point(0, 0);
             this.sbSearch.Name = "sbSearch";
-            this.sbSearch.Size = new System.Drawing.Size(203, 29);
+            this.sbSearch.Size = new System.Drawing.Size(75, 23);
             this.sbSearch.StyleController = this.layoutControl1;
-            this.sbSearch.TabIndex = 11;
-            this.sbSearch.Text = "조회";
-            this.sbSearch.Click += new System.EventHandler(this.sbSearch_Click);
+            this.sbSearch.TabIndex = 15;
             // 
             // layoutControlGroup2
             // 
@@ -274,8 +254,6 @@
         private XtraTab.XtraTabPage xtraTabPage1;
         private XtraTab.XtraTabPage xtraTabPage2;
         private XtraLayout.LayoutControlItem layoutControlItem12;
-        private XtraTab.XtraTabPage xtraTabPage3;
-        private XtraTab.XtraTabPage xtraTabPage4;
         private XtraLayout.LayoutControlItem layoutControlItem4;
         private XtraLayout.LayoutControlItem layoutControlItem5;
     }

@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.MailClient.Win;
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Forms {
     public partial class frmEdit_AMR_MST04 : XtraForm {

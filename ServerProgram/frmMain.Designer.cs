@@ -146,6 +146,8 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2Item4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -1127,7 +1129,9 @@
             this.navBarGroup5Item1,
             this.navBarGroup5Item2,
             this.navBarGroup2Item2,
-            this.navBarGroup2Item3});
+            this.navBarGroup2Item3,
+            this.navBarItem1,
+            this.navBarItem2});
             this.navBarControl1.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
             this.navBarControl1.MenuManager = this.ribbonControl1;
             this.navBarControl1.Name = "navBarControl1";
@@ -1210,9 +1214,11 @@
             this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup2.Name = "navBarGroup2";
-            this.navBarGroup2.SelectedLinkIndex = 2;
+            this.navBarGroup2.SelectedLinkIndex = 3;
             // 
             // navBarGroup2Item1
             // 
@@ -1223,6 +1229,16 @@
             // 
             resources.ApplyResources(this.navBarGroup2Item4, "navBarGroup2Item4");
             this.navBarGroup2Item4.Name = "navBarGroup2Item4";
+            // 
+            // navBarItem1
+            // 
+            resources.ApplyResources(this.navBarItem1, "navBarItem1");
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem2
+            // 
+            resources.ApplyResources(this.navBarItem2, "navBarItem2");
+            this.navBarItem2.Name = "navBarItem2";
             // 
             // navBarGroup3
             // 
@@ -1549,6 +1565,8 @@
         private XtraBars.BarButtonItem bbiG02I01;
         private XtraBars.BarButtonItem bbiG02I02;
         private XtraBars.BarButtonItem bbiG02I03;
+        private XtraNavBar.NavBarItem navBarItem1;
+        private XtraNavBar.NavBarItem navBarItem2;
     }
 }
 
