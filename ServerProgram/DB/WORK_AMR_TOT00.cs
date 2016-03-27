@@ -15,22 +15,23 @@ namespace DevExpress.ProductsDemo.Win.DB
             while (!_shouldStop)
             {
 
-                TimeSpan a = DateTime.Now.TimeOfDay;
-                Console.WriteLine("현재 : " + a.ToString());
-                TimeSpan b = new TimeSpan(a.Hours, (a.Minutes / 1 + 1) * 1, 0);
-                Console.WriteLine("다음 : " + b.ToString());
-                TimeSpan due = b - a;
-                Console.WriteLine("대기 : " + due.TotalSeconds.ToString() + " 초");
-                System.Threading.Thread.Sleep(due);
-                
+                //TimeSpan a = DateTime.Now.TimeOfDay;
+                //Console.WriteLine("현재 : " + a.ToString());
+                //TimeSpan b = new TimeSpan(a.Hours, (a.Minutes / 1 + 1) * 1, 0);
+                //Console.WriteLine("다음 : " + b.ToString());
+                //TimeSpan due = b - a;
+                //Console.WriteLine("대기 : " + due.TotalSeconds.ToString() + " 초");
+                //System.Threading.Thread.Sleep(due);
+
+                System.Threading.Thread.Sleep(5000);
                 //실행할 코드
                 //Console.WriteLine("worker thread: working...");
                 eHandler(new EventArgs { });
 
-                if (b > DateTime.Now.TimeOfDay)  //시간 오차 해결, 중복 실행 방지
-                {
-                    System.Threading.Thread.Sleep(100);
-                }
+                //if (b > DateTime.Now.TimeOfDay)  //시간 오차 해결, 중복 실행 방지
+                //{
+                //    System.Threading.Thread.Sleep(100);
+                //}
 
             }
             Console.WriteLine("worker thread: terminating gracefully.");

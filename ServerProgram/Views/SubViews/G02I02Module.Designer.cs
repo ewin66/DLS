@@ -28,30 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(G02I02Module));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.deLoginHistoryDateFrom = new DevExpress.XtraEditors.DateEdit();
-            this.sbLoingHistorySearch = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.cbeAction = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbeUser = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -93,29 +71,11 @@
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
-            this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deLoginHistoryDateFrom.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deLoginHistoryDateFrom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeAction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -154,176 +114,7 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(962, 697);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2,
-            this.xtraTabPage3,
-            this.xtraTabPage4});
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Controls.Add(this.layoutControl2);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage1.Text = "시간별";
-            // 
-            // layoutControl2
-            // 
-            this.layoutControl2.Controls.Add(this.chartControl1);
-            this.layoutControl2.Controls.Add(this.textEdit1);
-            this.layoutControl2.Controls.Add(this.deLoginHistoryDateFrom);
-            this.layoutControl2.Controls.Add(this.sbLoingHistorySearch);
-            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl2.Name = "layoutControl2";
-            this.layoutControl2.Root = this.layoutControlGroup3;
-            this.layoutControl2.Size = new System.Drawing.Size(956, 660);
-            this.layoutControl2.TabIndex = 0;
-            this.layoutControl2.Text = "layoutControl2";
-            // 
-            // chartControl1
-            // 
-            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chartControl1.Legend.EquallySpacedItems = false;
-            this.chartControl1.Legend.UseCheckBoxes = true;
-            this.chartControl1.Location = new System.Drawing.Point(12, 45);
-            this.chartControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.chartControl1.Name = "chartControl1";
-            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series1.Name = "전기";
-            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series2.Name = "수도";
-            series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series3.Name = "온수";
-            series4.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series4.Name = "가스";
-            series5.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series5.Name = "난방";
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2,
-        series3,
-        series4,
-        series5};
-            this.chartControl1.Size = new System.Drawing.Size(932, 603);
-            this.chartControl1.TabIndex = 16;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(58, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(183, 28);
-            this.textEdit1.StyleController = this.layoutControl2;
-            this.textEdit1.TabIndex = 12;
-            this.textEdit1.Click += new System.EventHandler(this.textEdit1_Click);
-            // 
-            // deLoginHistoryDateFrom
-            // 
-            this.deLoginHistoryDateFrom.EditValue = null;
-            this.deLoginHistoryDateFrom.Location = new System.Drawing.Point(291, 12);
-            this.deLoginHistoryDateFrom.Name = "deLoginHistoryDateFrom";
-            this.deLoginHistoryDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deLoginHistoryDateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deLoginHistoryDateFrom.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
-            this.deLoginHistoryDateFrom.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
-            this.deLoginHistoryDateFrom.Size = new System.Drawing.Size(184, 28);
-            this.deLoginHistoryDateFrom.StyleController = this.layoutControl2;
-            this.deLoginHistoryDateFrom.TabIndex = 4;
-            // 
-            // sbLoingHistorySearch
-            // 
-            this.sbLoingHistorySearch.Image = ((System.Drawing.Image)(resources.GetObject("sbLoingHistorySearch.Image")));
-            this.sbLoingHistorySearch.Location = new System.Drawing.Point(741, 12);
-            this.sbLoingHistorySearch.Name = "sbLoingHistorySearch";
-            this.sbLoingHistorySearch.Size = new System.Drawing.Size(203, 29);
-            this.sbLoingHistorySearch.StyleController = this.layoutControl2;
-            this.sbLoingHistorySearch.TabIndex = 11;
-            this.sbLoingHistorySearch.Text = "조회";
-            this.sbLoingHistorySearch.Click += new System.EventHandler(this.sbLoingHistorySearch_Click);
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup3.GroupBordersVisible = false;
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem9,
-            this.emptySpaceItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem1});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(956, 660);
-            this.layoutControlGroup3.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.deLoginHistoryDateFrom;
-            this.layoutControlItem2.Location = new System.Drawing.Point(233, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(234, 33);
-            this.layoutControlItem2.Text = "날짜";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(43, 22);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.sbLoingHistorySearch;
-            this.layoutControlItem9.Location = new System.Drawing.Point(729, 0);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(207, 33);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(467, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(262, 33);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.textEdit1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(233, 33);
-            this.layoutControlItem3.Text = "동/호";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(43, 22);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.chartControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 33);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(936, 607);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage2.Text = "일별";
-            // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage3.Text = "월별";
-            // 
-            // xtraTabPage4
-            // 
-            this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage4.Text = "연별";
+            this.xtraTabPage1});
             // 
             // cbeAction
             // 
@@ -650,6 +441,12 @@
             this.gridBand2.VisibleIndex = -1;
             this.gridBand2.Width = 75;
             // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(956, 660);
+            this.xtraTabPage1.Text = "기간별";
+            // 
             // G02I02Module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -662,25 +459,6 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
-            this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deLoginHistoryDateFrom.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deLoginHistoryDateFrom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeAction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -701,25 +479,12 @@
         private XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private XtraLayout.LayoutControlGroup layoutControlGroup2;
         private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraEditors.DateEdit deLoginHistoryDateFrom;
-        private XtraEditors.SimpleButton sbLoingHistorySearch;
         private XtraEditors.ComboBoxEdit cbeAction;
         private XtraEditors.ComboBoxEdit cbeUser;
         private XtraLayout.LayoutControlItem layoutControlItem7;
         private XtraLayout.LayoutControlItem layoutControlItem8;
         private XtraTab.XtraTabControl xtraTabControl1;
-        private XtraTab.XtraTabPage xtraTabPage1;
-        private XtraLayout.LayoutControl layoutControl2;
-        private XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraTab.XtraTabPage xtraTabPage2;
         private XtraLayout.LayoutControlItem layoutControlItem12;
-        private XtraEditors.TextEdit textEdit1;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraTab.XtraTabPage xtraTabPage3;
-        private XtraTab.XtraTabPage xtraTabPage4;
         private XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn1;
         private XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn2;
         private XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn3;
@@ -752,7 +517,6 @@
         private XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private XtraGrid.Views.BandedGrid.GridBand gridBand2;
-        private XtraCharts.ChartControl chartControl1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
+        private XtraTab.XtraTabPage xtraTabPage1;
     }
 }

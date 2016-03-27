@@ -22,17 +22,16 @@ using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
-    public partial class G02I01ModuleTab1 : UserControl, IBaseSubView
+    public partial class G02I01ModuleTab2 : UserControl, IBaseSubView
     {
 
-        public G02I01ModuleTab1()
+        public G02I01ModuleTab2()
         {
             InitializeComponent();
 
             //this.gridControl1.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.bindingSource1, "DataTable", true ));
 
             this.dateEdit1.DateTime = DateTime.Now;
-            this.dateEdit2.DateTime = DateTime.Now.AddDays(+1);
 
             mMST04 = new AMR_MST04Model();
 
@@ -70,8 +69,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
             if (mMST04 != null)
             {
                 mMST04.From = this.dateEdit1.DateTime;
-                mMST04.To = this.dateEdit2.DateTime;
-                mMST04.Name = "Tab1";
+                mMST04.To = this.dateEdit1.DateTime.AddDays(+1);
+                mMST04.Name = "Tab2";
                 CommandCenter.StateChanged.Execute(mMST04);
             }
                 

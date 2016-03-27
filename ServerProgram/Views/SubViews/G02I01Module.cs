@@ -36,6 +36,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         
         G02I01ModuleTab1 tab1;
+        G02I01ModuleTab2 tab2;
 
         /// <summary>
         /// 서브폼 추가
@@ -45,6 +46,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
             tab1 = new G02I01ModuleTab1();
             tab1.Dock = DockStyle.Fill;
             this.xtraTabPage1.Controls.Add(tab1);
+
+            tab2 = new G02I01ModuleTab2();
+            tab2.Dock = DockStyle.Fill;
+            this.xtraTabPage2.Controls.Add(tab2);
 
         }
 
@@ -78,13 +83,20 @@ namespace DevExpress.ProductsDemo.Win.Modules
             MessageBox.Show(msg);
         }
 
-        public void Tab1SearchComplete(IBaseModel item)
+        public void SearchComplete(IBaseModel item)
         {
             if (item == null)
                 return;
 
+            AMR_MST04Model model = new AMR_MST04Model();
+            model = (AMR_MST04Model)item;
+
             CurrentData = item;
-            tab1.DataBinding(this.CurrentData);
+
+            if( model.Name.Equals("Tab1") )
+                tab1.DataBinding(this.CurrentData);
+            else
+                tab2.DataBinding(this.CurrentData);
         }
 
         #endregion

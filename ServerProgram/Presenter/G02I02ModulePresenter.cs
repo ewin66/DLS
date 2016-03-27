@@ -9,21 +9,21 @@ using DevExpress.MailClient.Win;
 
 namespace ServerProgram
 {
-    public class G02I01ModulePresenter : IG02I01ModulePresenter
+    public class G02I02ModulePresenter : IG02I02ModulePresenter
     {
-        public IG02I01Module CurrentForm { get; set; }
+        public IG02I02Module CurrentForm { get; set; }
 
         /// <summary>
         /// 생성자
         /// </summary>
-        public G02I01ModulePresenter(IG02I01Module view)
+        public G02I02ModulePresenter(IG02I02Module view)
         {
             CurrentForm = view;
             //CurrentForm.Tab1SearchEvent += new EventHandler(CurrentForm_OnTab1Search);
-            CommandCenter.StateChanged.Executed += new EventHandler<ExecutedEventArgs>(StateChanged_Executed);
+            CommandCenter.GraphSearchChanged.Executed += new EventHandler<ExecutedEventArgs>(GraphSearchChanged_Executed);
         }
 
-        void StateChanged_Executed(object sender, ExecutedEventArgs e)
+        void GraphSearchChanged_Executed(object sender, ExecutedEventArgs e)
         {
             string messgae = "불러오기를 완료하였습니다.";
             AMR_MST04Model model = new AMR_MST04Model();
@@ -32,24 +32,17 @@ namespace ServerProgram
             
             MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
-            string query = string.Format("select TOT00DAT, TOT00PW1,  TOT00WT1, TOT00GS1, TOT00HT1, TOT00CL1 from amr_tot00 " +
-                "where TOT00SNO = '{0}' and TOT00DAT between '{1}' and '{2}' " + 
+            string query = string.Format("select TOT00DAT, {0} from amr_tot00 " +
+                "where TOT00SNO = '{1}' and TOT00DAT between '{2}' and '{3}' " + 
                 "order by TOT00DAT asc ",
+                model.Sensor,
                 model.MST04SNO,
                 model.From.ToString("yyyy-MM-dd"),
                 model.To.ToString("yyyy-MM-dd"));
             DataSet ds = new DataSet();
-            //ds = crud.SelectMariaDBTable(crud.Connection, query);
-
-            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
-
-            cmd.CommandText = "CALL sp_load(@sno, @datefrom, @dateto);";
-            cmd.Parameters.AddWithValue("@sno", model.MST04SNO);
-            cmd.Parameters.AddWithValue("@datefrom", model.From.ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@dateto", model.To.ToString("yyyy-MM-dd"));
-
-            ds = crud.CallSPMariaDBTable(crud.Connection, cmd);
-
+            ds = crud.SelectMariaDBTable(crud.Connection, query);
+            //ds = crud.CallSPMariaDBTable(crud.Connection, query);
+            
             if (ds.Tables.Count > 0)
             {
                 model.DataTable = ds.Tables[0];

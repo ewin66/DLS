@@ -20,10 +20,11 @@ using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraCharts;
 using DevExpress.MailClient.Win;
 using ServerProgram.DB;
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
-    public partial class G02I02Module : BaseModule
+    public partial class G02I02Module : BaseModule, IG02I02Module
     {
 
         AMR_MST04 mMST04;
@@ -33,8 +34,10 @@ namespace DevExpress.ProductsDemo.Win.Modules
         public G02I02Module()
         {
             InitializeComponent();
+            InitializeSubViews();
 
-            this.deLoginHistoryDateFrom.DateTime = DateTime.Today;
+            MainPresenter = new G02I02ModulePresenter(this);
+
 
             mMST04 = new AMR_MST04();
             mKey = new string[] { "전기", "수도", "온수", "가스", "난방" };
@@ -45,7 +48,20 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 chartData.Add(key, chartValue);
             }
         }
+        G02I02ModuleTab1 tab1;
 
+        /// <summary>
+        /// 서브폼 추가
+        /// </summary>
+        public void InitializeSubViews()
+        {
+            tab1 = new G02I02ModuleTab1();
+            tab1.Dock = DockStyle.Fill;
+            this.xtraTabPage1.Controls.Add(tab1);
+
+
+
+        }
 
         protected internal override void ButtonClick(string tag)
         {
@@ -99,8 +115,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             foreach (string key in mKey)
             {
-                this.chartControl1.SafeInvoke(d => d.Series[key].Points.BeginUpdate());
-                this.chartControl1.SafeInvoke(d => d.Series[key].Points.Clear());
+                //this.chartControl1.SafeInvoke(d => d.Series[key].Points.BeginUpdate());
+                //this.chartControl1.SafeInvoke(d => d.Series[key].Points.Clear());
             }
             MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
@@ -126,19 +142,53 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 foreach (string key in mKey)
                 {
                     chartData[key].data = new SeriesPoint(datetime, value[sensorOffset++]);
-                    this.chartControl1.SafeInvoke(d => d.Series[key].Points.Add(chartData[key].data));
+                    //this.chartControl1.SafeInvoke(d => d.Series[key].Points.Add(chartData[key].data));
                 }
             }
 
             foreach (string key in mKey)
             {
-                this.chartControl1.SafeInvoke(d => d.Series[key].Points.EndUpdate());
+                //this.chartControl1.SafeInvoke(d => d.Series[key].Points.EndUpdate());
 
             }
             //this.gcGrid.DataSource = ds.Tables[0];
 
         }
 
+        #region IG02I02Module
 
+        /// <summary>
+        /// 현재 사용 데이터모델을 지정/반환합니다.
+        /// </summary>
+        public IBaseModel CurrentData { get; set; }
+
+        /// <summary>
+        /// 컨트롤러를 지정/반환합니다.
+        /// </summary>
+        public IG02I02ModulePresenter MainPresenter { get; set; }
+
+
+        public void ShowMessage(string msg)
+        {
+            MessageBox.Show(msg);
+        }
+
+        public void SearchComplete(IBaseModel item)
+        {
+            if (item == null)
+                return;
+
+            AMR_MST04Model model = new AMR_MST04Model();
+            model = (AMR_MST04Model)item;
+
+            CurrentData = item;
+
+            if (model.Name.Equals("Tab1"))
+                tab1.DataBinding(this.CurrentData);
+            //else
+                //tab2.DataBinding(this.CurrentData);
+        }
+
+        #endregion
     }
 }

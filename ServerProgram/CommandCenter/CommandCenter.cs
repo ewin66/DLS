@@ -9,9 +9,12 @@ namespace ServerProgram
     {
         public static StaticCommand StateChanged { get; private set; }
 
+        public static StaticCommand GraphSearchChanged { get; private set; }
+
         static CommandCenter()
         {
             StateChanged = new StaticCommand("StateChanged");
+            GraphSearchChanged = new StaticCommand("GraphSearchChanged");
         }
     }
 }

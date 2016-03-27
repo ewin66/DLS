@@ -49,10 +49,11 @@ namespace ServerProgram
             return new AMR_MST04Model(this);
         }
 
+        public string Name { get; set; }
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
 
-        public DateTime from { get; set; }
-        public DateTime to { get; set; }
-
+        public string Sensor { get; set; }
         public DataTable DataTable { get; set; }
 
         public int CurrentRow { get; set; }

@@ -62,6 +62,34 @@ namespace ServerProgram.DB
         }
 
 
+        public DataSet CallSPMariaDBTable(MySqlConnection conn, MySqlCommand cmd)
+        {
+            DataSet ds = new DataSet();
+            DataTable dataTable = new DataTable();
+
+            MySqlDataReader Reader;
+            MySqlCommand command = conn.CreateCommand();
+
+            cmd.Connection = conn;
+
+            try
+            {
+                Reader = cmd.ExecuteReader();
+
+                ds.Tables.Add(dataTable);
+                ds.EnforceConstraints = false;
+                dataTable.Load(Reader);
+                Reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+           
+            return ds;
+        }
+
 
         public bool loginCheck(MySqlConnection conn, string query, string id, string pw)
         {

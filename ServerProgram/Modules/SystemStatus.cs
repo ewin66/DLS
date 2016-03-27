@@ -79,9 +79,11 @@ namespace DevExpress.ProductsDemo.Win.Modules
             int offset = 4;
             mCommTable = comm.CommTable;
 
+            //DataRow foundErrRow = mErrorTable.Rows.Find(string.Format("0x{0:D2}", slaveId));
+
             foreach (DataRow row in mCommTable.Rows)
             {
-    //                `TOT00SNO` INT(4) NOT NULL COMMENT '세대 번호',
+    //`TOT00SNO` INT(4) NOT NULL COMMENT '세대 번호',
     //`TOT00DAT` CHAR(20) NOT NULL COMMENT '검침 일시',
     //`TOT00PW1` VARCHAR(8) NULL DEFAULT NULL COMMENT '전력 검침 값',
     //`TOT00WT1` VARCHAR(8) NULL DEFAULT NULL COMMENT '수도 검침 값',
@@ -91,13 +93,22 @@ namespace DevExpress.ProductsDemo.Win.Modules
     //`TOT00CO1` VARCHAR(8) NULL DEFAULT NULL COMMENT '냉방 검침 값',
                 //mCommTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
                 offset = 4;
+
+                // 빠른 테스트를 위해 이전시간값을 가져온다.
+                string dat = row.ItemArray[1].ToString();
+                DateTime dtDate = DateTime.ParseExact(dat, "yyyy-MM-dd HH", null);
+                
                 string sql = string.Format("insert into amr_tot00 values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", 
                     row.ItemArray[0],
-                    DateTime.Now.ToString("yyyy-MM-dd hh:mm"),
+                    dtDate.AddHours(+1).ToString("yyyy-MM-dd HH"),
                     row.ItemArray[offset++], row.ItemArray[offset++], row.ItemArray[offset++], row.ItemArray[offset++], row.ItemArray[offset++], row.ItemArray[offset++]);
 
 
                 crud.InsertMariaDB(crud.Connection, sql);
+
+                // 빠른 테스트를 위해 임의로 한시간씩 증가한다.
+                string updatehour = dtDate.AddHours(+1).ToString("yyyy-MM-dd HH");
+                row["검침시간"] = updatehour;
             }
         }
 
@@ -319,8 +330,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                mDataTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
-                mCommTable.Rows.Add(row[0], "null", row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
+                mDataTable.Rows.Add(row[0], DateTime.Now.ToString("yyyy-MM-dd hh"), row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
+                mCommTable.Rows.Add(row[0], DateTime.Now.ToString("yyyy-MM-dd hh"), row[1], row[2], "null", "null", "null", "null", "null", "null", "null");
             }
             
             //gridControl1.DataSource = mSensorInfoTable;

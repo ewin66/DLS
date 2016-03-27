@@ -318,12 +318,12 @@ namespace DevExpress.ProductsDemo.Win.Serial
                 //int index = mCommTable.Rows.IndexOf(foundRow);
 
                 //전기	수도	온수	가스	열량	냉방
-                foundRow["전기"] = item.SENSOR[0];
-                foundRow["수도"] = item.SENSOR[1];
-                foundRow["온수"] = item.SENSOR[2];
-                foundRow["가스"] = item.SENSOR[3];
-                foundRow["열량"] = item.SENSOR[4];
-                foundRow["냉방"] = item.SENSOR[5];
+                foundRow["전기"] = item.SENSOR[0] / 10.0;
+                foundRow["수도"] = item.SENSOR[1] / 10.0;
+                foundRow["온수"] = item.SENSOR[2] / 10.0;
+                foundRow["가스"] = item.SENSOR[3] / 10.0;
+                foundRow["열량"] = item.SENSOR[4] / 10.0;
+                foundRow["냉방"] = item.SENSOR[5] / 10.0;
                 
             }
 

@@ -182,7 +182,7 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item6.Tag = new NavBarGroupTagObject("NetworkManage", typeof(DevExpress.ProductsDemo.Win.Modules.NetworkManage));
             this.navBarGroup1Item7.Tag = new NavBarGroupTagObject("DBManage", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             this.navBarGroup1Item8.Tag = new NavBarGroupTagObject("ExternalInterface", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
-            this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.SystemMonitoring));
+            this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
             this.navBarGroup1.SelectedLinkIndex = 5;
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("G02I01Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I01Module));
