@@ -30,6 +30,7 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.cbeAction = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbeUser = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -71,7 +72,7 @@
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -114,7 +115,14 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(962, 697);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1});
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(956, 660);
+            this.xtraTabPage1.Text = "시간별";
             // 
             // cbeAction
             // 
@@ -441,11 +449,11 @@
             this.gridBand2.VisibleIndex = -1;
             this.gridBand2.Width = 75;
             // 
-            // xtraTabPage1
+            // xtraTabPage2
             // 
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(956, 660);
-            this.xtraTabPage1.Text = "기간별";
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(0, 0);
+            this.xtraTabPage2.Text = "기간별";
             // 
             // G02I02Module
             // 
@@ -518,5 +526,6 @@
         private XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private XtraTab.XtraTabPage xtraTabPage1;
+        private XtraTab.XtraTabPage xtraTabPage2;
     }
 }

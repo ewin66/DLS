@@ -154,13 +154,16 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
                     if (!mInsertThread.IsAlive)
                     {
+                        mInsertThread = new Thread(new ThreadStart(mWorkArmTot00.DoWork));
+
                         mInsertThread.Start();
                         mInsertThread.IsBackground = true;
                     }
                     break;
                 case TagResources.StartStopComStop:
                     Stop();
-                    
+
+                    mWorkArmTot00.RequestStop();
                     break;
                 default:
                     

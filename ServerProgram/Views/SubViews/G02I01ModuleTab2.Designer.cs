@@ -36,22 +36,40 @@
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn5 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn6 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn7 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand8 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand9 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn8 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand10 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn10 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn12 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand13 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn13 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand14 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand15 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn14 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn15 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand16 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumn16 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand17 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn17 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -69,24 +87,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bandedGridColumn17 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand8 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand9 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand10 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand13 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand14 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand15 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand16 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand17 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbeAction.Properties)).BeginInit();
@@ -225,6 +225,13 @@
             this.bandedGridView1.Name = "bandedGridView1";
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // gridBand1
+            // 
+            this.gridBand1.Columns.Add(this.bandedGridColumn1);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 127;
+            // 
             // bandedGridColumn1
             // 
             this.bandedGridColumn1.Caption = "날짜";
@@ -233,9 +240,29 @@
             this.bandedGridColumn1.Visible = true;
             this.bandedGridColumn1.Width = 127;
             // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "전기";
+            this.gridBand2.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand3,
+            this.gridBand4});
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 217;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "검침 값";
+            this.gridBand3.Columns.Add(this.bandedGridColumn2);
+            this.gridBand3.Columns.Add(this.bandedGridColumn3);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 0;
+            this.gridBand3.Width = 144;
+            // 
             // bandedGridColumn2
             // 
             this.bandedGridColumn2.Caption = "시작 값";
+            this.bandedGridColumn2.FieldName = "TOT00PW1s";
             this.bandedGridColumn2.Name = "bandedGridColumn2";
             this.bandedGridColumn2.Visible = true;
             this.bandedGridColumn2.Width = 71;
@@ -243,9 +270,18 @@
             // bandedGridColumn3
             // 
             this.bandedGridColumn3.Caption = "최종 값";
+            this.bandedGridColumn3.FieldName = "TOT00PW1e";
             this.bandedGridColumn3.Name = "bandedGridColumn3";
             this.bandedGridColumn3.Visible = true;
             this.bandedGridColumn3.Width = 73;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "사용량";
+            this.gridBand4.Columns.Add(this.bandedGridColumn4);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 1;
+            this.gridBand4.Width = 73;
             // 
             // bandedGridColumn4
             // 
@@ -255,9 +291,29 @@
             this.bandedGridColumn4.Visible = true;
             this.bandedGridColumn4.Width = 73;
             // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "수도";
+            this.gridBand5.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand6,
+            this.gridBand7});
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 2;
+            this.gridBand5.Width = 217;
+            // 
+            // gridBand6
+            // 
+            this.gridBand6.Caption = "검침 값";
+            this.gridBand6.Columns.Add(this.bandedGridColumn5);
+            this.gridBand6.Columns.Add(this.bandedGridColumn6);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.VisibleIndex = 0;
+            this.gridBand6.Width = 144;
+            // 
             // bandedGridColumn5
             // 
             this.bandedGridColumn5.Caption = "시작 값";
+            this.bandedGridColumn5.FieldName = "TOT00WT1s";
             this.bandedGridColumn5.Name = "bandedGridColumn5";
             this.bandedGridColumn5.Visible = true;
             this.bandedGridColumn5.Width = 71;
@@ -265,9 +321,18 @@
             // bandedGridColumn6
             // 
             this.bandedGridColumn6.Caption = "최종 값";
+            this.bandedGridColumn6.FieldName = "TOT00WT1e";
             this.bandedGridColumn6.Name = "bandedGridColumn6";
             this.bandedGridColumn6.Visible = true;
             this.bandedGridColumn6.Width = 73;
+            // 
+            // gridBand7
+            // 
+            this.gridBand7.Caption = "사용량";
+            this.gridBand7.Columns.Add(this.bandedGridColumn7);
+            this.gridBand7.Name = "gridBand7";
+            this.gridBand7.VisibleIndex = 1;
+            this.gridBand7.Width = 73;
             // 
             // bandedGridColumn7
             // 
@@ -277,9 +342,29 @@
             this.bandedGridColumn7.Visible = true;
             this.bandedGridColumn7.Width = 73;
             // 
+            // gridBand8
+            // 
+            this.gridBand8.Caption = "온수";
+            this.gridBand8.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand9,
+            this.gridBand10});
+            this.gridBand8.Name = "gridBand8";
+            this.gridBand8.VisibleIndex = 3;
+            this.gridBand8.Width = 217;
+            // 
+            // gridBand9
+            // 
+            this.gridBand9.Caption = "검침 값";
+            this.gridBand9.Columns.Add(this.bandedGridColumn8);
+            this.gridBand9.Columns.Add(this.bandedGridColumn9);
+            this.gridBand9.Name = "gridBand9";
+            this.gridBand9.VisibleIndex = 0;
+            this.gridBand9.Width = 144;
+            // 
             // bandedGridColumn8
             // 
             this.bandedGridColumn8.Caption = "시작 값";
+            this.bandedGridColumn8.FieldName = "TOT00GS1s";
             this.bandedGridColumn8.Name = "bandedGridColumn8";
             this.bandedGridColumn8.Visible = true;
             this.bandedGridColumn8.Width = 71;
@@ -287,9 +372,18 @@
             // bandedGridColumn9
             // 
             this.bandedGridColumn9.Caption = "최종 값";
+            this.bandedGridColumn9.FieldName = "TOT00GS1e";
             this.bandedGridColumn9.Name = "bandedGridColumn9";
             this.bandedGridColumn9.Visible = true;
             this.bandedGridColumn9.Width = 73;
+            // 
+            // gridBand10
+            // 
+            this.gridBand10.Caption = "사용량";
+            this.gridBand10.Columns.Add(this.bandedGridColumn10);
+            this.gridBand10.Name = "gridBand10";
+            this.gridBand10.VisibleIndex = 1;
+            this.gridBand10.Width = 73;
             // 
             // bandedGridColumn10
             // 
@@ -299,9 +393,29 @@
             this.bandedGridColumn10.Visible = true;
             this.bandedGridColumn10.Width = 73;
             // 
+            // gridBand11
+            // 
+            this.gridBand11.Caption = "가스";
+            this.gridBand11.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand12,
+            this.gridBand13});
+            this.gridBand11.Name = "gridBand11";
+            this.gridBand11.VisibleIndex = 4;
+            this.gridBand11.Width = 217;
+            // 
+            // gridBand12
+            // 
+            this.gridBand12.Caption = "검침 값";
+            this.gridBand12.Columns.Add(this.bandedGridColumn11);
+            this.gridBand12.Columns.Add(this.bandedGridColumn12);
+            this.gridBand12.Name = "gridBand12";
+            this.gridBand12.VisibleIndex = 0;
+            this.gridBand12.Width = 144;
+            // 
             // bandedGridColumn11
             // 
             this.bandedGridColumn11.Caption = "시작 값";
+            this.bandedGridColumn11.FieldName = "TOT00HT1s";
             this.bandedGridColumn11.Name = "bandedGridColumn11";
             this.bandedGridColumn11.Visible = true;
             this.bandedGridColumn11.Width = 71;
@@ -309,9 +423,18 @@
             // bandedGridColumn12
             // 
             this.bandedGridColumn12.Caption = "최종 값";
+            this.bandedGridColumn12.FieldName = "TOT00HT1e";
             this.bandedGridColumn12.Name = "bandedGridColumn12";
             this.bandedGridColumn12.Visible = true;
             this.bandedGridColumn12.Width = 73;
+            // 
+            // gridBand13
+            // 
+            this.gridBand13.Caption = "사용량";
+            this.gridBand13.Columns.Add(this.bandedGridColumn13);
+            this.gridBand13.Name = "gridBand13";
+            this.gridBand13.VisibleIndex = 1;
+            this.gridBand13.Width = 73;
             // 
             // bandedGridColumn13
             // 
@@ -321,9 +444,29 @@
             this.bandedGridColumn13.Visible = true;
             this.bandedGridColumn13.Width = 73;
             // 
+            // gridBand14
+            // 
+            this.gridBand14.Caption = "난방";
+            this.gridBand14.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand15,
+            this.gridBand16});
+            this.gridBand14.Name = "gridBand14";
+            this.gridBand14.VisibleIndex = 5;
+            this.gridBand14.Width = 217;
+            // 
+            // gridBand15
+            // 
+            this.gridBand15.Caption = "검침 값";
+            this.gridBand15.Columns.Add(this.bandedGridColumn14);
+            this.gridBand15.Columns.Add(this.bandedGridColumn15);
+            this.gridBand15.Name = "gridBand15";
+            this.gridBand15.VisibleIndex = 0;
+            this.gridBand15.Width = 144;
+            // 
             // bandedGridColumn14
             // 
             this.bandedGridColumn14.Caption = "시작 값";
+            this.bandedGridColumn14.FieldName = "TOT00CL1s";
             this.bandedGridColumn14.Name = "bandedGridColumn14";
             this.bandedGridColumn14.Visible = true;
             this.bandedGridColumn14.Width = 71;
@@ -331,9 +474,18 @@
             // bandedGridColumn15
             // 
             this.bandedGridColumn15.Caption = "최종 값";
+            this.bandedGridColumn15.FieldName = "TOT00CL1e";
             this.bandedGridColumn15.Name = "bandedGridColumn15";
             this.bandedGridColumn15.Visible = true;
             this.bandedGridColumn15.Width = 73;
+            // 
+            // gridBand16
+            // 
+            this.gridBand16.Caption = "사용량";
+            this.gridBand16.Columns.Add(this.bandedGridColumn16);
+            this.gridBand16.Name = "gridBand16";
+            this.gridBand16.VisibleIndex = 1;
+            this.gridBand16.Width = 73;
             // 
             // bandedGridColumn16
             // 
@@ -342,6 +494,19 @@
             this.bandedGridColumn16.Name = "bandedGridColumn16";
             this.bandedGridColumn16.Visible = true;
             this.bandedGridColumn16.Width = 73;
+            // 
+            // gridBand17
+            // 
+            this.gridBand17.Columns.Add(this.bandedGridColumn17);
+            this.gridBand17.Name = "gridBand17";
+            this.gridBand17.VisibleIndex = 6;
+            this.gridBand17.Width = 75;
+            // 
+            // bandedGridColumn17
+            // 
+            this.bandedGridColumn17.Caption = "통신상태";
+            this.bandedGridColumn17.Name = "bandedGridColumn17";
+            this.bandedGridColumn17.Visible = true;
             // 
             // textEdit1
             // 
@@ -502,161 +667,6 @@
             // bindingSource1
             // 
             this.bindingSource1.DataSource = typeof(ServerProgram.AMR_MST04Model);
-            // 
-            // bandedGridColumn17
-            // 
-            this.bandedGridColumn17.Caption = "통신상태";
-            this.bandedGridColumn17.Name = "bandedGridColumn17";
-            this.bandedGridColumn17.Visible = true;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Columns.Add(this.bandedGridColumn1);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 127;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "전기";
-            this.gridBand2.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand3,
-            this.gridBand4});
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 217;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "검침 값";
-            this.gridBand3.Columns.Add(this.bandedGridColumn2);
-            this.gridBand3.Columns.Add(this.bandedGridColumn3);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 0;
-            this.gridBand3.Width = 144;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "사용량";
-            this.gridBand4.Columns.Add(this.bandedGridColumn4);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 1;
-            this.gridBand4.Width = 73;
-            // 
-            // gridBand5
-            // 
-            this.gridBand5.Caption = "수도";
-            this.gridBand5.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand6,
-            this.gridBand7});
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 2;
-            this.gridBand5.Width = 217;
-            // 
-            // gridBand6
-            // 
-            this.gridBand6.Caption = "검침 값";
-            this.gridBand6.Columns.Add(this.bandedGridColumn5);
-            this.gridBand6.Columns.Add(this.bandedGridColumn6);
-            this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 0;
-            this.gridBand6.Width = 144;
-            // 
-            // gridBand7
-            // 
-            this.gridBand7.Caption = "사용량";
-            this.gridBand7.Columns.Add(this.bandedGridColumn7);
-            this.gridBand7.Name = "gridBand7";
-            this.gridBand7.VisibleIndex = 1;
-            this.gridBand7.Width = 73;
-            // 
-            // gridBand8
-            // 
-            this.gridBand8.Caption = "온수";
-            this.gridBand8.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand9,
-            this.gridBand10});
-            this.gridBand8.Name = "gridBand8";
-            this.gridBand8.VisibleIndex = 3;
-            this.gridBand8.Width = 217;
-            // 
-            // gridBand9
-            // 
-            this.gridBand9.Caption = "검침 값";
-            this.gridBand9.Columns.Add(this.bandedGridColumn8);
-            this.gridBand9.Columns.Add(this.bandedGridColumn9);
-            this.gridBand9.Name = "gridBand9";
-            this.gridBand9.VisibleIndex = 0;
-            this.gridBand9.Width = 144;
-            // 
-            // gridBand10
-            // 
-            this.gridBand10.Caption = "사용량";
-            this.gridBand10.Columns.Add(this.bandedGridColumn10);
-            this.gridBand10.Name = "gridBand10";
-            this.gridBand10.VisibleIndex = 1;
-            this.gridBand10.Width = 73;
-            // 
-            // gridBand11
-            // 
-            this.gridBand11.Caption = "가스";
-            this.gridBand11.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand12,
-            this.gridBand13});
-            this.gridBand11.Name = "gridBand11";
-            this.gridBand11.VisibleIndex = 4;
-            this.gridBand11.Width = 217;
-            // 
-            // gridBand12
-            // 
-            this.gridBand12.Caption = "검침 값";
-            this.gridBand12.Columns.Add(this.bandedGridColumn11);
-            this.gridBand12.Columns.Add(this.bandedGridColumn12);
-            this.gridBand12.Name = "gridBand12";
-            this.gridBand12.VisibleIndex = 0;
-            this.gridBand12.Width = 144;
-            // 
-            // gridBand13
-            // 
-            this.gridBand13.Caption = "사용량";
-            this.gridBand13.Columns.Add(this.bandedGridColumn13);
-            this.gridBand13.Name = "gridBand13";
-            this.gridBand13.VisibleIndex = 1;
-            this.gridBand13.Width = 73;
-            // 
-            // gridBand14
-            // 
-            this.gridBand14.Caption = "난방";
-            this.gridBand14.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand15,
-            this.gridBand16});
-            this.gridBand14.Name = "gridBand14";
-            this.gridBand14.VisibleIndex = 5;
-            this.gridBand14.Width = 217;
-            // 
-            // gridBand15
-            // 
-            this.gridBand15.Caption = "검침 값";
-            this.gridBand15.Columns.Add(this.bandedGridColumn14);
-            this.gridBand15.Columns.Add(this.bandedGridColumn15);
-            this.gridBand15.Name = "gridBand15";
-            this.gridBand15.VisibleIndex = 0;
-            this.gridBand15.Width = 144;
-            // 
-            // gridBand16
-            // 
-            this.gridBand16.Caption = "사용량";
-            this.gridBand16.Columns.Add(this.bandedGridColumn16);
-            this.gridBand16.Name = "gridBand16";
-            this.gridBand16.VisibleIndex = 1;
-            this.gridBand16.Width = 73;
-            // 
-            // gridBand17
-            // 
-            this.gridBand17.Columns.Add(this.bandedGridColumn17);
-            this.gridBand17.Name = "gridBand17";
-            this.gridBand17.VisibleIndex = 6;
-            this.gridBand17.Width = 75;
             // 
             // G02I01ModuleTab2
             // 

@@ -24,10 +24,10 @@ using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
-    public partial class G02I02ModuleTab1 : UserControl, IBaseSubView
+    public partial class G02I02ModuleTab2 : UserControl, IBaseSubView
     {
 
-        public G02I02ModuleTab1()
+        public G02I02ModuleTab2()
         {
             InitializeComponent();
 
@@ -39,6 +39,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
 
             this.dateEdit1.DateTime = DateTime.Now;
+            this.dateEdit2.DateTime = DateTime.Now.AddDays(+1);
 
             // "전기", "수도", "온수", "가스", "난방"
             mSensorList = new string[] { "TOT00PW1", "TOT00WT1", "TOT00GS1", "TOT00HT1", "TOT00CL1"  };
@@ -81,8 +82,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
             if (mMST04 != null && this.radioGroup1.SelectedIndex >= 0 )
             {
                 mMST04.From = this.dateEdit1.DateTime;
-                mMST04.To = this.dateEdit1.DateTime.AddDays(+1);
-                mMST04.Name = "Tab1";
+                mMST04.To = this.dateEdit2.DateTime;
+                mMST04.Name = "Tab2";
                 mMST04.Sensor = mSensorList[this.radioGroup1.SelectedIndex];
                 CommandCenter.GraphSearchChanged.Execute(mMST04);
             }

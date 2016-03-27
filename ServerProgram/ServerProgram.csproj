@@ -461,6 +461,12 @@
     <Compile Include="Models\Interfaces\IBaseModel.cs" />
     <Compile Include="Presenter\Interfaces\IG02I02ModulePresenter.cs" />
     <Compile Include="Presenter\Interfaces\IG02I02Module.cs" />
+    <Compile Include="Views\SubViews\G02I02ModuleTab2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SubViews\G02I02ModuleTab2.Designer.cs">
+      <DependentUpon>G02I02ModuleTab2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SubViews\G02I02ModuleTab1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -863,6 +869,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SubViews\G02I02ModuleTab2.resx">
+      <DependentUpon>G02I02ModuleTab2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubViews\G02I02ModuleTab1.resx">
       <DependentUpon>G02I02ModuleTab1.cs</DependentUpon>

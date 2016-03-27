@@ -106,6 +106,9 @@ namespace DevExpress.ProductsDemo.Win {
             
             InitBarButtonItem(this.bbiLoginHistorySearch, TagResources.LoginHistorySearch);
 
+            InitBarButtonItem(bbiG02I01, TagResources.G02I01);
+
+
             // 세대 정보 등록/수정
             InitBarButtonItem(this.bbiNewSno, TagResources.SnoNew);
             InitBarButtonItem(this.bbiEditSno, TagResources.SnoEdit);

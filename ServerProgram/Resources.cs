@@ -50,6 +50,8 @@ namespace DevExpress.MailDemo.Win {
         public const string StartStopRealtimeStatus = "StartStopRealtimeStatus";
         public const string StartStopComStart = "StartStopComStart";
         public const string StartStopComStop = "StartStopComStop";
+
+        public const string G02I01 = "G02I01";
         
     }
     public class CollectionResources {

@@ -32,16 +32,27 @@ namespace ServerProgram
             
             MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
 
-            string query = string.Format("select TOT00DAT, {0} from amr_tot00 " +
-                "where TOT00SNO = '{1}' and TOT00DAT between '{2}' and '{3}' " + 
-                "order by TOT00DAT asc ",
-                model.Sensor,
-                model.MST04SNO,
-                model.From.ToString("yyyy-MM-dd"),
-                model.To.ToString("yyyy-MM-dd"));
+            //string query = string.Format("select TOT00DAT, {0} from amr_tot00 " +
+            //    "where TOT00SNO = '{1}' and TOT00DAT between '{2}' and '{3}' " + 
+            //    "order by TOT00DAT asc ",
+            //    model.Sensor,
+            //    model.MST04SNO,
+            //    model.From.ToString("yyyy-MM-dd"),
+            //    model.To.ToString("yyyy-MM-dd"));
+            
+            //ds = crud.SelectMariaDBTable(crud.Connection, query);
+
             DataSet ds = new DataSet();
-            ds = crud.SelectMariaDBTable(crud.Connection, query);
-            //ds = crud.CallSPMariaDBTable(crud.Connection, query);
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+
+            cmd.CommandText = "CALL sp_load_G02I02(@sno, @sensor, @datefrom, @dateto);";
+            cmd.Parameters.AddWithValue("@sno", model.MST04SNO);
+            cmd.Parameters.AddWithValue("@sensor", model.Sensor);
+            cmd.Parameters.AddWithValue("@datefrom", model.From.ToString("yyyy-MM-dd") + " 00");
+            cmd.Parameters.AddWithValue("@dateto", model.To.ToString("yyyy-MM-dd") + " 00");
+
+            ds = crud.CallSPMariaDBTable(crud.Connection, cmd);
+
             
             if (ds.Tables.Count > 0)
             {

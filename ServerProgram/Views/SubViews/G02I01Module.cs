@@ -57,10 +57,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
         {
             switch (tag)
             {
-                case TagResources.LoginHistorySearch:
+                case TagResources.G02I01:
                     break;
-                case TagResources.ContactNew:
-                    break;
+                
             }
         }
 

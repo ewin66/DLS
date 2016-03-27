@@ -49,6 +49,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             }
         }
         G02I02ModuleTab1 tab1;
+        G02I02ModuleTab2 tab2;
 
         /// <summary>
         /// 서브폼 추가
@@ -59,20 +60,16 @@ namespace DevExpress.ProductsDemo.Win.Modules
             tab1.Dock = DockStyle.Fill;
             this.xtraTabPage1.Controls.Add(tab1);
 
-
-
+            tab2 = new G02I02ModuleTab2();
+            tab2.Dock = DockStyle.Fill;
+            this.xtraTabPage2.Controls.Add(tab2);
         }
 
         protected internal override void ButtonClick(string tag)
         {
             switch (tag)
             {
-                case TagResources.LoginHistorySearch:
-
-
-                    break;
-                case TagResources.ContactNew:
-
+                case TagResources.G02I01:
                     break;
             }
         }
@@ -185,8 +182,8 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
             if (model.Name.Equals("Tab1"))
                 tab1.DataBinding(this.CurrentData);
-            //else
-                //tab2.DataBinding(this.CurrentData);
+            else
+                tab2.DataBinding(this.CurrentData);
         }
 
         #endregion

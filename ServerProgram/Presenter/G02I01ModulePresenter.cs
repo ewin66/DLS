@@ -31,22 +31,13 @@ namespace ServerProgram
             model = (AMR_MST04Model)e.Parameter;
             
             MySqlManage crud = new MySqlManage(ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
-
-            string query = string.Format("select TOT00DAT, TOT00PW1,  TOT00WT1, TOT00GS1, TOT00HT1, TOT00CL1 from amr_tot00 " +
-                "where TOT00SNO = '{0}' and TOT00DAT between '{1}' and '{2}' " + 
-                "order by TOT00DAT asc ",
-                model.MST04SNO,
-                model.From.ToString("yyyy-MM-dd"),
-                model.To.ToString("yyyy-MM-dd"));
             DataSet ds = new DataSet();
-            //ds = crud.SelectMariaDBTable(crud.Connection, query);
-
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
 
             cmd.CommandText = "CALL sp_load(@sno, @datefrom, @dateto);";
             cmd.Parameters.AddWithValue("@sno", model.MST04SNO);
-            cmd.Parameters.AddWithValue("@datefrom", model.From.ToString("yyyy-MM-dd"));
-            cmd.Parameters.AddWithValue("@dateto", model.To.ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@datefrom", model.From.ToString("yyyy-MM-dd") + " 00");
+            cmd.Parameters.AddWithValue("@dateto", model.To.ToString("yyyy-MM-dd") + " 00");
 
             ds = crud.CallSPMariaDBTable(crud.Connection, cmd);
 

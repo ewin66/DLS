@@ -1,6 +1,6 @@
 ﻿namespace DevExpress.ProductsDemo.Win.Modules
 {
-    partial class G02I02ModuleTab1
+    partial class G02I02ModuleTab2
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -57,6 +57,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbeAction.Properties)).BeginInit();
@@ -84,10 +86,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dateEdit2);
             this.layoutControl1.Controls.Add(this.cbeAction);
             this.layoutControl1.Controls.Add(this.cbeUser);
             this.layoutControl1.Controls.Add(this.sbSearch);
@@ -143,7 +149,7 @@
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(303, 22);
+            this.dateEdit1.Location = new System.Drawing.Point(231, 22);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -151,25 +157,25 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
-            this.dateEdit1.Size = new System.Drawing.Size(123, 28);
+            this.dateEdit1.Size = new System.Drawing.Size(108, 28);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 4;
             // 
             // textEdit1
             // 
             this.textEdit1.EditValue = "`";
-            this.textEdit1.Location = new System.Drawing.Point(97, 22);
+            this.textEdit1.Location = new System.Drawing.Point(70, 22);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(127, 28);
+            this.textEdit1.Size = new System.Drawing.Size(116, 28);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 12;
             this.textEdit1.Click += new System.EventHandler(this.textEdit1_Click_1);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(731, 22);
+            this.simpleButton1.Location = new System.Drawing.Point(833, 22);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(233, 29);
+            this.simpleButton1.Size = new System.Drawing.Size(131, 29);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "조회";
@@ -177,7 +183,7 @@
             // 
             // radioGroup1
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(505, 22);
+            this.radioGroup1.Location = new System.Drawing.Point(552, 22);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("전기", "전기"),
@@ -185,7 +191,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("온수", "온수"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("가스", "가스"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("난방", "난방")});
-            this.radioGroup1.Size = new System.Drawing.Size(189, 32);
+            this.radioGroup1.Size = new System.Drawing.Size(253, 32);
             this.radioGroup1.StyleController = this.layoutControl1;
             this.radioGroup1.TabIndex = 17;
             // 
@@ -293,7 +299,8 @@
             this.emptySpaceItem2,
             this.layoutControlItem3,
             this.layoutControlItem6,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem9});
             this.Root1.Location = new System.Drawing.Point(0, 0);
             this.Root1.Name = "Root1";
             this.Root1.Size = new System.Drawing.Size(966, 56);
@@ -305,19 +312,21 @@
             // 
             this.layoutControlItem2.Control = this.dateEdit1;
             this.layoutControlItem2.CustomizationFormText = "날짜";
-            this.layoutControlItem2.Location = new System.Drawing.Point(206, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(168, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(202, 36);
+            this.layoutControlItem2.Size = new System.Drawing.Size(153, 36);
             this.layoutControlItem2.Text = "날짜";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(72, 22);
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(36, 22);
+            this.layoutControlItem2.TextToControlDistance = 5;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(676, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(787, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(33, 36);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(24, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -326,17 +335,19 @@
             this.layoutControlItem3.CustomizationFormText = "동/호";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(206, 36);
+            this.layoutControlItem3.Size = new System.Drawing.Size(168, 36);
             this.layoutControlItem3.Text = "동/호";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 22);
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(43, 22);
+            this.layoutControlItem3.TextToControlDistance = 5;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton1;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
-            this.layoutControlItem6.Location = new System.Drawing.Point(709, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(811, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(237, 36);
+            this.layoutControlItem6.Size = new System.Drawing.Size(135, 36);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -344,9 +355,9 @@
             // 
             this.layoutControlItem1.Control = this.radioGroup1;
             this.layoutControlItem1.CustomizationFormText = "검침구분";
-            this.layoutControlItem1.Location = new System.Drawing.Point(408, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(455, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(268, 36);
+            this.layoutControlItem1.Size = new System.Drawing.Size(332, 36);
             this.layoutControlItem1.Text = "검침구분";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(72, 22);
             // 
@@ -361,12 +372,36 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // G02I02ModuleTab1
+            // dateEdit2
+            // 
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(367, 22);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Size = new System.Drawing.Size(106, 28);
+            this.dateEdit2.StyleController = this.layoutControl1;
+            this.dateEdit2.TabIndex = 18;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.dateEdit2;
+            this.layoutControlItem9.Location = new System.Drawing.Point(321, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(134, 36);
+            this.layoutControlItem9.Text = " ~";
+            this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(19, 22);
+            this.layoutControlItem9.TextToControlDistance = 5;
+            // 
+            // G02I02ModuleTab2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "G02I02ModuleTab1";
+            this.Name = "G02I02ModuleTab2";
             this.Size = new System.Drawing.Size(986, 590);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -395,6 +430,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,6 +464,8 @@
         private XtraLayout.LayoutControlItem layoutControlItem1;
         private XtraCharts.ChartControl chartControl1;
         private XtraLayout.LayoutControlItem layoutControlItem5;
+        private XtraEditors.DateEdit dateEdit2;
+        private XtraLayout.LayoutControlItem layoutControlItem9;
 
         public System.Drawing.SizeF AutoScaleDimensions { get; set; }
 
