@@ -27,9 +27,11 @@ using DevExpress.LookAndFeel;
 using DevExpress.Utils.Taskbar.Core;
 using DevExpress.Utils.Taskbar;
 
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win {
-    public partial class frmMain : RibbonForm {
+    public partial class frmMain : RibbonForm, IfmMain
+    {
         ModulesNavigator modulesNavigator;
         ZoomManager zoomManager;
         List<BarItem> AllowCustomizationMenuList = new List<BarItem>();
@@ -48,6 +50,8 @@ namespace DevExpress.ProductsDemo.Win {
             guideGenerator = new GuideGenerator();
             guideGenerator.CreateWhatsThisItem(ribbonControl1, () => { return this; });
 
+
+            MainPresenter = new fmMainPresenter(this);
             
         }
         void NavigationInitialize() {
@@ -121,9 +125,9 @@ namespace DevExpress.ProductsDemo.Win {
             InitBarButtonItem(this.bbiComSetup, TagResources.ComSetup);
 
             // 검침
-            InitBarButtonItem(this.bbiStartStopRealtimeStatus, TagResources.StartStopRealtimeStatus);
-            InitBarButtonItem(this.bbiStartStopComStart, TagResources.StartStopComStart);
-            InitBarButtonItem(this.bbiStartStopComStop, TagResources.StartStopComStop);
+            //InitBarButtonItem(this.bbiStartStopRealtimeStatus, TagResources.StartStopRealtimeStatus);
+            InitBarButtonItem(this.bbiReadingStart, TagResources.ReadingStart);
+            InitBarButtonItem(this.bbiReadingStop, TagResources.ReadingStop);
 
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[0], TagResources.TaskList, Properties.Resources.TaskListDescription);
             //InitGalleryItem(rgbiCurrentViewTasks.Gallery.Groups[0].Items[1], TagResources.TaskToDoList, Properties.Resources.TaskToDoListDescription);
@@ -186,7 +190,7 @@ namespace DevExpress.ProductsDemo.Win {
             this.navBarGroup1Item7.Tag = new NavBarGroupTagObject("DBManage", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             this.navBarGroup1Item8.Tag = new NavBarGroupTagObject("ExternalInterface", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             this.navBarGroup1Item9.Tag = new NavBarGroupTagObject("SystemMonitoring", typeof(DevExpress.ProductsDemo.Win.Modules.DataAnalytics));
-            this.navBarGroup1.SelectedLinkIndex = 5;
+            //this.navBarGroup1.SelectedLinkIndex = 5;
 
             this.navBarGroup2Item1.Tag = new NavBarGroupTagObject("G02I01Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I01Module));
             this.navBarGroup2Item4.Tag = new NavBarGroupTagObject("G02I01Module", typeof(DevExpress.ProductsDemo.Win.Modules.G02I02Module));
@@ -198,10 +202,10 @@ namespace DevExpress.ProductsDemo.Win {
 
 
             // 검침
-            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Modules.SystemStatus));
+            this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("Reading", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
             //this.navBarGroup3Item1.Tag = new NavBarGroupTagObject("StartStop", typeof(DevExpress.ProductsDemo.Win.Controls.GridRealTime));
             
-            //this.navBarGroup3.SelectedLinkIndex = 0;
+            this.navBarGroup3.SelectedLinkIndex = 0;
 
             // 정산
             this.navBarGroup4Item1.Tag = new NavBarGroupTagObject("Sum", typeof(DevExpress.ProductsDemo.Win.Modules.BaseBackup));
@@ -247,12 +251,30 @@ namespace DevExpress.ProductsDemo.Win {
             if(string.IsNullOrEmpty(modulesNavigator.CurrentModule.PartName)) return null;
             return string.Format(" - {0}", modulesNavigator.CurrentModule.PartName);
         }
+
+        /// <summary>
+        /// 모듈 클릭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void navBarControl1_SelectedLinkChanged(object sender, XtraNavBar.ViewInfo.NavBarSelectedLinkChangedEventArgs e) {
             if(e.Link != null)
                 modulesNavigator.ChangeSelectedItem(e.Link, null);
         }
+
+        /// <summary>
+        /// 리본 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bbi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
-            modulesNavigator.CurrentModule.ButtonClick(string.Format("{0}", e.Item.Tag));
+
+            if (e.Item.Tag.ToString() == "ReadingStart")
+                CommandCenter.ReadingChanged.Execute(e.Item.Tag);
+            else if (e.Item.Tag.ToString() == "ReadingStop")
+                CommandCenter.ReadingChanged.Execute(e.Item.Tag);
+            else
+                modulesNavigator.CurrentModule.ButtonClick(string.Format("{0}", e.Item.Tag));
         }
         private void frmMain_KeyDown(object sender, KeyEventArgs e) {
             modulesNavigator.CurrentModule.SendKeyDown(e);
@@ -375,5 +397,26 @@ namespace DevExpress.ProductsDemo.Win {
         {
 
         }
+
+
+        #region IfmMain
+
+        /// <summary>
+        /// 현재 사용 데이터모델을 지정/반환합니다.
+        /// </summary>
+        public IBaseModel CurrentData { get; set; }
+
+        /// <summary>
+        /// 컨트롤러를 지정/반환합니다.
+        /// </summary>
+        public IfmMainPresenter MainPresenter { get; set; }
+
+
+        public void ShowMessage(string msg)
+        {
+            XtraMessageBox.Show(msg, HtmlText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        #endregion
     }
 }

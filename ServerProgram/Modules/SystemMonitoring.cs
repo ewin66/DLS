@@ -36,10 +36,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             {
                 case TagResources.StartStopRealtimeStatus:
                     break;
-                case TagResources.StartStopComStart:
-                    break;
-                case TagResources.StartStopComStop:
-                    break;
+
             }
         }
     }

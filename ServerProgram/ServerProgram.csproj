@@ -452,6 +452,8 @@
     </Compile>
     <Compile Include="Models\AMR_MST04Model.cs" />
     <Compile Include="Presenter\fmLoad_AMR_MST04Presenter.cs" />
+    <Compile Include="Presenter\fmMainPresenter.cs" />
+    <Compile Include="Presenter\G03I01ModulePresenter.cs" />
     <Compile Include="Presenter\G02I02ModulePresenter.cs" />
     <Compile Include="Presenter\Interfaces\IfmLoad_AMR_MST04.cs" />
     <Compile Include="Item\DK1EventArgs.cs" />
@@ -459,6 +461,10 @@
     <Compile Include="Common\Extension.cs" />
     <Compile Include="Common\IniFileHandle.cs" />
     <Compile Include="Models\Interfaces\IBaseModel.cs" />
+    <Compile Include="Presenter\Interfaces\IfmMain.cs" />
+    <Compile Include="Presenter\Interfaces\IfmMainPresenter.cs" />
+    <Compile Include="Presenter\Interfaces\IG03I01ModulePresenter.cs" />
+    <Compile Include="Presenter\Interfaces\IG03I01Module.cs" />
     <Compile Include="Presenter\Interfaces\IG02I02ModulePresenter.cs" />
     <Compile Include="Presenter\Interfaces\IG02I02Module.cs" />
     <Compile Include="Views\SubViews\G02I02ModuleTab2.cs">
@@ -617,10 +623,10 @@
     <Compile Include="Forms\wfMain.Designer.cs">
       <DependentUpon>wfMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Views\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
@@ -800,6 +806,12 @@
     <Compile Include="Sales.Model\Utils.cs" />
     <Compile Include="Serial\DK1Interface.cs" />
     <Compile Include="Views\SubViews\Interfaces\IBaseSubView.cs" />
+    <Compile Include="Views\SubViews\G03I01Module.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SubViews\G03I01Module.Designer.cs">
+      <DependentUpon>G03I01Module.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -866,7 +878,10 @@
     <EmbeddedResource Include="Forms\ssMain.resx">
       <DependentUpon>ssMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Modules\BaseBackup.resx">
+      <DependentUpon>BaseBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -967,6 +982,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\SubViews\G03I01Module.resx">
+      <DependentUpon>G03I01Module.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>

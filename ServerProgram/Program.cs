@@ -38,7 +38,8 @@ namespace DevExpress.ProductsDemo.Win {
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Segoe UI", 8);
             //DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2013");
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light");
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Light");
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2010 Black");
             SkinManager.EnableFormSkins();
             EnumProcessingHelper.RegisterEnum<TaskStatus>();
 

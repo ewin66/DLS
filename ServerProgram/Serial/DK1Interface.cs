@@ -10,7 +10,7 @@ using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.XtraCharts;
 
-namespace DevExpress.ProductsDemo.Win.Serial
+namespace ServerProgram.Serial
 {
     public class DK1Interface : IDisposable
     {
@@ -60,11 +60,11 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
         private bool isDispose = false;
 
-        private SerialPort mComport = new SerialPort();
+        private SerialPort mComport;
 
         private DataTable mDataTable;   // contact에러시 기정의된 이름으로 출력하기 위한 참조 테이블
         private DataTable mCommTable;
-        private DataTable mErrorTable;
+
         
         private DataTable mErrorListTable;
         private string mLineName;
@@ -80,11 +80,6 @@ namespace DevExpress.ProductsDemo.Win.Serial
         {
             get { return mCommTable; }
             set { mCommTable = value; }
-        }
-        public DataTable ErrorTable
-        {
-            get { return mErrorTable; }
-            set { mErrorTable = value; }
         }
         public DataTable ErrorListTable
         {
@@ -108,6 +103,41 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
         #region public method
 
+        public DK1Interface(DataTable dataTable, UInt16 interval)
+        {
+            mComport = new SerialPort();
+            
+            // COM 포트 설정
+            mComport.BaudRate = 9600;
+            mComport.DataBits = 8;
+            mComport.Parity = Parity.None;
+            mComport.StopBits = StopBits.One;
+            mComport.PortName = "COM1";
+
+            try
+            {
+
+                mComport.Open();
+
+                mComport.DataReceived += mComport_DataReceived;
+
+                mDataTable = dataTable;
+               
+
+                this.pollingTimer = new System.Timers.Timer();
+                this.pollingTimer.Interval = 5000;
+                this.pollingTimer.Elapsed += pollingTimer_Elapsed;
+                this.pollingTimer.Enabled = true;
+
+                this.actived = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
 
         public DK1Interface( DataTable dataTable, DataTable commTable, DataTable errorTable, UInt16 interval )
         {
@@ -126,7 +156,7 @@ namespace DevExpress.ProductsDemo.Win.Serial
 
             mDataTable = dataTable;
             mCommTable = commTable;
-            mErrorTable = errorTable;
+            //mErrorTable = errorTable;
 
             this.pollingTimer = new System.Timers.Timer();
             this.pollingTimer.AutoReset = false;
@@ -342,29 +372,31 @@ namespace DevExpress.ProductsDemo.Win.Serial
             UInt16 dong = 0;
             UInt16 ho = 0;
 
-            foreach (DataRow row in mDataTable.Rows)
-            {
-                item[0] = 0x02;
-                item[1] = 0x09;
-                dong = Convert.ToUInt16(row.ItemArray[2]);
-                item[2] = (byte)(dong >> 8);
-                item[3] = (byte)(dong >> 0);
-                ho = Convert.ToUInt16(row.ItemArray[3]);
-                item[4] = (byte)(ho >> 8);
-                item[5] = (byte)(ho >> 0);
-                item[6] = 0x11;
-                item[7] = 0x0F;
-                item[8] = 0x1C;
+            //foreach (DataRow row in mDataTable.Rows)
+            //{
+            //    item[0] = 0x02;
+            //    item[1] = 0x09;
+            //    dong = Convert.ToUInt16(row.ItemArray[2]);
+            //    item[2] = (byte)(dong >> 8);
+            //    item[3] = (byte)(dong >> 0);
+            //    ho = Convert.ToUInt16(row.ItemArray[3]);
+            //    item[4] = (byte)(ho >> 8);
+            //    item[5] = (byte)(ho >> 0);
+            //    item[6] = 0x11;
+            //    item[7] = 0x0F;
+            //    item[8] = 0x1C;
 
-                //foreach (DataRow row in mCommTable.Rows)
+            //    //foreach (DataRow row in mCommTable.Rows)
 
-                if (mComport.IsOpen)
-                {
-                    mComport.Write(item, 0, item.Length);
+            //    //if (mComport.IsOpen)
+            //    //{
+            //    //    mComport.ReadTimeout = 50;
+            //    //    mComport.Write(item, 0, item.Length);
+            //    //    //mComport.Read)
 
-                    this.pollingTimer.Enabled = true;
-                }
-            }
+            //    //    //this.pollingTimer.Enabled = true;
+            //    //}
+            //}
 
         }
 
@@ -449,7 +481,7 @@ namespace DevExpress.ProductsDemo.Win.Serial
                 dongho[1] = string.Format("{0}", ho);
                 // BMS 리스트 테이블에 수신한 ID 찾기
                 DataRow foundRow = mCommTable.Rows.Find(dongho);
-                DataRow foundErrRow = mErrorTable.Rows.Find(dongho);
+                //DataRow foundErrRow = mErrorTable.Rows.Find(dongho);
 
                 // 있다면 업데이트
                 if (foundRow != null)
@@ -484,13 +516,16 @@ namespace DevExpress.ProductsDemo.Win.Serial
         {
             isDispose = true;
 
-            this.mComport.Close();
-            //this.mComport.DataReceived -= mComport_DataReceived;
+            if (this.pollingTimer != null)
+                this.pollingTimer.Enabled = false;
 
-            this.pollingTimer.Enabled = false;
+            this.mComport.DataReceived -= mComport_DataReceived;
+            this.mComport.Close();
+
+            //this.pollingTimer.Enabled = false;
             this.actived = false;
 
-            
+            //GC.SuppressFinalize(this);
 
         }
 

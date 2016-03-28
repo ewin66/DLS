@@ -15,49 +15,44 @@ using System.Threading.Tasks;
 using DevExpress.ProductsDemo.Win.Common;
 using DevExpress.ProductsDemo.Win.Item;
 using DevExpress.ProductsDemo.Win.DB;
-using DevExpress.ProductsDemo.Win.Serial;
+
 using System.Runtime.InteropServices;
 
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 
-
 using System.Collections;
-using ServerProgram.Serial;
 using ServerProgram.DB;
+using ServerProgram.Serial;
+using ServerProgram;
 
 namespace DevExpress.ProductsDemo.Win.Modules
 {
 
-    public partial class SystemStatus : BaseModule
+    public partial class G03I01Module : BaseModule, IG03I01Module, IBaseSubView
     {
- 
-        public SystemStatus()
+
+        public G03I01Module()
         {
             InitializeComponent();
+            MainPresenter = new G03I01ModulePresenter(this);
+
+            //// 실시간 데이터 저장 테이블
+            //mCommTable = initCommDataTable();
+            //mDataTable = initCommDataTable();
+            //InitGridData();
 
 
-            // 실시간 데이터 저장 테이블
-            mCommTable = initCommDataTable();
-            mDataTable = initCommDataTable();
-            InitGridData();
+            //timer1.Interval = 1000;
+            //timer1.Tick += new EventHandler(uiUpdateTimer_Tick);
+
+            //mWorkArmTot00 = new WORK_AMR_TOT00();
+            //mWorkArmTot00.eReady += mWorkArmTot00_eReady;
+            //mInsertThread = new Thread(new ThreadStart(mWorkArmTot00.DoWork));
+            //mInsertThread.IsBackground = true;
 
 
-            timer1.Interval = 1000;
-            timer1.Tick += new EventHandler(uiUpdateTimer_Tick);
-
-            mWorkArmTot00 = new WORK_AMR_TOT00();
-            mWorkArmTot00.eReady += mWorkArmTot00_eReady;
-            mInsertThread = new Thread(new ThreadStart(mWorkArmTot00.DoWork));
-            mInsertThread.IsBackground = true;
-
-
-            //this.serialConnection.Open("COM1", 115200, 8, System.IO.Ports.Parity.None, System.IO.Ports.StopBits.One);
-            //this.serialConnection
-            //SerialPort sp = new SerialPort("COM1", 115200, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
-            //sp.Open();
-            //sp.Write("hi1234");
         }
         private DK1Interface comm;
         private WORK_AMR_TOT00 mWorkArmTot00;
@@ -149,22 +144,14 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 case TagResources.StartStopRealtimeStatus:
 
                     break;
-                case TagResources.ReadingStart:
-                    Run();
+                //case TagResources.ReadingStart:
+                //    CommandCenter.ReadingChanged.Execute("RUN");
 
-                    if (!mInsertThread.IsAlive)
-                    {
-                        mInsertThread = new Thread(new ThreadStart(mWorkArmTot00.DoWork));
+                //    break;
+                //case TagResources.ReadingStop:
+                //    CommandCenter.ReadingChanged.Execute("STOP");
 
-                        mInsertThread.Start();
-                        mInsertThread.IsBackground = true;
-                    }
-                    break;
-                case TagResources.ReadingStop:
-                    Stop();
-
-                    mWorkArmTot00.RequestStop();
-                    break;
+                //    break;
                 default:
                     
                     
@@ -408,115 +395,66 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         }
 
+
+
+
+        #region IG03I01Module
+
+        /// <summary>
+        /// 현재 사용 데이터모델을 지정/반환합니다.
+        /// </summary>
+        public IBaseModel CurrentData { get; set; }
+
+        /// <summary>
+        /// 컨트롤러를 지정/반환합니다.
+        /// </summary>
+        public IG03I01ModulePresenter MainPresenter { get; set; }
+
+
+        public void ShowMessage(string msg)
+        {
+            MessageBox.Show(msg);
+        }
+
+        public void ReadingComplete(IBaseModel item)
+        {
+            if (item == null)
+                return;
+
+            AMR_MST04Model model = new AMR_MST04Model();
+            model = (AMR_MST04Model)item;
+
+            CurrentData = item;
+
+            this.DataBinding(CurrentData);
+            //if (model.Name.Equals("Tab1"))
+            //    tab1.DataBinding(this.CurrentData);
+            //else
+            //    tab2.DataBinding(this.CurrentData);
+        }
+
+        #endregion
+                
+
+        #region IBaseSubView
+        public void DataBinding(IBaseModel datalist)
+        {
+            if (datalist == null) return;
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate() { this.DataBinding(datalist); });
+            }
+            else
+            {
+
+            }
+
+        }
+        #endregion  
+
     }
 
 
-    #region record
-    public class RecordCollection : CollectionBase, IBindingList, ITypedList
-    {
-        public Record this[int i] { get { return (Record)List[i]; } }
-        public void Add(Record record)
-        {
-            int res = List.Add(record);
-            record.owner = this;
-            record.Index = res;
-        }
-        public void SetValue(int row, int col, object val)
-        {
-            this[row].SetValue(col, val);
-        }
-        internal void OnListChanged(Record rec)
-        {
-            if (listChangedHandler != null) listChangedHandler(this, new ListChangedEventArgs(ListChangedType.ItemChanged, rec.Index, rec.Index));
-        }
-
-        PropertyDescriptorCollection ITypedList.GetItemProperties(PropertyDescriptor[] accessors)
-        {
-            PropertyDescriptorCollection coll = TypeDescriptor.GetProperties(typeof(Record));
-            ArrayList list = new ArrayList(coll);
-            list.Sort(new PDComparer());
-            PropertyDescriptorCollection res = new PropertyDescriptorCollection(null);
-            for (int n = 0; n < SystemStatus.ColumnCount; n++)
-            {
-                res.Add(list[n] as PropertyDescriptor);
-            }
-            return res;
-        }
-        class PDComparer : IComparer
-        {
-            int IComparer.Compare(object a, object b)
-            {
-                return Comparer.Default.Compare(GetName(a), GetName(b));
-            }
-            int GetName(object a)
-            {
-                PropertyDescriptor pd = (PropertyDescriptor)a;
-                if (pd.Name.StartsWith("Column")) return Convert.ToInt32(pd.Name.Substring(6));
-                return -1;
-
-            }
-        }
-        string ITypedList.GetListName(PropertyDescriptor[] accessors) { return ""; }
-        public object AddNew() { return null; }
-        public bool AllowEdit { get { return true; } }
-        public bool AllowNew { get { return false; } }
-        public bool AllowRemove { get { return false; } }
-
-        private ListChangedEventHandler listChangedHandler;
-        public event ListChangedEventHandler ListChanged
-        {
-            add { listChangedHandler += value; }
-            remove { listChangedHandler -= value; }
-        }
-        public void AddIndex(PropertyDescriptor pd) { throw new NotSupportedException(); }
-        public void ApplySort(PropertyDescriptor pd, ListSortDirection dir) { throw new NotSupportedException(); }
-        public int Find(PropertyDescriptor property, object key) { throw new NotSupportedException(); }
-        public bool IsSorted { get { return false; } }
-        public void RemoveIndex(PropertyDescriptor pd) { throw new NotSupportedException(); }
-        public void RemoveSort() { throw new NotSupportedException(); }
-        public ListSortDirection SortDirection { get { throw new NotSupportedException(); } }
-        public PropertyDescriptor SortProperty { get { throw new NotSupportedException(); } }
-        public bool SupportsChangeNotification { get { return true; } }
-        public bool SupportsSearching { get { return false; } }
-        public bool SupportsSorting { get { return false; } }
-
-    }
-
-    public class Record
-    {
-        internal int Index = -1;
-        internal RecordCollection owner;
-        string[] values = new string[20];
-        public string Column0 { get { return values[0]; } set { SetValue(0, value); } }
-        public string Column1 { get { return values[1]; } set { SetValue(1, value); } }
-        public string Column2 { get { return values[2]; } set { SetValue(2, value); } }
-        public string Column3 { get { return values[3]; } set { SetValue(3, value); } }
-        public string Column4 { get { return values[4]; } set { SetValue(4, value); } }
-        public string Column5 { get { return values[5]; } set { SetValue(5, value); } }
-        public string Column6 { get { return values[6]; } set { SetValue(6, value); } }
-        public string Column7 { get { return values[7]; } set { SetValue(7, value); } }
-        public string Column8 { get { return values[8]; } set { SetValue(8, value); } }
-        public string Column9 { get { return values[9]; } set { SetValue(9, value); } }
-        public string Column10 { get { return values[10]; } set { SetValue(10, value); } }
-        public string Column11 { get { return values[11]; } set { SetValue(11, value); } }
-        public string Column12 { get { return values[12]; } set { SetValue(12, value); } }
-        public string Column13 { get { return values[13]; } set { SetValue(13, value); } }
-        public string Column14 { get { return values[14]; } set { SetValue(14, value); } }
-        public string Column15 { get { return values[15]; } set { SetValue(15, value); } }
-        public string Column16 { get { return values[16]; } set { SetValue(16, value); } }
-        public string Column17 { get { return values[17]; } set { SetValue(17, value); } }
-        public string Column18 { get { return values[18]; } set { SetValue(18, value); } }
-        public string Column19 { get { return values[19]; } set { SetValue(19, value); } }
-        public string GetValue(int index) { return values[index]; }
-        //<label1>
-        public void SetValue(int index, object val)
-        {
-            values[index] = (string)val;
-            if (this.owner != null) this.owner.OnListChanged(this);
-        }
-        //</label1>
-    }
-    #endregion
 
 
 }

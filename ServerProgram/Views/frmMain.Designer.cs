@@ -93,9 +93,8 @@
             this.bbiNewDon = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.bbiComSetup = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiStartStopRealtimeStatus = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiStartStopComStart = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiStartStopComStop = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReadingStart = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReadingStop = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.bbiG02I01 = new DevExpress.XtraBars.BarButtonItem();
             this.bbiG02I02 = new DevExpress.XtraBars.BarButtonItem();
@@ -146,8 +145,6 @@
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup2Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2Item4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3Item1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -240,9 +237,8 @@
             this.bbiNewDon,
             this.barSubItem1,
             this.bbiComSetup,
-            this.bbiStartStopRealtimeStatus,
-            this.bbiStartStopComStart,
-            this.bbiStartStopComStop,
+            this.bbiReadingStart,
+            this.bbiReadingStop,
             this.barButtonItem6,
             this.bbiG02I01,
             this.bbiG02I02,
@@ -777,29 +773,21 @@
             this.bbiComSetup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiComSetup.LargeGlyph")));
             this.bbiComSetup.Name = "bbiComSetup";
             // 
-            // bbiStartStopRealtimeStatus
+            // bbiReadingStart
             // 
-            resources.ApplyResources(this.bbiStartStopRealtimeStatus, "bbiStartStopRealtimeStatus");
-            this.bbiStartStopRealtimeStatus.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopRealtimeStatus.Glyph")));
-            this.bbiStartStopRealtimeStatus.Id = 5;
-            this.bbiStartStopRealtimeStatus.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopRealtimeStatus.LargeGlyph")));
-            this.bbiStartStopRealtimeStatus.Name = "bbiStartStopRealtimeStatus";
+            resources.ApplyResources(this.bbiReadingStart, "bbiReadingStart");
+            this.bbiReadingStart.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiReadingStart.Glyph")));
+            this.bbiReadingStart.Id = 6;
+            this.bbiReadingStart.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiReadingStart.LargeGlyph")));
+            this.bbiReadingStart.Name = "bbiReadingStart";
             // 
-            // bbiStartStopComStart
+            // bbiReadingStop
             // 
-            resources.ApplyResources(this.bbiStartStopComStart, "bbiStartStopComStart");
-            this.bbiStartStopComStart.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopComStart.Glyph")));
-            this.bbiStartStopComStart.Id = 6;
-            this.bbiStartStopComStart.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopComStart.LargeGlyph")));
-            this.bbiStartStopComStart.Name = "bbiStartStopComStart";
-            // 
-            // bbiStartStopComStop
-            // 
-            resources.ApplyResources(this.bbiStartStopComStop, "bbiStartStopComStop");
-            this.bbiStartStopComStop.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopComStop.Glyph")));
-            this.bbiStartStopComStop.Id = 7;
-            this.bbiStartStopComStop.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiStartStopComStop.LargeGlyph")));
-            this.bbiStartStopComStop.Name = "bbiStartStopComStop";
+            resources.ApplyResources(this.bbiReadingStop, "bbiReadingStop");
+            this.bbiReadingStop.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiReadingStop.Glyph")));
+            this.bbiReadingStop.Id = 7;
+            this.bbiReadingStop.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiReadingStop.LargeGlyph")));
+            this.bbiReadingStop.Name = "bbiReadingStop";
             // 
             // barButtonItem6
             // 
@@ -989,14 +977,13 @@
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
             this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Tag = "StartStop";
+            this.ribbonPage4.Tag = "";
             resources.ApplyResources(this.ribbonPage4, "ribbonPage4");
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.bbiStartStopRealtimeStatus);
-            this.ribbonPageGroup6.ItemLinks.Add(this.bbiStartStopComStart);
-            this.ribbonPageGroup6.ItemLinks.Add(this.bbiStartStopComStop);
+            this.ribbonPageGroup6.ItemLinks.Add(this.bbiReadingStart);
+            this.ribbonPageGroup6.ItemLinks.Add(this.bbiReadingStop);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             resources.ApplyResources(this.ribbonPageGroup6, "ribbonPageGroup6");
             // 
@@ -1129,9 +1116,7 @@
             this.navBarGroup5Item1,
             this.navBarGroup5Item2,
             this.navBarGroup2Item2,
-            this.navBarGroup2Item3,
-            this.navBarItem1,
-            this.navBarItem2});
+            this.navBarGroup2Item3});
             this.navBarControl1.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
             this.navBarControl1.MenuManager = this.ribbonControl1;
             this.navBarControl1.Name = "navBarControl1";
@@ -1147,6 +1132,7 @@
             // navBarGroup1
             // 
             resources.ApplyResources(this.navBarGroup1, "navBarGroup1");
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Large;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -1214,9 +1200,7 @@
             this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarGroup2Item4)});
             this.navBarGroup2.Name = "navBarGroup2";
             this.navBarGroup2.SelectedLinkIndex = 3;
             // 
@@ -1229,16 +1213,6 @@
             // 
             resources.ApplyResources(this.navBarGroup2Item4, "navBarGroup2Item4");
             this.navBarGroup2Item4.Name = "navBarGroup2Item4";
-            // 
-            // navBarItem1
-            // 
-            resources.ApplyResources(this.navBarItem1, "navBarItem1");
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            resources.ApplyResources(this.navBarItem2, "navBarItem2");
-            this.navBarItem2.Name = "navBarItem2";
             // 
             // navBarGroup3
             // 
@@ -1542,9 +1516,8 @@
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private XtraBars.BarButtonItem bbiComSetup;
         private XtraBars.Ribbon.RibbonPage ribbonPage4;
-        private XtraBars.BarButtonItem bbiStartStopRealtimeStatus;
-        private XtraBars.BarButtonItem bbiStartStopComStart;
-        private XtraBars.BarButtonItem bbiStartStopComStop;
+        private XtraBars.BarButtonItem bbiReadingStart;
+        private XtraBars.BarButtonItem bbiReadingStop;
         private XtraBars.BarButtonItem barButtonItem6;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
@@ -1565,8 +1538,6 @@
         private XtraBars.BarButtonItem bbiG02I01;
         private XtraBars.BarButtonItem bbiG02I02;
         private XtraBars.BarButtonItem bbiG02I03;
-        private XtraNavBar.NavBarItem navBarItem1;
-        private XtraNavBar.NavBarItem navBarItem2;
     }
 }
 

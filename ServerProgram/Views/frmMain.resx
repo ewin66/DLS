@@ -1296,75 +1296,10 @@
         vx/Afgb/O2tZDZB/fgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bbiStartStopRealtimeStatus.Caption" xml:space="preserve">
-    <value>실시간 상태</value>
-  </data>
-  <data name="bbiStartStopRealtimeStatus.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAPdEVYdFRpdGxlAEZlZWQ7UnNzO8lCZZYAAAKxSURBVDhP
-        dZNrSFNhGMfXzqZu8zKdhtIVS+kChl+E6Ft+6fIxJPugKYmUZVRE5YeBiybmBQOlMi2lMkwEo1BCbGmi
-        XWdaS7xky5mbl6lTZ7ucy7/3PRtLu7zw4/0fzvv83sPDcyRkrSNICQxBtgr5fwjyQ8/QWgkzVZvQaa9L
-        hP2en7vbMVubiNkashOmKzfBVhIDK2HyejSsxTH4rtd0kVoqlMjs5JCnIx14e5qQB7yhnPJzEniRBjw/
-        5OcgXI0pmLimAakNpgL59O1tEHpzgaepQPO+v6lJAKrjfdTvhNCYjPHCSCpQUEHQVNVm8N3Z4B+nADwH
-        OK0QLJ0Q3peDbzkA/tbWtTQk4Zs2ggqUVBA8WbEBnOEYvA/3gDM9AG9uh7BoAV28pQtsSzo8lRsDsPd3
-        42tBOBWoqCBkoiQObPsRuOp2rMHbowc/Nwze1gd3cxpWKmJFPOTdyMVQKgilAsV4UQw8rYexVL0F4Lzg
-        pgfgflcF56NUOJ9kgpv5Au9oGxarEuEo0cBFmj50XhkQKM26KLhb9mO+MhYu4x2wlh7x8z3DzzB/MwnO
-        trPi83LrGdiLIvCT9GEwX0EFYaJgVKuGq2kvZsrUAZZfXvUVGQph0ynB2kfgMjWJ2Un6YMoLpoJwKlCN
-        XArDSkMyJosU4Bw/4OjQitk1ZoDH8hoT2iCs9DeAnRsT89KNOHzKFQURVBA6dEGF5fpdGNcx4q2swyJm
-        x6tSCKwb5gIpHAY9BJ715fL1GMiRU4GaCsJM+SFYqomHTa+CWSsJMHaFcHkt1kIFFkgjP2bLqCBSFHzO
-        C8GoTo2FsujflEZjvjjynwyeU8CYyQQEit4seVd/jgz9J+Tw7TLxhr4swnGG4NtpkTGDwYcMKQxHpd2k
-        Vhwk+ivTkaQNocbVRP2Bxg/NZAYkzC9WayeSnzdNuwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bbiStartStopRealtimeStatus.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bbiStartStopComStart.Caption" xml:space="preserve">
+  <data name="bbiReadingStart.Caption" xml:space="preserve">
     <value>검침시작</value>
   </data>
-  <data name="bbiStartStopComStart.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiReadingStart.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAhdEVYdFRpdGxlAEFwcGx5O09LO0NoZWNrO0JhcnM7UmliYm9uO2RjyGgAAAOmSURBVDhPTZN9
@@ -1386,7 +1321,7 @@
         RO9E2+l7vpngQ/AmbCI8QfD4f33HmIT6BwJEEY+T4HTzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bbiStartStopComStart.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiReadingStart.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAhdEVYdFRpdGxlAEFwcGx5O09LO0NoZWNrO0JhcnM7UmliYm9uO2RjyGgAAAqwSURBVFhHlVcL
@@ -1438,10 +1373,10 @@
         /9PUQviqcmK2lAUxEYPHPMfvOEYd/z+aEP8CrR1y7ZCy7FEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bbiStartStopComStop.Caption" xml:space="preserve">
+  <data name="bbiReadingStop.Caption" xml:space="preserve">
     <value>검침중단</value>
   </data>
-  <data name="bbiStartStopComStop.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiReadingStop.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAjdEVYdFRpdGxlAENhbmNlbDtTdG9wO0V4aXQ7QmFycztSaWJib247TJaWsgAAA5pJREFUOE8l
@@ -1463,7 +1398,7 @@
         2/YHv6ihMyGUwBXfPvI/dZFG19yv1ioAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bbiStartStopComStop.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bbiReadingStop.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAjdEVYdFRpdGxlAENhbmNlbDtTdG9wO0V4aXQ7QmFycztSaWJib247TJaWsgAACxVJREFUWEeV
@@ -2265,7 +2200,7 @@
     <value>조회 / 분석</value>
   </data>
   <data name="navBarGroup2Item1.Caption" xml:space="preserve">
-    <value>세대별 조회</value>
+    <value>검침 데이터 조회</value>
   </data>
   <data name="navBarGroup2Item1.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2310,7 +2245,7 @@
 </value>
   </data>
   <data name="navBarGroup2Item4.Caption" xml:space="preserve">
-    <value>세대별 분석</value>
+    <value>검침 데이터 분석</value>
   </data>
   <data name="navBarGroup2Item4.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2361,12 +2296,6 @@
         vqP9z4iZLnSRmNLsPOm9zRHUpInYpR9LsUuYlVLM4hVaoj9YwZcfzQYnwqPh6eRHiUf3ugY+5zZeZ76H
         79WKE3T+ID2N26f/pEv/fYiOCJ4R7pinlCWPw218je95dP/PhCT9GyaC9lzhR4OcAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="navBarItem1.Caption" xml:space="preserve">
-    <value>navBarItem1</value>
-  </data>
-  <data name="navBarItem2.Caption" xml:space="preserve">
-    <value>navBarItem2</value>
   </data>
   <data name="navBarGroup2.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3472,22 +3401,16 @@
   <data name="&gt;&gt;bbiComSetup.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;bbiStartStopRealtimeStatus.Name" xml:space="preserve">
-    <value>bbiStartStopRealtimeStatus</value>
+  <data name="&gt;&gt;bbiReadingStart.Name" xml:space="preserve">
+    <value>bbiReadingStart</value>
   </data>
-  <data name="&gt;&gt;bbiStartStopRealtimeStatus.Type" xml:space="preserve">
+  <data name="&gt;&gt;bbiReadingStart.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;bbiStartStopComStart.Name" xml:space="preserve">
-    <value>bbiStartStopComStart</value>
+  <data name="&gt;&gt;bbiReadingStop.Name" xml:space="preserve">
+    <value>bbiReadingStop</value>
   </data>
-  <data name="&gt;&gt;bbiStartStopComStart.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;bbiStartStopComStop.Name" xml:space="preserve">
-    <value>bbiStartStopComStop</value>
-  </data>
-  <data name="&gt;&gt;bbiStartStopComStop.Type" xml:space="preserve">
+  <data name="&gt;&gt;bbiReadingStop.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem6.Name" xml:space="preserve">
@@ -3776,18 +3699,6 @@
     <value>navBarGroup2Item4</value>
   </data>
   <data name="&gt;&gt;navBarGroup2Item4.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
-    <value>navBarItem1</value>
-  </data>
-  <data name="&gt;&gt;navBarItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navBarItem2.Name" xml:space="preserve">
-    <value>navBarItem2</value>
-  </data>
-  <data name="&gt;&gt;navBarItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;navBarGroup3.Name" xml:space="preserve">

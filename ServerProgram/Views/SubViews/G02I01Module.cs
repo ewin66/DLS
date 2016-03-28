@@ -34,7 +34,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
             MainPresenter = new G02I01ModulePresenter(this);
         }
 
-        
+        private string mModuleName = "검침 데이터 조회";
         G02I01ModuleTab1 tab1;
         G02I01ModuleTab2 tab2;
 
@@ -79,7 +79,7 @@ namespace DevExpress.ProductsDemo.Win.Modules
 
         public void ShowMessage(string msg)
         {
-            MessageBox.Show(msg);
+            XtraMessageBox.Show(msg, mModuleName, MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
         public void SearchComplete(IBaseModel item)

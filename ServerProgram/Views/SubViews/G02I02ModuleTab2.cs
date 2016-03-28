@@ -85,7 +85,9 @@ namespace DevExpress.ProductsDemo.Win.Modules
                 mMST04.To = this.dateEdit2.DateTime;
                 mMST04.Name = "Tab2";
                 mMST04.Sensor = mSensorList[this.radioGroup1.SelectedIndex];
+                
                 CommandCenter.GraphSearchChanged.Execute(mMST04);
+
             }
                 
         }
